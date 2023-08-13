@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EA2A224D-4BB6-49C2-929A-74C05CC510F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{734B9C58-00F9-4C76-A10E-DADAAAAE28AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{28C4A472-96E1-4F2B-B944-A73DC885DA39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{8D2CEBAE-5970-481D-9375-D01B8BDCF818}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{563A8163-FF7B-447D-B9D4-1E9087A80CD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7C41E2D0-D973-4FC0-9D8E-972799846632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Clean.Domain", "Portfolio.Clean.Domain\Portfolio.Clean.Domain.csproj", "{65ABB74A-BE8C-464D-9422-A307670E4CFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65ABB74A-BE8C-464D-9422-A307670E4CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65ABB74A-BE8C-464D-9422-A307670E4CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65ABB74A-BE8C-464D-9422-A307670E4CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65ABB74A-BE8C-464D-9422-A307670E4CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28C4A472-96E1-4F2B-B944-A73DC885DA39} = {EA2A224D-4BB6-49C2-929A-74C05CC510F6}
+		{8D2CEBAE-5970-481D-9375-D01B8BDCF818} = {EA2A224D-4BB6-49C2-929A-74C05CC510F6}
+		{563A8163-FF7B-447D-B9D4-1E9087A80CD1} = {EA2A224D-4BB6-49C2-929A-74C05CC510F6}
+		{7C41E2D0-D973-4FC0-9D8E-972799846632} = {EA2A224D-4BB6-49C2-929A-74C05CC510F6}
+		{65ABB74A-BE8C-464D-9422-A307670E4CFC} = {563A8163-FF7B-447D-B9D4-1E9087A80CD1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D730D84C-B690-4749-9F30-7D9A8D09F367}
+	EndGlobalSection
+EndGlobal
