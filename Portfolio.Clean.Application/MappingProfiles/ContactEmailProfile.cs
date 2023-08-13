@@ -1,25 +1,29 @@
 ﻿using AutoMapper;
+using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
+using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.MappingProfiles
+namespace Portfolio.Clean.Application.MappingProfiles;
+
+public class ContactEmailProfile : Profile
 {
-    public class ContactEmailProfile : Profile
+
+    #region Attributes & Accessors
+
+    #endregion
+
+    #region Constructors
+    public ContactEmailProfile()
     {
+        CreateMap<ContactEmailDto, ContactEmail>().ReverseMap();
+    }
+    #endregion
 
-		#region Attributes & Accessors
+    #region Methods
 
-		#endregion
-
-		#region Constructors
-
-		#endregion
-
-		#region Methods
-
-		#endregion
-	}
+    #endregion
 }
