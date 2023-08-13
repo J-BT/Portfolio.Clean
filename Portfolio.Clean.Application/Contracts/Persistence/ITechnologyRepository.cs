@@ -1,10 +1,8 @@
 ﻿using Portfolio.Clean.Domain;
 
-namespace Portfolio.Clean.Application.Contracts.Persistence
-{
-    public interface ITechnologyRepository : IGenericRepository<Technology>
-    {
+namespace Portfolio.Clean.Application.Contracts.Persistence;
 
-    }
+public interface ITechnologyRepository : IGenericRepository<Technology>
+{
 
 }
