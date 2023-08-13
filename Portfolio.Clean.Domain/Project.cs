@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portfolio.Clean.Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Domain;
 
-public class Project
+public class Project : BaseEntity
 {
-    #region Attributes & Properties
-
-    public string IdProject { get; set; } = string.Empty;
+    #region Attributes & Accessors
+    public string ProjectName { get; set; } = string.Empty;
     //public string ProjectTitle { get; set; } = string.Empty; //XML
-    //public string ProjectName { get; set; } = string.Empty; //XML
     //public string ProjectDescription { get; set; } = string.Empty; //XML
     public Technology ProjectTechnologies { get; set; } = new();
     public int TechnologyId { get; set; }
@@ -20,8 +19,6 @@ public class Project
     public string? ProjectUrl { get; set; }
     public string? ProjectVideo { get; set; }
     public string? ProjectGithub { get; set; }
-    public DateTime ProjectCreationDate { get; set; }
-    public DateTime ProjectLastUpdate { get; set; }
 
     #endregion
 

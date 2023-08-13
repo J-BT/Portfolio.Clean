@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Domain.Common;
 
-public class BaseEntity
+public abstract class BaseEntity
 {
-    #region Attributes & Properties
-
+    #region Attributes & Accessors
+    //[Key]
+    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
+    public DateTime? CreationDate { get; set; }
+    public DateTime? LastUpdate { get; set; }
 
     #endregion
 
