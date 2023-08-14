@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
+using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ public class ContactEmailProfile : Profile
     public ContactEmailProfile()
     {
         CreateMap<ContactEmailDto, ContactEmail>().ReverseMap();
+        CreateMap<ContactEmail, ContactEmailDetailsDto>();
     }
     #endregion
 
