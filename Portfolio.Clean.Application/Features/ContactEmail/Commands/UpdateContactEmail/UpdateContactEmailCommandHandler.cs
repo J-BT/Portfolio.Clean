@@ -32,6 +32,7 @@ public class DeleteContactEmailCommandHandler : IRequestHandler<DeleteContactEma
     {
         //Validate incoming data
 
+
         //Convert to domain entity object
         var contactEmailToUpdate = _mapper.Map<Domain.ContactEmail>(request);
 

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Portfolio.Clean.Application.Contracts.Persistence;
+using Portfolio.Clean.Application.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,10 @@ public class GetContactEmailDetailsQueryHandler : IRequestHandler<GetContactEmai
     {
         //Query the database
         var contactEmail = await _contactEmailRepository.GetAsyncById(request.Id);
+
+        //Verify that record exists
+        if (contactEmail == null)
+            throw new NotFoundException(nameof(ContactEmail), request.Id);
 
         //Convert data object to DTO object
         var data = _mapper.Map<ContactEmailDetailsDto>(contactEmail);

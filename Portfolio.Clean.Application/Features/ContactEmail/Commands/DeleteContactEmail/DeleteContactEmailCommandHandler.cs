@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Portfolio.Clean.Application.Contracts.Persistence;
+using Portfolio.Clean.Application.Exceptions;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,10 @@ public class DeleteContactEmailCommandHandler : IRequestHandler<DeleteContactEma
         //Retrieve domain entity object
         var contactEmailToDelete = await _contactEmailRepository.GetAsyncById(request.Id);
 
-        //Validate incoming data
-
+        //Verify that record exists
+        if(contactEmailToDelete == null) 
+            throw new NotFoundException(nameof(ContactEmail), request.Id);
+       
         //Remove to database
         await _contactEmailRepository.DeleteAsync(contactEmailToDelete);
 
