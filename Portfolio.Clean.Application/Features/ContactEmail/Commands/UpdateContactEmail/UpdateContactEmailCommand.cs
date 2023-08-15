@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
+namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.UpdateContactEmail;
 
-public class UpdateContactEmailCommand : IRequest<int>
+public class DeleteContactEmailCommand : IRequest<Unit> // Unit == void
 {
 
     #region Attributes & Accessors

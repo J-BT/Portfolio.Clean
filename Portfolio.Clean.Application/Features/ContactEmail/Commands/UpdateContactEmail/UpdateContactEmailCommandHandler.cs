@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
+namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.UpdateContactEmail;
 
-public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEmailCommand, int>
+public class DeleteContactEmailCommandHandler : IRequestHandler<DeleteContactEmailCommand, Unit>
 {
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
@@ -20,7 +20,7 @@ public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEma
     #endregion
 
     #region Constructors
-    public UpdateContactEmailCommandHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public DeleteContactEmailCommandHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
     {
         _mapper = mapper;
         _contactEmailRepository = contactEmailRepository;
@@ -28,18 +28,18 @@ public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEma
     #endregion
 
     #region Methods
-    public async Task<int> Handle(UpdateContactEmailCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(DeleteContactEmailCommand request, CancellationToken cancellationToken)
     {
         //Validate incoming data
 
         //Convert to domain entity object
-        var contactEmailToCreate = _mapper.Map<Domain.ContactEmail>(request);
+        var contactEmailToUpdate = _mapper.Map<Domain.ContactEmail>(request);
 
-        //Add to database
-        await _contactEmailRepository.CreateAsync(contactEmailToCreate);
+        //Update database
+        await _contactEmailRepository.UpdateAsync(contactEmailToUpdate);
 
-        //Return record id
-        return contactEmailToCreate.Id;
+        //Return Unit Value (== void)
+        return Unit.Value;
     }
     #endregion
 
