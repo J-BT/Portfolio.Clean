@@ -22,6 +22,7 @@ public class ContactEmailProfile : Profile
     {
         CreateMap<ContactEmailDto, ContactEmail>().ReverseMap();
         CreateMap<ContactEmail, ContactEmailDetailsDto>();
+        //CreateMap<>(PCLog, LogDto).ReverseMap();
     }
     #endregion
 

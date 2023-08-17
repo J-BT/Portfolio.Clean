@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Domain;
 
-public class Log : BaseEntity
+public class PCLog : BaseEntity
 {
     #region Attributes & Accessors
 
-    public string LogContent { get; set; } = string.Empty;
+    public string PCLogContent { get; set; } = string.Empty;
 
     #endregion
 
