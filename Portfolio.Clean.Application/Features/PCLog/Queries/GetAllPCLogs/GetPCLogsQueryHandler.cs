@@ -7,34 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
+namespace Portfolio.Clean.Application.Features.PCLog.Queries.GetAllPCLogs;
 
 public class GetPCLogsQueryHandler : IRequestHandler<GetPCLogsQuery,
-    List<ContactEmailDto>>
+    List<PCLogDto>>
 {
     private readonly IMapper _mapper;
-    private readonly IContactEmailRepository _contactEmailRepository;
+    private readonly IPCLogRepository _pCLogRepository;
+
 
     #region Attributes & Accessors
 
     #endregion
 
     #region Constructors
-    public GetPCLogsQueryHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public GetPCLogsQueryHandler(IMapper mapper, IPCLogRepository pCLogRepository)
     {
         _mapper = mapper;
-        _contactEmailRepository = contactEmailRepository;
+        _pCLogRepository = pCLogRepository;
     }
     #endregion
 
     #region Methods
-    public async Task<List<ContactEmailDto>> Handle(GetPCLogsQuery request, CancellationToken cancellationToken)
+    public async Task<List<PCLogDto>> Handle(GetPCLogsQuery request, CancellationToken cancellationToken)
     {
         //Query the database
-        var contactEmails = await _contactEmailRepository.GetAsync();
+        var pCLogs = await _pCLogRepository.GetAsync();
 
         //Convert data objects to DTO objects
-        var data = _mapper.Map<List<ContactEmailDto>>(contactEmails);
+        var data = _mapper.Map<List<PCLogDto>>(pCLogs);
 
         //Return list of Dto objects
         return data;
