@@ -4,16 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
+namespace Portfolio.Clean.Application.Features.PCLogs.Queries.GetPCLogDetails;
 
 public class PCLogDetailsDto
 {
     #region Attributes & Accessors
     public int Id { get; set; }
-    public string ContactEmailObject { get; set; } = string.Empty;
-    public string ContactEmailContent { get; set; } = string.Empty;
-    public string ContactEmailSender { get; set; } = string.Empty;
-    public bool ContactEmailIsSent { get; set; }
+    public string PCLogContent { get; set; } = string.Empty;
     public DateTime? CreationDate { get; set; }
     public DateTime? LastUpdate { get; set; }
 

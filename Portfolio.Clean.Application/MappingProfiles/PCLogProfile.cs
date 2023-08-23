@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.MappingProfiles;
 
-public class ContactEmailProfile : Profile
+public class PCLogProfile : Profile
 {
 
     #region Attributes & Accessors
@@ -19,10 +19,10 @@ public class ContactEmailProfile : Profile
     #endregion
 
     #region Constructors
-    public ContactEmailProfile()
+    public PCLogProfile()
     {
-        CreateMap<ContactEmailDto, ContactEmail>().ReverseMap();
-        CreateMap<ContactEmail, PCLogDetailsDto>();
+        CreateMap<PCLogDto, PCLog>().ReverseMap();
+        CreateMap<PCLog, PCLogDetailsDto>();
     }
     #endregion
 

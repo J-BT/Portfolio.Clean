@@ -5,6 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
+namespace Portfolio.Clean.Application.Features.PCLogs.Queries.GetPCLogDetails;
 
 public record GetPCLogDetailsQuery(int Id) : IRequest<PCLogDetailsDto>;

@@ -8,36 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
+namespace Portfolio.Clean.Application.Features.PCLogs.Queries.GetPCLogDetails;
 
 public class GetPCLogDetailsQueryHandler : IRequestHandler<GetPCLogDetailsQuery,
     PCLogDetailsDto>
 {
     private readonly IMapper _mapper;
-    private readonly IContactEmailRepository _contactEmailRepository;
+    private readonly IPCLogRepository _pCLogRepository;
 
     #region Attributes & Accessors
 
     #endregion
 
     #region Constructors
-    public GetPCLogDetailsQueryHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public GetPCLogDetailsQueryHandler(IMapper mapper, IPCLogRepository pCLogRepository)
     {
         _mapper = mapper;
-        _contactEmailRepository = contactEmailRepository;
+        _pCLogRepository = pCLogRepository;
     }
 
     public async Task<PCLogDetailsDto> Handle(GetPCLogDetailsQuery request, CancellationToken cancellationToken)
     {
         //Query the database
-        var contactEmail = await _contactEmailRepository.GetAsyncById(request.Id);
+        var log = await _pCLogRepository.GetAsyncById(request.Id);
 
         //Verify that record exists
-        if (contactEmail == null)
-            throw new NotFoundException(nameof(ContactEmail), request.Id);
+        if (log == null)
+            throw new NotFoundException(nameof(PCLog), request.Id);
 
         //Convert data object to DTO object
-        var data = _mapper.Map<PCLogDetailsDto>(contactEmail);
+        var data = _mapper.Map<PCLogDetailsDto>(log);
 
         //Return DTO object
         return data;
