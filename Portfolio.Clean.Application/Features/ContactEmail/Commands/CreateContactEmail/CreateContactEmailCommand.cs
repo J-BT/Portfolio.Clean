@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
 
-public class UpdateContactEmailCommand : IRequest<int>
+public class CreateContactEmailCommand : IRequest<int>
 {
 
     #region Attributes & Accessors

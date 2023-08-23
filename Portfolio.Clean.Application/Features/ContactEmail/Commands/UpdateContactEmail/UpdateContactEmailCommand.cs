@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.UpdateContactEmail;
 
-public class DeleteContactEmailCommand : IRequest<Unit> // Unit == void
+public class UpdateContactEmailCommand : IRequest<Unit> // Unit == void
 {
 
     #region Attributes & Accessors

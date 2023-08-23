@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
 
-public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEmailCommand, int>
+public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEmailCommand, int>
 {
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
@@ -20,7 +20,7 @@ public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEma
     #endregion
 
     #region Constructors
-    public UpdateContactEmailCommandHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public CreateContactEmailCommandHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
     {
         _mapper = mapper;
         _contactEmailRepository = contactEmailRepository;
@@ -28,7 +28,7 @@ public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEma
     #endregion
 
     #region Methods
-    public async Task<int> Handle(UpdateContactEmailCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(CreateContactEmailCommand request, CancellationToken cancellationToken)
     {
         //Validate incoming data
 
