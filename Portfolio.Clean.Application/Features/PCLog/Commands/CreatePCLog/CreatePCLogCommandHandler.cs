@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using MediatR;
 using Portfolio.Clean.Application.Contracts.Persistence;
+using Portfolio.Clean.Application.Exceptions;
+using Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +30,11 @@ public class CreatePCLogCommandHandler : IRequestHandler<CreatePCLogCommand, int
     public async Task<int> Handle(CreatePCLogCommand request, CancellationToken cancellationToken)
     {
         //Validate incoming data
+        var validator = new CreatePCLogCommandValidator();
+        var validationResult = await validator.ValidateAsync(request);
+
+        if (validationResult.Errors.Any())
+            throw new BadRequestException("Invalid PCLog", validationResult);
 
         //Convert to domain entity object
         var PcLogToCreate = _mapper.Map<Domain.PCLog>(request);
