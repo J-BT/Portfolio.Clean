@@ -13,9 +13,9 @@ namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.DeleteConta
 
 public class DeleteContactEmailCommandHandler : IRequestHandler<DeleteContactEmailCommand, Unit>
 {
-    private readonly IContactEmailRepository _contactEmailRepository;
-
     #region Attributes & Accessors
+
+    private readonly IContactEmailRepository _contactEmailRepository;
 
     #endregion
 

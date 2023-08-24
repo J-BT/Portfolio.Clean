@@ -12,10 +12,10 @@ namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateConta
 
 public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEmailCommand, int>
 {
+    #region Attributes & Accessors
+
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
-
-    #region Attributes & Accessors
 
     #endregion
 

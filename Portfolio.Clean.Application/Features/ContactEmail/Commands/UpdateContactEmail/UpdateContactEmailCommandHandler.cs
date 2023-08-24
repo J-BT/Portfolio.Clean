@@ -12,10 +12,10 @@ namespace Portfolio.Clean.Application.Features.ContactEmail.Commands.UpdateConta
 
 public class UpdateContactEmailCommandHandler : IRequestHandler<UpdateContactEmailCommand, Unit>
 {
+    #region Attributes & Accessors
+
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
-
-    #region Attributes & Accessors
 
     #endregion
 
