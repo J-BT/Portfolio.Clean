@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Portfolio.Clean.Application.Contracts.Persistence;
+using Portfolio.Clean.Application.Exceptions;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,11 @@ public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEma
     public async Task<int> Handle(CreateContactEmailCommand request, CancellationToken cancellationToken)
     {
         //Validate incoming data
+        var validator = new CreateContactEmailCommandValidator();
+        var validationResult = await validator.ValidateAsync(request);
+
+        if (validationResult.Errors.Any())
+            throw new BadRequestException("Invalid ContactEmail", validationResult);
 
         //Convert to domain entity object
         var contactEmailToCreate = _mapper.Map<Domain.ContactEmail>(request);

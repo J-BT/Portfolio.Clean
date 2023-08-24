@@ -1,22 +1,33 @@
-﻿namespace Portfolio.Clean.Application.Exceptions
+﻿using FluentValidation.Results;
+
+namespace Portfolio.Clean.Application.Exceptions;
+
+public class BadRequestException : Exception
 {
-    public class BadRequestException : Exception
+
+    #region Attributes & Accessors
+    public List<string> ValidationErrors { get; set; }
+    #endregion
+
+    #region Constructors
+    public BadRequestException(string message) 
+        : base(message)
     {
 
-        #region Attributes & Accessors
-
-        #endregion
-
-        #region Constructors
-        public BadRequestException(string message)
-            : base(message)
-        {
-
-        }
-        #endregion
-
-        #region Methods
-
-        #endregion
     }
+
+    public BadRequestException(string message, ValidationResult validationResult) 
+        : base(message)
+    {
+        ValidationErrors = new();
+        foreach(var error in validationResult.Errors)
+        {
+            ValidationErrors.Add(error.ErrorMessage);
+        }
+    }
+    #endregion
+
+    #region Methods
+
+    #endregion
 }
