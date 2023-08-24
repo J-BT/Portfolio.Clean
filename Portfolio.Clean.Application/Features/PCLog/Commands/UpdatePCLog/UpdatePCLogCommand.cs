@@ -11,6 +11,7 @@ public class UpdatePCLogCommand : IRequest<Unit>
 {
 
     #region Attributes & Accessors
+    public int Id { get; set; }
     public string PCLogContent { get; set; } = string.Empty;
     public DateTime? CreationDate { get; set; }
     public DateTime? LastUpdate { get; set; }

@@ -11,6 +11,7 @@ public class UpdateContactEmailCommand : IRequest<Unit> // Unit == void
 {
 
     #region Attributes & Accessors
+    public int Id { get; set; }
     public string ContactEmailObject { get; set; } = string.Empty;
     public string ContactEmailContent { get; set; } = string.Empty;
     public string ContactEmailSender { get; set; } = string.Empty;
