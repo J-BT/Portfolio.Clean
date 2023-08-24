@@ -13,10 +13,11 @@ namespace Portfolio.Clean.Application.Features.PCLogs.Queries.GetPCLogDetails;
 public class GetPCLogDetailsQueryHandler : IRequestHandler<GetPCLogDetailsQuery,
     PCLogDetailsDto>
 {
-    private readonly IMapper _mapper;
-    private readonly IPCLogRepository _pCLogRepository;
 
     #region Attributes & Accessors
+
+    private readonly IMapper _mapper;
+    private readonly IPCLogRepository _pCLogRepository;
 
     #endregion
 
@@ -26,6 +27,10 @@ public class GetPCLogDetailsQueryHandler : IRequestHandler<GetPCLogDetailsQuery,
         _mapper = mapper;
         _pCLogRepository = pCLogRepository;
     }
+
+    #endregion
+
+    #region Methods
 
     public async Task<PCLogDetailsDto> Handle(GetPCLogDetailsQuery request, CancellationToken cancellationToken)
     {
@@ -42,9 +47,6 @@ public class GetPCLogDetailsQueryHandler : IRequestHandler<GetPCLogDetailsQuery,
         //Return DTO object
         return data;
     }
-    #endregion
-
-    #region Methods
 
     #endregion
 }

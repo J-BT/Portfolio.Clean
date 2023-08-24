@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 
-public class PCLogDetailsDto
+public class ContactEmailDetailsDto
 {
     #region Attributes & Accessors
     public int Id { get; set; }

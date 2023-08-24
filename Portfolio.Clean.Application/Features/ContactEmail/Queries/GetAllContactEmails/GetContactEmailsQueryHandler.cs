@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
 
-public class GetPCLogsQueryHandler : IRequestHandler<GetPCLogsQuery,
+public class GetContactEmailsQueryHandler : IRequestHandler<GetContactEmailsQuery,
     List<ContactEmailDto>>
 {
+    #region Attributes & Accessors
+
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
-
-    #region Attributes & Accessors
 
     #endregion
 
     #region Constructors
-    public GetPCLogsQueryHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public GetContactEmailsQueryHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
     {
         _mapper = mapper;
         _contactEmailRepository = contactEmailRepository;
@@ -28,7 +28,7 @@ public class GetPCLogsQueryHandler : IRequestHandler<GetPCLogsQuery,
     #endregion
 
     #region Methods
-    public async Task<List<ContactEmailDto>> Handle(GetPCLogsQuery request, CancellationToken cancellationToken)
+    public async Task<List<ContactEmailDto>> Handle(GetContactEmailsQuery request, CancellationToken cancellationToken)
     {
         //Query the database
         var contactEmails = await _contactEmailRepository.GetAsync();

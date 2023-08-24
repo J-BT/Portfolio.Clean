@@ -7,4 +7,4 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 
-public record GetPCLogDetailsQuery(int Id) : IRequest<PCLogDetailsDto>;
+public record GetContactEmailDetailsQuery(int Id) : IRequest<ContactEmailDetailsDto>;

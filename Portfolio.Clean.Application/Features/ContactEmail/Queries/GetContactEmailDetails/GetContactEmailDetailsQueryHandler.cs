@@ -10,24 +10,27 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 
-public class GetPCLogDetailsQueryHandler : IRequestHandler<GetPCLogDetailsQuery,
-    PCLogDetailsDto>
+public class GetContactEmailDetailsQueryHandler : IRequestHandler<GetContactEmailDetailsQuery,
+    ContactEmailDetailsDto>
 {
+    #region Attributes & Accessors
+
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
-
-    #region Attributes & Accessors
 
     #endregion
 
     #region Constructors
-    public GetPCLogDetailsQueryHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public GetContactEmailDetailsQueryHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
     {
         _mapper = mapper;
         _contactEmailRepository = contactEmailRepository;
     }
 
-    public async Task<PCLogDetailsDto> Handle(GetPCLogDetailsQuery request, CancellationToken cancellationToken)
+    #endregion
+
+    #region Methods
+    public async Task<ContactEmailDetailsDto> Handle(GetContactEmailDetailsQuery request, CancellationToken cancellationToken)
     {
         //Query the database
         var contactEmail = await _contactEmailRepository.GetAsyncById(request.Id);
@@ -37,14 +40,10 @@ public class GetPCLogDetailsQueryHandler : IRequestHandler<GetPCLogDetailsQuery,
             throw new NotFoundException(nameof(ContactEmail), request.Id);
 
         //Convert data object to DTO object
-        var data = _mapper.Map<PCLogDetailsDto>(contactEmail);
+        var data = _mapper.Map<ContactEmailDetailsDto>(contactEmail);
 
         //Return DTO object
         return data;
     }
-    #endregion
-
-    #region Methods
-
     #endregion
 }

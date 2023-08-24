@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
-using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 using Portfolio.Clean.Application.Features.PCLog.Queries.GetAllPCLogs;
+using Portfolio.Clean.Application.Features.PCLogs.Queries.GetPCLogDetails;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;

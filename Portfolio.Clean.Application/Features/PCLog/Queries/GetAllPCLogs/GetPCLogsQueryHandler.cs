@@ -12,11 +12,10 @@ namespace Portfolio.Clean.Application.Features.PCLog.Queries.GetAllPCLogs;
 public class GetPCLogsQueryHandler : IRequestHandler<GetPCLogsQuery,
     List<PCLogDto>>
 {
+    #region Attributes & Accessors
+
     private readonly IMapper _mapper;
     private readonly IPCLogRepository _pCLogRepository;
-
-
-    #region Attributes & Accessors
 
     #endregion
 
