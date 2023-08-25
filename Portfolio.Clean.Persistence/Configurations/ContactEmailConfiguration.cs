@@ -21,11 +21,9 @@ public class ContactEmailConfiguration : IEntityTypeConfiguration<ContactEmail>
     #endregion
 
     #region Methods
-
-    #endregion
     public void Configure(EntityTypeBuilder<ContactEmail> builder)
     {
-        builder.HasData( 
+        builder.HasData(
             new ContactEmail
             {
                 Id = 1,
@@ -38,4 +36,6 @@ public class ContactEmailConfiguration : IEntityTypeConfiguration<ContactEmail>
             }
         );
     }
+    #endregion
+
 }

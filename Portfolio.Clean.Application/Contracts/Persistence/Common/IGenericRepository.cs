@@ -9,10 +9,10 @@ namespace Portfolio.Clean.Application.Contracts.Persistence.Common;
 public interface IGenericRepository<T>
     where T : class
 {
-    Task<List<T>> GetAsync();
+    Task<IReadOnlyList<T>> GetAsync();
     Task<T> GetAsyncById(int id);
-    Task<T> CreateAsync(T entity);
-    Task<T> UpdateAsync(T entity);
+    Task CreateAsync(T entity);
+    Task UpdateAsync(T entity);
     Task DeleteAsync(T entity);
 
 }

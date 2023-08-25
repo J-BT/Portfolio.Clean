@@ -5,5 +5,5 @@ namespace Portfolio.Clean.Application.Contracts.Persistence;
 
 public interface ITechnologyRepository : IGenericRepository<Technology>
 {
-
+    Task<bool> IsTechnologyUnique(string name);
 }

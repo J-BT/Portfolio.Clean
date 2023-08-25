@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Portfolio.Clean.Application.Contracts.Persistence;
+using Portfolio.Clean.Application.Contracts.Persistence.Common;
 using Portfolio.Clean.Persistence.DatabaseContext;
+using Portfolio.Clean.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +32,13 @@ public static class PersistenceServiceRegistration
         {
             options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
         });
+
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped<IContactEmailRepository, ContactEmailRepository>();
+        services.AddScoped<IPCLogRepository, PCLogRepository>();
+        services.AddScoped<ITechnologyRepository, TechnologyRepository>();
+        services.AddScoped<IProjectRepository, ProjectRepository>();
+
 
         return services;
     }
