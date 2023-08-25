@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Portfolio.Clean.Persistence.DatabaseContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +22,14 @@ public static class PersistenceServiceRegistration
     #endregion
 
     #region Methods
-    public static IServiceCollection AddPersistenceServices(this IServiceCollection services)
+    public static IServiceCollection AddPersistenceServices(this IServiceCollection services,
+        IConfiguration configuration)
     {
+        services.AddDbContext<PortfolioDatabaseContext>(options =>
+        {
+            options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
+        });
+
         return services;
     }
     #endregion
