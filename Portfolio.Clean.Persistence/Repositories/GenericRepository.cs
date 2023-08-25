@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Portfolio.Clean.Application.Contracts.Persistence.Common;
+using Portfolio.Clean.Domain.Common;
 using Portfolio.Clean.Persistence.DatabaseContext;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace Portfolio.Clean.Persistence.Repositories;
 
 public class GenericRepository<T> : IGenericRepository<T> 
-    where T : class
+    where T : BaseEntity
 {
 
     #region Attributes & Accessors
@@ -40,12 +41,14 @@ public class GenericRepository<T> : IGenericRepository<T>
 
     public async Task<IReadOnlyList<T>> GetAsync()
     {
-        return await _context.Set<T>().ToListAsync();
+        return await _context.Set<T>().AsNoTracking().ToListAsync();
     }
 
     public async Task<T> GetAsyncById(int id)
     {
-        return await _context.Set<T>().FindAsync(id);
+        return await _context.Set<T>()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(q => q.Id == id);
     }
 
     public async Task UpdateAsync(T entity)
