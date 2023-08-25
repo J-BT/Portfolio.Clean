@@ -30,7 +30,7 @@ public class PortfolioDatabaseContext : DbContext
     #region Methods
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //Apply all the configurations located into Configurations folder 
+        //Apply all the configurations located into Configurations folder via IEntityTypeConfiguration
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PortfolioDatabaseContext).Assembly);
 
         base.OnModelCreating(modelBuilder);
