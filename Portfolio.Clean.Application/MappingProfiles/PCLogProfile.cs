@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Portfolio.Clean.Application.Features.PCLog.Commands.CreatePCLog;
+using Portfolio.Clean.Application.Features.PCLog.Commands.UpdatePCLog;
 using Portfolio.Clean.Application.Features.PCLog.Queries.GetAllPCLogs;
-using Portfolio.Clean.Application.Features.PCLogs.Queries.GetPCLogDetails;
+using Portfolio.Clean.Application.Features.PCLog.Queries.GetPCLogDetails;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
@@ -20,8 +22,10 @@ public class PCLogProfile : Profile
     #region Constructors
     public PCLogProfile()
     {
-        CreateMap<PCLogDto, PCLog>().ReverseMap();
-        CreateMap<PCLog, PCLogDetailsDto>();
+        CreateMap<PCLog, PCLogDto>().ReverseMap();
+        CreateMap<PCLog, PCLogDetailsDto>().ReverseMap();
+        CreateMap<CreatePCLogCommand, PCLog>();
+        CreateMap<UpdatePCLogCommand, PCLog>();
     }
     #endregion
 

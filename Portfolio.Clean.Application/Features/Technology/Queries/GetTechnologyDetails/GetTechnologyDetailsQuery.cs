@@ -1,18 +1,17 @@
-﻿using Portfolio.Clean.Domain.Common;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portfolio.Clean.Domain;
+namespace Portfolio.Clean.Application.Features.Technology.Queries.GetTechnologyDetails;
 
-public class Technology : BaseEntity
+public class GetTechnologyDetailsQuery : IRequest<TechnologyDetailsDto>
 {
+
     #region Attributes & Accessors
-    public int Id { get; set; }
     public string TechnoName { get; set; } = string.Empty;
-    public byte[]? TechnoImg { get; set; }
 
     #endregion
 
