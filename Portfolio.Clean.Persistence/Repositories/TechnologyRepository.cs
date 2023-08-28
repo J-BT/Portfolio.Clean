@@ -31,6 +31,7 @@ public class TechnologyRepository : GenericRepository<Technology>, ITechnologyRe
         var technology = await _context.Technologies
             .FirstOrDefaultAsync(q => q.TechnoName == technoName);
 
+        //return technology == null ? new Technology() : technology;
         return technology;
     }
     #endregion

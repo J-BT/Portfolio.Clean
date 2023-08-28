@@ -15,7 +15,6 @@ public class UpdateContactEmailCommand : IRequest<Unit> // Unit == void
     public string ContactEmailObject { get; set; } = string.Empty;
     public string ContactEmailContent { get; set; } = string.Empty;
     public string ContactEmailSender { get; set; } = string.Empty;
-    public bool ContactEmailIsSent { get; set; }
     public DateTime? CreationDate { get; set; }
     public DateTime? LastUpdate { get; set; }
     #endregion
