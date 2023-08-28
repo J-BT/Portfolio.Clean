@@ -14,7 +14,6 @@ public class ContactEmail : BaseEntity
     public string ContactEmailObject { get; set; } = string.Empty;
     public string ContactEmailContent { get; set; } = string.Empty;
     public string ContactEmailSender { get; set; } = string.Empty;
-    public bool ContactEmailIsSent { get; set; }
 
     #endregion
 

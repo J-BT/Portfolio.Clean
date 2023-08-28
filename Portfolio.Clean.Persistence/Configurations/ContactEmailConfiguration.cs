@@ -30,7 +30,6 @@ public class ContactEmailConfiguration : IEntityTypeConfiguration<ContactEmail>
                 ContactEmailContent = "This first ContactEmail is a test for db initialization",
                 ContactEmailObject = "Initialization test",
                 ContactEmailSender = "Configuration",
-                ContactEmailIsSent = false,
                 LastUpdate = DateTime.Now,
                 CreationDate = DateTime.Now
             }

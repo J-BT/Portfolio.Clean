@@ -16,6 +16,7 @@ public class ContactEmailRepository : GenericRepository<ContactEmail>, IContactE
         : base(context)
     {
     }
+
     #endregion
 
     #region Methods

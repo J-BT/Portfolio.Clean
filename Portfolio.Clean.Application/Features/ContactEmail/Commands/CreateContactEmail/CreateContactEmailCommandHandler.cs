@@ -41,6 +41,9 @@ public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEma
         //Convert to domain entity object
         var contactEmailToCreate = _mapper.Map<Domain.ContactEmail>(request);
 
+        //Send Email
+
+
         //Add to database
         await _contactEmailRepository.CreateAsync(contactEmailToCreate);
 
