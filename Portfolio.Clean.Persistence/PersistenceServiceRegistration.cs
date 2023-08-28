@@ -30,6 +30,7 @@ public static class PersistenceServiceRegistration
     {
         services.AddDbContext<PortfolioDatabaseContext>(options =>
         {
+            //[---------------Use user secret instead----------------- ]
             options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
         });
 
