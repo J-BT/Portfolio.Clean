@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Technology\Commands\" />
+    <Folder Include="Features\Technology\Commands\CreateTechnology\" />
   </ItemGroup>
 
 </Project>
