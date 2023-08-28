@@ -25,6 +25,14 @@ public class TechnologyRepository : GenericRepository<Technology>, ITechnologyRe
     {
         return await _context.Technologies.AnyAsync(q => q.TechnoName == name);
     }
+
+    public async Task<Technology> GetTechnologyWithDetails(string technoName)
+    {
+        var technology = await _context.Technologies
+            .FirstOrDefaultAsync(q => q.TechnoName == technoName);
+
+        return technology;
+    }
     #endregion
 
 }
