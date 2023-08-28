@@ -23,7 +23,7 @@ public class ProjectConfiguration : IEntityTypeConfiguration<Project>
             {
                 Id = 1, 
                 ProjectName = "This first Project is a test for db initialization",
-                TechnologyId = 1,
+                ProjectTechnologiesList = "C#,Blazor",
                 LastUpdate = DateTime.Now,
                 CreationDate = DateTime.Now
             }

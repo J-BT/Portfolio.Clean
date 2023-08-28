@@ -14,7 +14,7 @@ public class Project : BaseEntity
     //public string ProjectTitle { get; set; } = string.Empty; //XML
     //public string ProjectDescription { get; set; } = string.Empty; //XML
     public Technology? ProjectTechnologies { get; set; } = new();
-    public int TechnologyId { get; set; }
+    public string ProjectTechnologiesList { get; set; } = string.Empty;
     public byte[]? ProjectScreenshots { get; set; }
     public string? ProjectUrl { get; set; }
     public string? ProjectVideo { get; set; }
