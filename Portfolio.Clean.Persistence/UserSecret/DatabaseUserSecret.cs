@@ -10,6 +10,7 @@ public class DatabaseUserSecret
 {
 
     #region Attributes & Accessors
+
     public static string SectionName = "Database";
     public string HostName { get; set; } = string.Empty;
     public string HostPort { get; set; } = string.Empty;

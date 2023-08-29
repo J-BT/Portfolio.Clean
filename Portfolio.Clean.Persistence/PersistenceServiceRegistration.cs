@@ -19,8 +19,8 @@ public static class PersistenceServiceRegistration
 {
 
     #region Attributes & Accessors
-    private static string ConnectionString { get; set; }
-    public static DatabaseUserSecret DbConfig { get; set; }
+    private static string ConnectionString { get; set; } = string.Empty;
+    public static DatabaseUserSecret DbConfig { get; set; } = new();
     #endregion
 
     #region Constructors
