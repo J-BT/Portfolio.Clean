@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Portfolio.Clean.Application.Contracts.Persistence;
 using Portfolio.Clean.Application.Contracts.Persistence.Common;
 using Portfolio.Clean.Persistence.DatabaseContext;
 using Portfolio.Clean.Persistence.Repositories;
+using Portfolio.Clean.Persistence.UserSecret;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,8 @@ public static class PersistenceServiceRegistration
 {
 
     #region Attributes & Accessors
-
+    private static string ConnectionString { get; set; }
+    public static DatabaseUserSecret DbConfig { get; set; }
     #endregion
 
     #region Constructors
@@ -26,12 +29,17 @@ public static class PersistenceServiceRegistration
 
     #region Methods
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration, IOptions<DatabaseUserSecret> databaseUserSecret)
     {
+        DbConfig = databaseUserSecret.Value; //Getting Usersecret infos
+
+        ConnectionString =$@"Server={DbConfig.HostName}; Database={DbConfig.DatabaseName}; Trusted_Connection=True;
+        Integrated security=false; Encrypt=False; User ID={DbConfig.UserName}; Password={DbConfig.UserPassword};";
+
         services.AddDbContext<PortfolioDatabaseContext>(options =>
         {
-            //[---------------Use user secret instead----------------- ]
-            options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
+            //options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
+            options.UseSqlServer(ConnectionString);
         });
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
