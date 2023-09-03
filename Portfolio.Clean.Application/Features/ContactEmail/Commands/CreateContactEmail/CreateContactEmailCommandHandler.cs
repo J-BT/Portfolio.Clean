@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
+using Portfolio.Clean.Application.Contracts.Email;
 using Portfolio.Clean.Application.Contracts.Persistence;
 using Portfolio.Clean.Application.Exceptions;
+using Portfolio.Clean.Application.Models.Email;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
@@ -17,14 +19,17 @@ public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEma
 
     private readonly IMapper _mapper;
     private readonly IContactEmailRepository _contactEmailRepository;
+    private readonly IEmailSender _emailSender;
 
     #endregion
 
     #region Constructors
-    public CreateContactEmailCommandHandler(IMapper mapper, IContactEmailRepository contactEmailRepository)
+    public CreateContactEmailCommandHandler(IMapper mapper, IContactEmailRepository contactEmailRepository,
+        IEmailSender emailSender)
     {
         _mapper = mapper;
         _contactEmailRepository = contactEmailRepository;
+        _emailSender = emailSender;
     }
     #endregion
 
@@ -42,6 +47,22 @@ public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEma
         var contactEmailToCreate = _mapper.Map<Domain.ContactEmail>(request);
 
         //Send Email
+        try
+        {
+            var email = new EmailMessage
+            {
+                To = string.Empty, /* Get email from user secret */
+                Body = $"The following user '{request.ContactEmailSender}' sent the following message :" +
+                $"\n{request.ContactEmailContent}",
+                Subject = request.ContactEmailObject
+            };
+
+            await _emailSender.SendEmail(email);
+        }
+        catch (Exception)
+        {
+            //// Log or handle error,
+        }
 
 
         //Add to database
