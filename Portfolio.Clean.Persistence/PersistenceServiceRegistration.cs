@@ -6,7 +6,6 @@ using Portfolio.Clean.Application.Contracts.Persistence;
 using Portfolio.Clean.Application.Contracts.Persistence.Common;
 using Portfolio.Clean.Persistence.DatabaseContext;
 using Portfolio.Clean.Persistence.Repositories;
-using Portfolio.Clean.Persistence.UserSecret;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +18,7 @@ public static class PersistenceServiceRegistration
 {
 
     #region Attributes & Accessors
-    private static string ConnectionString { get; set; } = string.Empty;
-    public static DatabaseUserSecret DbConfig { get; set; } = new();
+
     #endregion
 
     #region Constructors
@@ -29,17 +27,12 @@ public static class PersistenceServiceRegistration
 
     #region Methods
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services,
-        IConfiguration configuration, IOptions<DatabaseUserSecret> databaseUserSecret)
+        IConfiguration configuration)
     {
-        DbConfig = databaseUserSecret.Value; //Getting Usersecret infos
-
-        ConnectionString =$@"Server={DbConfig.HostName}; Database={DbConfig.DatabaseName}; Trusted_Connection=True;
-        Integrated security=false; Encrypt=False; User ID={DbConfig.UserName}; Password={DbConfig.UserPassword};";
 
         services.AddDbContext<PortfolioDatabaseContext>(options =>
         {
-            //options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
-            options.UseSqlServer(ConnectionString);
+            options.UseSqlServer(configuration.GetConnectionString("PortfolioDatabaseConnectionString"));
         });
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
