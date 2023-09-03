@@ -16,7 +16,6 @@ public class PortfolioDatabaseContext : DbContext
     public DbSet<ContactEmail> ContactEmails { get; set; }
     public DbSet<PCLog> PCLogs { get; set; }
     public DbSet<Project> Projects { get; set; }
-    public DbSet<Technology> Technologies { get; set; }
     #endregion
 
     #region Constructors

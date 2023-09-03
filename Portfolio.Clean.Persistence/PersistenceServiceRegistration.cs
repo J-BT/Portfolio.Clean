@@ -38,7 +38,6 @@ public static class PersistenceServiceRegistration
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<IContactEmailRepository, ContactEmailRepository>();
         services.AddScoped<IPCLogRepository, PCLogRepository>();
-        services.AddScoped<ITechnologyRepository, TechnologyRepository>();
         services.AddScoped<IProjectRepository, ProjectRepository>();
 
 

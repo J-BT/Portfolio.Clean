@@ -29,7 +29,6 @@ public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     public async Task<List<Project>> GetAllProjects()
     {
         var projects = await _context.Projects
-            .Include(q => q.Technologies) //FK
             .ToListAsync();
         return projects;
     }
@@ -37,8 +36,7 @@ public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     public async Task<List<Project>> GetProjectsWithDetails(string technology)
     {
         var projects = await _context.Projects
-            .Where(q => q.ProjectTechnologiesList.Contains(technology))
-            .Include(q => q.Technologies)
+            .Where(q => q.ProjectTechnologies.Contains(technology))
             .ToListAsync();
         return projects;
     }
@@ -46,7 +44,6 @@ public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     public async Task<Project> GetProjectWithDetails(string projectName)
     {
         var project = await _context.Projects
-            .Include(q => q.Technologies)
             .FirstOrDefaultAsync(q => q.ProjectName == projectName);
 
         return project;
