@@ -16,7 +16,7 @@ public static class InfrastructureServicesRegistration
 	#endregion
 
 	#region Methods
-	public static IServiceCollection ConfigureInfrastuctureServices(this IServiceCollection services,
+	public static IServiceCollection AddInfrastuctureServices(this IServiceCollection services,
 		IConfiguration configuration)
 	{
         //Email config here
