@@ -29,7 +29,7 @@ public class EmailSender : IEmailSender
     public async Task<bool> SendEmail(EmailMessage email)
     {
         var client = new SendGridClient(_emailSettings.ApiKey);
-        var to = new EmailAddress(email.To);
+        var to = new EmailAddress(_emailSettings.To);
         var from = new EmailAddress
         {
             Email = _emailSettings.FromAddress,

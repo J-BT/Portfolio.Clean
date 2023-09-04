@@ -54,7 +54,6 @@ public class CreateContactEmailCommandHandler : IRequestHandler<CreateContactEma
         {
             var email = new EmailMessage
             {
-                To = string.Empty, /* Get email from user secret */
                 Body = $"The following user '{request.ContactEmailSender}' sent the following message :" +
                 $"\n{request.ContactEmailContent}",
                 Subject = request.ContactEmailObject
