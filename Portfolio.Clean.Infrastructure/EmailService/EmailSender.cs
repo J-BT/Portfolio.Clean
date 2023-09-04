@@ -28,6 +28,7 @@ public class EmailSender : IEmailSender
     #region Methods
     public async Task<bool> SendEmail(EmailMessage email)
     {
+        //OK
         var client = new SendGridClient(_emailSettings.ApiKey);
         var to = new EmailAddress(_emailSettings.To);
         var from = new EmailAddress
