@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
 using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
 using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 
@@ -45,8 +46,13 @@ public class ContactEmailsController : ControllerBase
 
     // POST api/<ContactEmailsController>
     [HttpPost]
-    public void Post([FromBody] string value)
+    [ProducesResponseType(201)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult> Post(CreateContactEmailCommand contactEmail)
     {
+        var response = await _mediator.Send(contactEmail);
+        return CreatedAtAction(nameof(Get), new { id = response});
     }
 
     // PUT api/<ContactEmailsController>/5
