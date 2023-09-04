@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.Clean.Application.Features.ContactEmail.Commands.CreateContactEmail;
+using Portfolio.Clean.Application.Features.ContactEmail.Commands.DeleteContactEmail;
+using Portfolio.Clean.Application.Features.ContactEmail.Commands.UpdateContactEmail;
 using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetAllContactEmails;
 using Portfolio.Clean.Application.Features.ContactEmail.Queries.GetContactEmailDetails;
 
@@ -30,18 +32,18 @@ public class ContactEmailsController : ControllerBase
 
     // GET: api/<ContactEmailsController>
     [HttpGet]
-    public async Task<List<ContactEmailDto>> Get()
+    public async Task<ActionResult<List<ContactEmailDto>>> Get()
     {
         var contactEmails = await _mediator.Send(new GetContactEmailsQuery());
-        return contactEmails;
+        return Ok(contactEmails);
     }
 
     // GET api/<ContactEmailsController>/5
     [HttpGet("{id}")]
-    public async Task<ContactEmailDetailsDto> Get(int id)
+    public async Task<ActionResult<ContactEmailDetailsDto>> Get(int id)
     {
         var contactEmail = await _mediator.Send(new GetContactEmailDetailsQuery(id));
-        return contactEmail;
+        return Ok(contactEmail);
     }
 
     // POST api/<ContactEmailsController>
@@ -57,14 +59,26 @@ public class ContactEmailsController : ControllerBase
 
     // PUT api/<ContactEmailsController>/5
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesDefaultResponseType]
+    public async Task<ActionResult> Put(UpdateContactEmailCommand contactEmail)
     {
+        await _mediator.Send(contactEmail);
+        return NoContent();
     }
 
     // DELETE api/<ContactEmailsController>/5
     [HttpDelete("{id}")]
-    public void Delete(int id)
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesDefaultResponseType]
+    public async Task<ActionResult> Delete(int id)
     {
+        var contactEmailtoDelete = new DeleteContactEmailCommand { Id = id };
+        await _mediator.Send(contactEmailtoDelete);
+        return NoContent();
     }
     #endregion
 }
