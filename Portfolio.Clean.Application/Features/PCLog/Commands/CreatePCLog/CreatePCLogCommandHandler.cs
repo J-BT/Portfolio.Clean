@@ -27,6 +27,9 @@ public class CreatePCLogCommandHandler : IRequestHandler<CreatePCLogCommand, int
         _pCLogRepository = pCLogRepository;
     }
 
+    #endregion
+
+    #region Methods
     public async Task<int> Handle(CreatePCLogCommand request, CancellationToken cancellationToken)
     {
         //Validate incoming data
@@ -45,9 +48,5 @@ public class CreatePCLogCommandHandler : IRequestHandler<CreatePCLogCommand, int
         //Return record id
         return PcLogToCreate.Id;
     }
-    #endregion
-
-    #region Methods
-
     #endregion
 }
