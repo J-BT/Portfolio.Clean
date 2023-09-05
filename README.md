@@ -1,9 +1,8 @@
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+<h1 style="blue">Portfolio.Clean</h1>
+<img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" title=".NET" alt=".NET" width="40" height="40"/>&nbsp;
 </div>
-
-
-# Portfolio.Clean
+<!-- # Portfolio.Clean -->
 ### _Work in Progress_
 
 > **NOTE**
