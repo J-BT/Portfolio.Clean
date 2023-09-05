@@ -1,3 +1,4 @@
+using Portfolio.Clean.Api.Middleware;
 using Portfolio.Clean.Application;
 using Portfolio.Clean.Infrastructure;
 using Portfolio.Clean.Persistence;
@@ -24,6 +25,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
