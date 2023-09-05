@@ -19,6 +19,24 @@
 ```diff
 + # Libraries
 ``` -->
+## __Projects__
+| Project | Description |
+| --- | --- |
+> Core
+| `Portfolio.Clean.Domain` | -> Enterprise logic, like the entities and their specifications. |
+| `Portfolio.Clean.Application` | -> Business logic such as features, etc. |
+> Infrastructure
+| `Portfolio.Clean.Persistence` | -> Database migrations, database context, db repositories
+| `Portfolio.Clean.Infrastructure` | -> Emails, logging and other third-party services |
+> API
+| `Portfolio.Clean.Api` | -> The solution starts from the API. The others services are injected here |
+> Tests
+| `Portfolio.Clean.Application.UnitTests` | Comming soon |
+| `Portfolio.Clean.Application.IntegrationTests` | Comming soon |
+> User Interface
+| `Portfolio.Clean.BlazorUI` | Comming soon |
+
+
 
 ## __User secret__
 ```
