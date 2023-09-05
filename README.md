@@ -23,25 +23,17 @@
 **Core**
 | Project | Description |
 | --- | --- |
-| `Portfolio.Clean.Domain` | -> Enterprise logic, like the entities and their specifications. |
-| `Portfolio.Clean.Application` | -> Business logic such as features, etc. |
+| `Portfolio.Clean.Domain` | Enterprise logic, like the entities and their specifications. |
+| `Portfolio.Clean.Application` | Business logic such as features, etc. |
 **Infrastructure**
-| Project | Description |
-| --- | --- |
-| `Portfolio.Clean.Persistence` | -> Database migrations, database context, db repositories
-| `Portfolio.Clean.Infrastructure` | -> Emails, logging and other third-party services |
+| `Portfolio.Clean.Persistence` | Database migrations, database context, db repositories
+| `Portfolio.Clean.Infrastructure` | Emails, logging and other third-party services |
 **API**
-| Project | Description |
-| --- | --- |
-| `Portfolio.Clean.Api` | -> The solution starts from the API. The others services are injected here |
+| `Portfolio.Clean.Api` | The solution starts from the API. The others services are injected here |
 **Tests**
-| Project | Description |
-| --- | --- |
 | `Portfolio.Clean.Application.UnitTests` | Comming soon |
 | `Portfolio.Clean.Application.IntegrationTests` | Comming soon |
 **User Interface**
-| Project | Description |
-| --- | --- |
 | `Portfolio.Clean.BlazorUI` | Comming soon |
 
 
