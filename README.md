@@ -34,7 +34,7 @@
 | `Portfolio.Clean.Application.UnitTests` | Unit tests for the features |
 | `Portfolio.Clean.Application.IntegrationTests` | Coming soon |
 **User Interface**
-| `Portfolio.Clean.BlazorUI` | User Interface to interact with API|
+| `Portfolio.Clean.BlazorUI` | User Interface to interact with the API|
 
 ## __Dependencies & Libraries__
 | Project |  Dependencies | Libraries |
