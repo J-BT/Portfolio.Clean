@@ -20,9 +20,9 @@
 + # Libraries
 ``` -->
 ## __Projects__
-**Core**
 | Project | Description |
 | --- | --- |
+**Core**
 | `Portfolio.Clean.Domain` | Enterprise logic, like the entities and their specifications. |
 | `Portfolio.Clean.Application` | Business logic such as features, etc. |
 **Infrastructure**
