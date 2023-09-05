@@ -1,9 +1,8 @@
-<div >
-    <img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" title=".NET" alt=".NET" width="60" height="60"/>&nbsp;
-    <h1>Portfolio.Clean</h1>
+<div id="header" align="center">
+<img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" title=".NET" alt=".NET" width="80" height="80"/>&nbsp;
 </div>
 
-<!-- # Portfolio.Clean -->
+# Portfolio.Clean
 ### _Work in Progress_
 
 > **NOTE**
@@ -20,3 +19,21 @@
 ```diff
 + # Libraries
 ``` -->
+
+## __User secret__
+```
+{
+  "ConnectionStrings": {
+    "PortfolioDatabaseConnectionString": "Server=YourDbServerName;Database=YourDbName;Trusted_Connection=True;Integrated security=false; Encrypt=False; User ID=YourDbID; Password=YourDbPassword; MultipleActiveResultSets=true"
+  },
+  "EmailSettings": {
+    "ApiKey": "SendGridAPIKey",
+    "FromAddress": "AdressUsedToSendEmails",
+    "FromName": "NameOfYourSolution",
+    "To": "RecipientAdress"
+  }
+}
+```
+> NOTE
+> In visual studio, the secrets.json file must be retrieved from the API project.
+>
