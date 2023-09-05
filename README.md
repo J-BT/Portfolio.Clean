@@ -26,12 +26,12 @@
 | `Portfolio.Clean.Domain` | Enterprise logic, like the entities and their specifications. |
 | `Portfolio.Clean.Application` | Business logic such as features, etc. |
 **Infrastructure**
-| `Portfolio.Clean.Persistence` | Database migrations, database context, db repositories
+| `Portfolio.Clean.Persistence` | Database migrations, database context, db repositories |
 | `Portfolio.Clean.Infrastructure` | Emails, logging and other third-party services |
 **API**
 | `Portfolio.Clean.Api` | The solution starts from the API. The others services are injected here |
 **Test**
-| `Portfolio.Clean.Application.UnitTests` | Coming soon |
+| `Portfolio.Clean.Application.UnitTests` | Unit tests for the features |
 | `Portfolio.Clean.Application.IntegrationTests` | Coming soon |
 **User Interface**
 | `Portfolio.Clean.BlazorUI` | Coming soon |
