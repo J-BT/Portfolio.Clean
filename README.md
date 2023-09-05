@@ -30,7 +30,7 @@
 | `Portfolio.Clean.Infrastructure` | Emails, logging and other third-party services |
 **API**
 | `Portfolio.Clean.Api` | The solution starts from the API. The others services are injected here |
-**Tests**
+**Test**
 | `Portfolio.Clean.Application.UnitTests` | Coming soon |
 | `Portfolio.Clean.Application.IntegrationTests` | Coming soon |
 **User Interface**
