@@ -1,6 +1,6 @@
 <div >
-<h1>Portfolio.Clean</h1>
-<img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" title=".NET" alt=".NET" width="60" height="60"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/dotnetcore/dotnetcore-original.svg" title=".NET" alt=".NET" width="60" height="60"/>&nbsp;
+    <h1>Portfolio.Clean</h1>
 </div>
 
 <!-- # Portfolio.Clean -->
