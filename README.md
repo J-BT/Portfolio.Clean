@@ -20,20 +20,28 @@
 + # Libraries
 ``` -->
 ## __Projects__
+**Core**
 | Project | Description |
 | --- | --- |
-> Core
 | `Portfolio.Clean.Domain` | -> Enterprise logic, like the entities and their specifications. |
 | `Portfolio.Clean.Application` | -> Business logic such as features, etc. |
-> Infrastructure
+**Infrastructure**
+| Project | Description |
+| --- | --- |
 | `Portfolio.Clean.Persistence` | -> Database migrations, database context, db repositories
 | `Portfolio.Clean.Infrastructure` | -> Emails, logging and other third-party services |
-> API
+**API**
+| Project | Description |
+| --- | --- |
 | `Portfolio.Clean.Api` | -> The solution starts from the API. The others services are injected here |
-> Tests
+**Tests**
+| Project | Description |
+| --- | --- |
 | `Portfolio.Clean.Application.UnitTests` | Comming soon |
 | `Portfolio.Clean.Application.IntegrationTests` | Comming soon |
-> User Interface
+**User Interface**
+| Project | Description |
+| --- | --- |
 | `Portfolio.Clean.BlazorUI` | Comming soon |
 
 
