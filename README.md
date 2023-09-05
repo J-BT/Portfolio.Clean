@@ -31,12 +31,12 @@
 **API**
 | `Portfolio.Clean.Api` | The solution starts from the API. The others services are injected here |
 **Tests**
-| `Portfolio.Clean.Application.UnitTests` | Comming soon |
-| `Portfolio.Clean.Application.IntegrationTests` | Comming soon |
+| `Portfolio.Clean.Application.UnitTests` | Coming soon |
+| `Portfolio.Clean.Application.IntegrationTests` | Coming soon |
 **User Interface**
-| `Portfolio.Clean.BlazorUI` | Comming soon |
+| `Portfolio.Clean.BlazorUI` | Coming soon |
 
-
+## __Libraries__
 
 ## __User secret__
 ```
