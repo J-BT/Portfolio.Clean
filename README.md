@@ -3,7 +3,7 @@
 </div>
 
 # Portfolio.Clean
-### _Work in Progress_
+### _(Work in Progress)_
 
 > **NOTE**
 > Currently learning the cleaning architecture design philosophy, I decided to renew my portfolio in order to put my new knowledge into pratice.
@@ -36,7 +36,17 @@
 **User Interface**
 | `Portfolio.Clean.BlazorUI` | Coming soon |
 
-## __Libraries__
+## __Dependencies & Libraries__
+| Project |  Dependencies | Libraries |
+| --- | --- | --- |
+| `Portfolio.Clean.Domain` |  |  |
+| `Portfolio.Clean.Application` |  |  |
+| `Portfolio.Clean.Persistence` |  |  |
+| `Portfolio.Clean.Infrastructure` |  |  |
+| `Portfolio.Clean.Api` |  |  |
+| `Portfolio.Clean.Application.UnitTests` |  |  |
+| `Portfolio.Clean.Application.IntegrationTests` |  |  |
+| `Portfolio.Clean.BlazorUI` |  |  |
 
 ## __User secret__
 ```
