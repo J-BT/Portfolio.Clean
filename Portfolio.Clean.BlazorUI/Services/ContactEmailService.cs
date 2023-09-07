@@ -24,14 +24,38 @@ public class ContactEmailService : BaseHttpService, IContactEmailService
 
     #region Methods
 
-    public Task<Response<Guid>> CreateContactEmail(ContactEmailVM contactEmail)
+    public async Task<Response<Guid>> CreateContactEmail(ContactEmailVM contactEmail)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var createEmailContactCommand = _mapper.Map<CreateContactEmailCommand>(contactEmail);
+            await _client.ContactEmailsPOSTAsync(createEmailContactCommand);
+            return new Response<Guid>()
+            {
+                Success = true
+            };
+        }
+
+        catch (ApiException ex)
+        {
+            return ConvertApiException<Guid>(ex);
+        }
     }
 
-    public Task<Response<Guid>> DeleteContactEmail(int id)
+    public async Task<Response<Guid>> DeleteContactEmail(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            await _client.ContactEmailsDELETEAsync(id);
+            return new Response<Guid>()
+            {
+                Success = true
+            };
+        }
+        catch (ApiException ex)
+        {
+            return ConvertApiException<Guid>(ex);
+        }
     }
 
     public async Task<ContactEmailVM> GetContactEmailDetails(int id)
@@ -46,9 +70,21 @@ public class ContactEmailService : BaseHttpService, IContactEmailService
         return _mapper.Map<List<ContactEmailVM>>(contactEmails);
     }
 
-    public Task<Response<Guid>> UpdateContactEmail(int id, ContactEmailVM contactEmail)
+    public async Task<Response<Guid>> UpdateContactEmail(int id, ContactEmailVM contactEmail)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var updateEmailContactCommand = _mapper.Map<UpdateContactEmailCommand>(contactEmail);
+            await _client.ContactEmailsPUTAsync(id.ToString(), updateEmailContactCommand);
+            return new Response<Guid>()
+            {
+                Success = true
+            };
+        }
+        catch (ApiException ex)
+        {
+            return ConvertApiException<Guid>(ex);
+        }
     }
 
     #endregion

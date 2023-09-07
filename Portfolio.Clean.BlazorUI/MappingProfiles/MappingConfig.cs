@@ -15,6 +15,8 @@ public class MappingConfig : Profile
     public MappingConfig()
     {
         CreateMap<ContactEmailDto, ContactEmailVM>().ReverseMap();
+        CreateMap<CreateContactEmailCommand, ContactEmailVM>().ReverseMap();
+        CreateMap<UpdateContactEmailCommand, ContactEmailVM>().ReverseMap();
     }
     #endregion
 
