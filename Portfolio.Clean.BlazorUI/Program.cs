@@ -4,6 +4,7 @@ using Portfolio.Clean.BlazorUI;
 using Portfolio.Clean.BlazorUI.Contracts;
 using Portfolio.Clean.BlazorUI.Services;
 using Portfolio.Clean.BlazorUI.Services.Base;
+using System.Reflection;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -18,5 +19,7 @@ builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = n
 
 builder.Services.AddScoped<IContactEmailService, ContactEmailService>();
 builder.Services.AddScoped<IPCLogService, PCLogService>();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 await builder.Build().RunAsync();
