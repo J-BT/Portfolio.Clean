@@ -2,10 +2,21 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 main {
     flex: 1;
+    position: relative;
 }
 
 .sidebar {
