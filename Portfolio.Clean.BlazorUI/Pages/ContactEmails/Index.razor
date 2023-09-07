@@ -1,0 +1,59 @@
+﻿@page "/contactemails/"
+
+<h3>Contact Emails</h3>
+
+<div class="m-2 d-flex justify-content-end">
+    <button @onclick="CreateContactEmail" class="btn btn-success">Envoyer un email</button>
+</div>
+
+@if (string.IsNullOrEmpty(Message) == false)
+{
+    <div class="alert alert-danger">
+        @Message
+    </div>
+}
+
+@if (ContactEmails == null)
+{
+    <p>Loading Data...</p>
+}
+
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    ContactEmailObject
+                </th>
+                <th>
+                    ContactEmailContent
+                </th>
+                <th>
+                    ContactEmailSender
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var contactEmail in ContactEmails)
+            {
+                <tr>
+                    <td>@contactEmail.Id</td>
+                    <td>@contactEmail.ContactEmailObject</td>
+                    <td>@contactEmail.ContactEmailContent</td>
+                    <td>@contactEmail.ContactEmailSender</td>
+                    <td>
+                        <button @onclick="@(() => EditContactEmail(contactEmail.Id))" class="btn btn-warning">Edit</button>
+                        <button @onclick="@(() => DeleteContactEmail(contactEmail.Id))" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

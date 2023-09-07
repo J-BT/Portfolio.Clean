@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Clean.Api", "Port
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Clean.Application.UnitTests", "Portfolio.Clean.Application.UnitTests\Portfolio.Clean.Application.UnitTests.csproj", "{BACCA3B9-1FB8-474E-82E6-F73267703B49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.Clean.BlazorUI", "Portfolio.Clean.BlazorUI\Portfolio.Clean.BlazorUI.csproj", "{44ED31EF-A67C-4721-B512-E32B13E8A63D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Clean.BlazorUI", "Portfolio.Clean.BlazorUI\Portfolio.Clean.BlazorUI.csproj", "{44ED31EF-A67C-4721-B512-E32B13E8A63D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
