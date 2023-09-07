@@ -5,29 +5,27 @@
     height: 100%;
 }
 
+
+
 video {
+    /*vided*/
     object-fit: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    -webkit-filter: blur(1.2px) contrast(1.9) brightness(1) grayscale(0.4) hue-rotate(160deg) /*blue*/
+    opacity(1);
+    filter: blur(1.2px) contrast(1.9) brightness(1) grayscale(0.4) hue-rotate(160deg) /*blue*/
+    opacity(1);
 
-    -webkit-filter: 
-        blur(1.2px) 
-        contrast(1.9)
-        brightness(1) 
-        grayscale(0.4) 
-        hue-rotate(160deg)  /*blue*/
-        opacity(1);
-    
-    filter: 
-        blur(1.2px)
-        contrast(1.9)
-        brightness(1)
-        grayscale(0.4)
-        hue-rotate(160deg) /*blue*/
-        opacity(1);
+    /*monitor frame*/
+    border: 20px solid black;
+    border-bottom-right-radius: 15px 25px;
+    border-top-right-radius: 15px 25px;
+    border-top-left-radius: 15px 25px;
+    border-bottom-left-radius: 15px 25px;
 }
 
 main {
@@ -54,14 +52,14 @@ main {
         text-decoration: none;
     }
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
+        .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
+            text-decoration: underline;
+        }
 
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+        .top-row ::deep a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
@@ -95,11 +93,11 @@ main {
         z-index: 1;
     }
 
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
+        .top-row.auth ::deep a:first-child {
+            flex: 1;
+            text-align: right;
+            width: 0;
+        }
 
     .top-row, article {
         padding-left: 2rem !important;
