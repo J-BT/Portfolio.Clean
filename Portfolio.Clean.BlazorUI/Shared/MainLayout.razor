@@ -1,5 +1,5 @@
-﻿@inherits LayoutComponentBase
-
+﻿@using Portfolio.Clean.BlazorUI.Components.Common
+@inherits LayoutComponentBase
 
 <video autoplay loop>
     <source src="/videos/noRoad-8s-Osaka.mp4" type="video/mp4" />
@@ -9,14 +9,12 @@
 @*     <div class="sidebar">
         <NavMenu />
     </div> *@
-
+   
+    <PortfolioNavbar></PortfolioNavbar>
     <main>
-   @*      <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div> *@
-
         <article class="content px-4">
             @Body
         </article>
     </main>
 </div>
+
