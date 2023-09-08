@@ -14,11 +14,16 @@ video {
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-filter: blur(1.2px) contrast(1.9) brightness(1) grayscale(0.4) hue-rotate(160deg) /*blue*/
+    -webkit-filter: blur(0px) contrast(1.9) brightness(0.5) grayscale(0.4) hue-rotate(220deg) /*blue*/
     opacity(1);
-    filter: blur(1.2px) contrast(1.9) brightness(1) grayscale(0.4) hue-rotate(160deg) /*blue*/
-    opacity(1);
+    /*violet-blue*/ /*hue-rotate(220deg)*/
+    /*blue-green*/ /*hue-rotate(160deg)*/
 
+
+    filter: blur(0px) contrast(1.9) brightness(0.5) grayscale(0.4) hue-rotate(220deg) /*blue*/
+    opacity(1);
+    /*violet-blue*/ /*hue-rotate(220deg)*/
+    /*blue-green*/ /*hue-rotate(160deg)*/
     /*monitor frame*/
     border: 20px solid black;
     border-bottom-right-radius: 15px 25px;
