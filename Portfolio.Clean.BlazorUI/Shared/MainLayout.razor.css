@@ -1,35 +1,37 @@
 .page {
     position: relative;
- /*   display: flex;
+    /*   display: flex;
     flex-direction: column;*/
     height: 100%;
-    width:100vw;
+    width: 100vw;
 }
 
 video {
-    /*vided*/
+    /*video*/
     object-fit: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-filter: blur(0px) contrast(1.9) brightness(0.5) grayscale(0.4) hue-rotate(220deg) /*blue*/
+    -webkit-filter: blur(0px) contrast(2.2) brightness(0.5) grayscale(0.4) hue-rotate(220deg) /*blue*/
     opacity(1);
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
 
-
-    filter: blur(0px) contrast(1.9) brightness(0.5) grayscale(0.4) hue-rotate(220deg) /*blue*/
+    filter: blur(0px) contrast(2.2) brightness(0.5) grayscale(0.4) hue-rotate(220deg) /*blue*/
     opacity(1);
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
+    
     /*monitor frame*/
+    padding-right: 10px;
+    padding-left: 10px;
     border: 20px solid black;
-    border-bottom-right-radius: 15px 25px;
-    border-top-right-radius: 15px 25px;
-    border-top-left-radius: 15px 25px;
-    border-bottom-left-radius: 15px 25px;
+    border-bottom-right-radius: 40px 105px;
+    border-top-right-radius: 40px 105px;
+    border-top-left-radius: 40px 105px;
+    border-bottom-left-radius: 40px 105px;
 }
 
 main {
