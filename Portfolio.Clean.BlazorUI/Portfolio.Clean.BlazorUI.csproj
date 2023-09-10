@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\fonts\common\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
