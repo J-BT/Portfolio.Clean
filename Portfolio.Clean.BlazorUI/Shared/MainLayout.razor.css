@@ -18,7 +18,7 @@
         background-size: 100% 2px, 3px 100%;
         pointer-events: none;
     }*/
- 
+
 
 video {
     /*video*/
@@ -28,16 +28,13 @@ video {
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-filter: blur(0px) contrast(2.2) brightness(0.7) grayscale(0.4) hue-rotate(220deg) 
-    opacity(1);
+    /*  -webkit-filter: blur(0px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1); */
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
 
-    filter: blur(0px) contrast(2.2) brightness(0.7) grayscale(0.4) hue-rotate(220deg) 
-    opacity(1);
+    filter: blur(0px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
-    
     /*monitor frame*/
     padding-right: 10px;
     padding-left: 10px;
