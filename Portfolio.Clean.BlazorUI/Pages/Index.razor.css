@@ -43,13 +43,14 @@
     font-size: 8.5vw;
     letter-spacing: -0.7vw;
     color: #ffffff;
+    text-shadow: -1px 0 #09367d, 0 1px #09367d, 1px 0 #09367d, 0 -1px #09367d;
     font-weight: 800;
 }
 
 
         .text .wrapper .letter {
             transition: ease-out 1s;
-            transform: translateY(40%);
+            transform: translateY(38%);
         }
 
     .text .wrapper .shadow {
@@ -60,12 +61,12 @@
     }
 
         .text .wrapper:hover .letter {
-            transform: translateY(-20%);
+            transform: translateY(-5%);
         }
 
         .text .wrapper:hover .shadow {
             opacity: 0;
-            transform: translateY(20%);
+            transform: translateY(5%);
         }
 
 @media (max-width: 480px) {
