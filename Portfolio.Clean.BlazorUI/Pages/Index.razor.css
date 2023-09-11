@@ -42,8 +42,8 @@
     user-select: none;
     font-size: 8.5vw;
     letter-spacing: -0.7vw;
-    color: #ffffff;
-    text-shadow: -1px 0 #09367d, 0 1px #09367d, 1px 0 #09367d, 0 -1px #09367d;
+    color: #E6E6FA; /*lavender*/
+    text-shadow: -1px 0 #4e0db3, 0 1px #4e0db3, 1px 0 #4e0db3, 0 -1px #4e0db3;
     font-weight: 800;
 }
 
@@ -55,7 +55,7 @@
 
     .text .wrapper .shadow {
         transform: scale(1, -1);
-        color: #09367d;
+        color: #4e0db3;
         /*violet (background main color) -> #4e0db3*/
         transition: ease-in 1s, ease-out 5s;
     }
