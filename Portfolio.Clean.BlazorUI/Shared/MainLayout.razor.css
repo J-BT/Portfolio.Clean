@@ -8,7 +8,7 @@
     height: 100%;
     width: 100vw;
 }
-/*    .page::before {
+    .page::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -20,7 +20,7 @@
         z-index: 0;
         background-size: 100% 2px, 3px 100%;
         pointer-events: none;
-    }*/
+    }
 
 
 video {
