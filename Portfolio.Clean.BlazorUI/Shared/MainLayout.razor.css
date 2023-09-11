@@ -27,15 +27,15 @@ video {
     /*video*/
     object-fit: cover;
     width: 100vw;
-    height: 75vh;
+    height: 85vh;
     position: fixed;
-    top: 90px;
+    top: 0;
     left: 0;
     /*  -webkit-filter: blur(0px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1); */
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
 
-    filter: blur(0.9px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);
+    /*filter: blur(0.9px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);*/
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
     /*monitor frame*/
