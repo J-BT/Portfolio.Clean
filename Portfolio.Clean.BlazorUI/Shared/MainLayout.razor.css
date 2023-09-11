@@ -51,7 +51,7 @@ video {
 main {
     flex: 1;
     position: relative;
-    height: calc(100vh - 100px);
+    height: calc(90vh - 100px);
 }
 
 .sidebar {
