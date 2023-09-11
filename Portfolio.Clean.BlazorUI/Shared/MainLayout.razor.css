@@ -8,11 +8,11 @@
     height: 100%;
     width: 100vw;
 }
-    .page::before {
+  /*  .page::before {
         position: absolute;
         top: 0;
         left: 0;
-        bottom: 0;
+        bottom: 20vh;
         right: 0;
         content: " ";
         background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(18, 16, 16, 0)), color-stop(50%, #062B35)), -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.06)), color-stop(rgba(0, 255, 0, 0.02)), to(rgba(0, 0, 255, 0.06)));
@@ -20,22 +20,22 @@
         z-index: 0;
         background-size: 100% 2px, 3px 100%;
         pointer-events: none;
-    }
+    }*/
 
 
 video {
     /*video*/
     object-fit: cover;
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
     position: fixed;
-    top: 0;
+    top: 90px;
     left: 0;
     /*  -webkit-filter: blur(0px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1); */
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
 
-    filter: blur(0px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);
+    filter: blur(0.9px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
     /*monitor frame*/
