@@ -12,7 +12,7 @@
 
 video {
     /*video*/
-    object-fit: cover;
+    object-fit: inherit;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -23,7 +23,7 @@ video {
     /*blue-green*/ /*hue-rotate(160deg)*/
 
     /*filter: blur(0.9px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);*/
-    filter: blur(0px) brightness(1) grayscale(0) hue-rotate(290deg) opacity(1) saturate(1);
+    /*filter: blur(0px) brightness(1) grayscale(0) hue-rotate(290deg) opacity(1) saturate(1);*/
     /*violet-blue*/ /*hue-rotate(220deg)*/
     /*blue-green*/ /*hue-rotate(160deg)*/
     /*monitor frame*/
