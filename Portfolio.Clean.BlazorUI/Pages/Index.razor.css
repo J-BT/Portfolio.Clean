@@ -30,6 +30,8 @@
     complementary 3 : #0d4eb3  (blue sky)
     complementary 4 : #09367d  (blue ocean)
 
+
+
 */
 
 .text {
@@ -42,21 +44,20 @@
     user-select: none;
     font-size: 8.5vw;
     letter-spacing: -0.7vw;
-    color: #E6E6FA; /*lavender*/
-    text-shadow: -1px 0 #4e0db3, 0 1px #4e0db3, 1px 0 #4e0db3, 0 -1px #4e0db3;
+    color: #FCF8FF; /*white*/
+    text-shadow: -1px 0 #B1A8B9, 0 1px #B1A8B9, 1px 0 #B1A8B9, 0 -1px #B1A8B9; /*light grey*/
     font-weight: 800;
 }
 
-
-        .text .wrapper .letter {
-            transition: ease-out 1s;
-            transform: translateY(38%);
-        }
+    .text .wrapper .letter {
+        transition: ease-out 1s;
+        transform: translateY(38%);
+    }
 
     .text .wrapper .shadow {
         transform: scale(1, -1);
-        color: #4e0db3;
-        /*violet (background main color) -> #4e0db3*/
+        color: #A00000; /*Bordeaux*/
+        text-shadow: -1px 0 #A00000, 0 1px #A00000, 1px 0 #A00000, 0 -1px #A00000; /*Bordeaux*/
         transition: ease-in 1s, ease-out 5s;
     }
 
