@@ -1,17 +1,19 @@
-﻿namespace Portfolio.Clean.BlazorUI.Components.Home;
+﻿
+
+namespace Portfolio.Clean.BlazorUI.Components.Home;
 
 public partial class Laptop
 {
 
-	#region Attributes & Accessors
+    #region Attributes & Accessors
 
-	#endregion
+    #endregion
 
-	#region Constructors
+    #region Constructors
 
-	#endregion
+    #endregion
 
-	#region Methods
+    #region Methods
 
-	#endregion
+    #endregion
 }
