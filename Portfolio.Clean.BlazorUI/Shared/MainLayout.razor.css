@@ -1,43 +1,19 @@
-
-
+/*    linear-gradient maker -> https://cssgradient.io/*/
 
 .page {
     position: relative;
     /*   display: flex;
     flex-direction: column;*/
-    height: 100%;
-    width: 100vw;
-}
-
-
-video {
-    /*video*/
-    object-fit: inherit;
-    width: 100vw;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /*  -webkit-filter: blur(0px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1); */
-    /*violet-blue*/ /*hue-rotate(220deg)*/
-    /*blue-green*/ /*hue-rotate(160deg)*/
-
-    /*filter: blur(0.9px) contrast(2.5) brightness(1) grayscale(0) hue-rotate(270deg) opacity(1) saturate(1);*/
-    /*filter: blur(0px) brightness(1) grayscale(0) hue-rotate(290deg) opacity(1) saturate(1);*/
-    /*violet-blue*/ /*hue-rotate(220deg)*/
-    /*blue-green*/ /*hue-rotate(160deg)*/
-    /*monitor frame*/
-    padding-right: 10px;
-    padding-left: 10px;
-    border: 20px solid black;
-    border-bottom-right-radius: 40px 105px;
-    border-top-right-radius: 40px 105px;
-    border-top-left-radius: 40px 105px;
-    border-bottom-left-radius: 40px 105px;
+    width: 100vw;
+    background: rgb(0,158,248);
+    background: linear-gradient(148deg, rgba(0,158,248,1) 0%, rgba(78,13,179,1) 50%, rgba(31,25,38,1) 100%);
 }
+
 
 main {
     flex: 1;
     position: relative;
     height: calc(90vh - 100px);
+
 }
