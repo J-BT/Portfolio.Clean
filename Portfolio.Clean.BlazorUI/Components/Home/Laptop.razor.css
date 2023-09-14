@@ -34,3 +34,15 @@ img{
         top: 51%;
     }
 }
+
+
+.laptop-text {
+    text-align: center;
+    color: #FCF8FF;
+    font-size: 30px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(-1deg) rotateY(63deg) rotateZ(6deg);
+    z-index: 8;
+}

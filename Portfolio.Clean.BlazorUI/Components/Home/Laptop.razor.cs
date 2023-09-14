@@ -14,6 +14,9 @@ public partial class Laptop
     #endregion
 
     #region Methods
+    //protected override async Task OnInitializedAsync()
+    //{
 
+    //}
     #endregion
 }
