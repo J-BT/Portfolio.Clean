@@ -1,0 +1,17 @@
+﻿
+.moon-container {
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    right: 15%;
+    height: fit-content;
+    width: fit-content;
+}
+
+    .moon-container img {
+        z-index: 1;
+        object-fit: inherit;
+        height: auto;
+        width: 2vw;
+        transform: rotateY(180deg) rotate(-25deg);
+    }

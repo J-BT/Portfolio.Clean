@@ -5,18 +5,12 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    /*    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
     height: fit-content;
     width: fit-content;
 }
 
     .left-city-container img {
-        /*z-index: 2;*/
         object-fit: inherit;
-        /*object-fit: cover;*/
         height: auto;
         width: 50vw;
     }
@@ -26,10 +20,6 @@
     position: fixed;
     bottom: -0.9%;
     right: 0;
-/*    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
     height: fit-content;
     width: fit-content;
 }
@@ -37,7 +27,6 @@
     .right-city-container img {
         z-index: 1;
         object-fit: inherit;
-        /*object-fit: cover;*/
         height: auto;
         width: 50.1vw;
         transform: rotateY(180deg);
