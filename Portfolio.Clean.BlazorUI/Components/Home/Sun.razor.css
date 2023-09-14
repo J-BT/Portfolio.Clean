@@ -1,0 +1,16 @@
+﻿
+.sun-container {
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 15%;
+    height: fit-content;
+    width: fit-content;
+}
+
+    .sun-container img {
+        z-index: 1;
+        object-fit: inherit;
+        height: auto;
+        width: 2vw;
+    }
