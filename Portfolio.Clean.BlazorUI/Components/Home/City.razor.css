@@ -7,6 +7,7 @@
     left: 0;
     height: fit-content;
     width: fit-content;
+    opacity: 0.33;
 }
 
     .left-city-container img {
@@ -22,12 +23,13 @@
     right: 0;
     height: fit-content;
     width: fit-content;
+    opacity: 0.33;
 }
 
     .right-city-container img {
         z-index: 1;
         object-fit: inherit;
         height: auto;
-        width: 50.1vw;
+        width: 50.02vw;
         transform: rotateY(180deg);
     }
