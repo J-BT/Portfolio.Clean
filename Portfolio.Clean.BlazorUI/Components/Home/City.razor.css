@@ -5,39 +5,40 @@
     position: fixed;
     bottom: 0;
     left: 0;
-/*    display: flex;
+    /*    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;*/
-    height: 50vh;
-    width: 50vw;
+    height: fit-content;
+    width: fit-content;
 }
 
     .left-city-container img {
         /*z-index: 2;*/
         object-fit: inherit;
         /*object-fit: cover;*/
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: 50vw;
     }
 
 .right-city-container {
     z-index: 1;
     position: fixed;
-    bottom: 0;
+    bottom: -0.9%;
     right: 0;
 /*    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;*/
-    height: 50vh;
-    width: 50vw;
+    height: fit-content;
+    width: fit-content;
 }
 
     .right-city-container img {
         z-index: 1;
         object-fit: inherit;
         /*object-fit: cover;*/
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: 50.1vw;
+        transform: rotateY(180deg);
     }
