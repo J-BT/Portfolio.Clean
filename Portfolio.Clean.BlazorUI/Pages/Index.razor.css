@@ -1,70 +1,11 @@
 ﻿
 .home-page {
-    position:relative;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#title-block {
-    position: fixed;
-    top: 45vh;
-    right: 0;
-    bottom: 0;
-    left: 20vw;
-    z-index: 8;
-}
-
-#titlename {
-
-    font-family: 'Castoro Titling', sans-serif;
-    font-size: 10vw;
-    letter-spacing: -0.7vw;
-    color: #FCF8FF; /*white*/
-    text-shadow: -1px 0 #B1A8B9, 0 1px #B1A8B9, 1px 0 #B1A8B9, 0 -1px #B1A8B9; /*light grey*/
-    font-weight: 800;
-}
-
-.titlejob {
-    margin-top: -40px;
-    margin-left: 50px;
-    display: flex;
-    flex-direction:column;
-}
-
-.titlejob span {
-    font-family: 'Castoro Titling', sans-serif;
-    font-size: 3.5vw;
-    letter-spacing: 0.75vw;
-    color: #FCF8FF; /*white*/
-    font-weight: 700;
-}
-
-#titlejob-l{
-    margin-top: -20px;
-    margin-left: 100px;
-}
-
-
-@media (max-width: 480px) {
-    #title-block {
-        margin-top: 230px;
-    }
-    #titlename {
-        font-size: 14vw;
-    }
-    .titlejob {
-        font-size: 6vw;
-        margin-top: -20px;
-        margin-left: 30px;
-    }
-    #titlejob-l {
-        margin-top: 0px;
-        margin-left: 30px;
-    }
-
 }
