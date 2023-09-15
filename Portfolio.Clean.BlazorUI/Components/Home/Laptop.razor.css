@@ -46,10 +46,6 @@ img {
     position: fixed;
     top: 45%;
     left: 52%;
-    /*transform: translate(-50%, -50%) rotateX(-0.7deg) rotateY(63deg) rotateZ(5.25deg);*/
-
-
     transform: translate(-50%, -50%) rotateX(23.65deg) rotateY(23.65deg) rotateZ(3deg);
-    /*transform: translate(-50%, -50%) rotateX(-147.42deg) rotateY(23.65deg) rotateZ(-176.0deg);*/
     z-index: 8;
 }
