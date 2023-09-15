@@ -18,7 +18,7 @@
     animation: up-down 1.5s infinite alternate;
 }
 
-img {
+.laptop-container img {
     z-index: 7;
     margin-top: 250px;
     width: 1000px;
