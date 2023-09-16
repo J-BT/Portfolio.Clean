@@ -23,4 +23,8 @@
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Components\Common\CustomLoadingAnimation.razor" />
+  </ItemGroup>
+
 </Project>

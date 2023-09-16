@@ -1,5 +1,5 @@
 ﻿@using Portfolio.Clean.BlazorUI.Components.Common
-@using Portfolio.Clean.BlazorUI.Components.Home
+
 @inherits LayoutComponentBase
 
 
@@ -17,8 +17,5 @@
 }
 else
 {
-    <div>
-        Bienvenue sur jbt.dev !
-        Veuillez patienter
-    </div>
+    <CustomLoadingAnimation></CustomLoadingAnimation>
 }
