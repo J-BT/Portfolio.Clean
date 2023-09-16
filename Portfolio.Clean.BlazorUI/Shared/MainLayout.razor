@@ -3,19 +3,20 @@
 @inherits LayoutComponentBase
 
 
-@if (isLoaded)
-{
-    <div class="page">
-      @*   <PortfolioNavbar></PortfolioNavbar> *@
+
+<div class="page">
+    @if (isLoaded)
+    {
+        @*   <PortfolioNavbar></PortfolioNavbar> *@
         <main>
             <article class="content">
                 @Body
             </article>
         </main>
         @* <PortfolioFooter></PortfolioFooter> *@
-    </div>
-}
-else
-{
-    <CustomLoadingAnimation></CustomLoadingAnimation>
-}
+    }
+    else
+    {
+        <CustomLoadingAnimation></CustomLoadingAnimation>
+    }
+</div>
