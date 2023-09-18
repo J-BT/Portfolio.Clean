@@ -18,12 +18,13 @@
         width: 210px;
         height: fit-content;
         margin: 8px 8px 8px 8px;
+        border: 1px solid rgb(252, 248, 255, 0.05);
     }
     .sidenav a, .side-element button {
         width: 210px;
         position: relative;
         background: none;
-        color: #B1A8B9;
+        color: #FCF8FF;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 20px;
