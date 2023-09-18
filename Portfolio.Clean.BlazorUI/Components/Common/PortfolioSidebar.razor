@@ -3,21 +3,21 @@
         <a href="#"><span>Accueil</span><i></i></a>
     </div>
     <div class="side-element">
-        <button class="dropdown-btn">
-            <span>Projets</span><i></i>
+        <button class="dropdown-btn" @onclick="ProjectDropdown">
+            <span>Projets ▽</span><i></i>
         </button>
-        <div class="dropdown-container">
+        <div class="dropdown-container" id="project-dropdown" style="display: @projectsList;">
             <a href="#">Realisations</a>
             <a href="#">Simulation</a>
         </div>
     </div>
     <div class="side-element">
-        <button class="dropdown-btn">
-            <span>A propos</span><i></i>
+        <button class="dropdown-btn" @onclick="AboutDropdown">
+            <span>A propos ▽</span><i></i>
         </button>
-        <div class="dropdown-container">
+        <div class="dropdown-container" id="about-dropdown" style="display: @aboutList;">
             <a href="#">JBT.DEV</a>
-            <a href="#">Collaborateurs</a>
+            <a href="#">l'équipe</a>
         </div>
     </div>
     <div class="side-element">
@@ -29,20 +29,3 @@
     </div>
 
 </div> 
-
-@* <script>
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-</script> *@

@@ -3,15 +3,48 @@
 public partial class PortfolioSidebar
 {
 
-	#region Attributes & Accessors
+    #region Attributes & Accessors
 
-	#endregion
+    private string projectsList = string.Empty;
+    private string aboutList = string.Empty;
+    
+    #endregion
 
-	#region Constructors
+    #region Constructors
 
-	#endregion
+    #endregion
 
-	#region Methods
+    #region Methods
 
-	#endregion
+    protected override void OnInitialized()
+    {
+        projectsList = "none";
+        aboutList = "none";
+    }
+
+    private void ProjectDropdown()
+	{
+        if(projectsList == "none")
+        {
+            projectsList = "block";
+        }
+        else
+        {
+            projectsList = "none";
+        }
+    }
+
+    private void AboutDropdown()
+    {
+        if (aboutList == "none")
+        {
+            aboutList = "block";
+        }
+        else
+        {
+            aboutList = "none";
+        }
+    }
+
+    #endregion
 }

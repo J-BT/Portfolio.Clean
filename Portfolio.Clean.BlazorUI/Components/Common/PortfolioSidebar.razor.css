@@ -1,10 +1,10 @@
 ﻿
 .sidenav {
     height: fit-content;
-    width: 210px;
+    width: fit-content;
     position: fixed;
     top: 50%;
-    left: 93%;
+    left: 92%;
     transform: translate(-50%, -50%);
     z-index: 6;
     overflow-x: hidden;
@@ -15,19 +15,19 @@
 }
 
     .sidenav .side-element {
-        width: 210px;
+        width: 225px;
         height: fit-content;
         margin: 8px 8px 8px 8px;
         border: 1px solid rgb(252, 248, 255, 0.05);
     }
     .sidenav a, .side-element button {
-        width: 210px;
+        width: 225px;
         position: relative;
         background: none;
         color: #FCF8FF;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: 5px;
         font-weight: 400;
         padding: 10px 30px;
@@ -72,7 +72,12 @@
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
-    display: none;
     background-color: background: rgb(31, 25, 38, 0.5);
     padding-left: 8px;
 }
+
+    .dropdown-container a {
+        font-size: 13px;
+        width: 190px;
+        letter-spacing: 4px;
+    }
