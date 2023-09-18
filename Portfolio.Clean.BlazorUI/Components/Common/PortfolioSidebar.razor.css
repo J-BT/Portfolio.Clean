@@ -20,6 +20,7 @@
         margin: 8px 8px 8px 8px;
         border: 1px solid rgb(252, 248, 255, 0.05);
     }
+
     .sidenav a, .side-element button {
         width: 225px;
         position: relative;
@@ -84,6 +85,83 @@
 
 /*------------------------------ Responsive ------------------------------*/
 
+.sidenav-toogle {
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    top: 6%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    overflow-x: hidden;
+    background: rgb(31, 25, 38, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .sidenav-toogle .side-element {
+        width: fit-content;
+        height: fit-content;
+        margin: 8px 8px 8px 8px;
+        padding: 0;
+        border: 1px solid rgb(252, 248, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+        .sidenav-toogle .side-element button {
+            width: fit-content;
+            height: auto;
+            position: relative;
+            background: none;
+            color: #FCF8FF;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 10px;
+            font-family: 'Castoro Titling', sans-serif;
+            transition: 0.5s;
+            border: none;
+            --clr: #009ef8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+            .sidenav-toogle .side-element button span {
+                position: relative;
+                z-index: 1;
+                width: 40px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .sidenav-toogle .side-element button:hover {
+                background: rgb(31, 25, 38, 0.5);
+                color: var(--clr);
+                box-shadow: 0 0 5px var(--clr);
+            }
+
+            .sidenav-toogle .side-element button:before {
+                content: '';
+                position: absolute;
+                inset: 2px;
+                /*background: rgb(31, 25, 38, 0.5);*/
+            }
+
+
 /* Phones & small devices: */
 @media screen and (max-device-width : 600px) {
     .sidenav {
@@ -101,6 +179,13 @@
 /* Desktops and laptops  */
 @media screen and (min-device-width: 1024px ) and (max-device-width : 1224px) {
     .sidenav {
+        display: none;
+    }
+}
+
+/* Large desktops and laptops  */
+@media screen and (min-device-width : 1224px) {
+    .sidenav-toogle {
         display: none;
     }
 }
