@@ -1,48 +1,65 @@
 ﻿
 .sidenav {
     height: fit-content;
-    width: 200px;
+    width: 210px;
     position: fixed;
     top: 50%;
-    right: -7%;
+    left: 93%;
     transform: translate(-50%, -50%);
     z-index: 6;
-    background-color: rgb(31, 25, 38, 0.5);
     overflow-x: hidden;
-    padding: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(31, 25, 38, 0.5);
 }
+
     .sidenav .side-element {
-        width: fit-content;
+        width: 210px;
         height: fit-content;
-        /*background-color: pink;*/
-
+        margin: 8px 8px 8px 8px;
     }
-    /* Style the sidenav links and the dropdown button */
-    .sidenav a, .dropdown-btn {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 25px;
-        font-family: 'Castoro Titling', sans-serif;
-        color: #B1A8B9;
-        display: block;
-        border: none;
+    .sidenav a, .side-element button {
+        width: 210px;
+        position: relative;
         background: none;
-        width: 100%;
-        text-align: left;
-        cursor: pointer;
-        outline: none;
+        color: #B1A8B9;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 5px;
+        font-weight: 400;
+        padding: 10px 30px;
+        font-family: 'Castoro Titling', sans-serif;
+        display: block;
+        transition: 0.5s;
+        border: none;
+        --clr: #009ef8;
+        text-align: start;
     }
 
-        /* On mouse-over */
-        .sidenav a:hover, .dropdown-btn:hover {
-            color: #009ef8;
+        .sidenav a:hover, .side-element button:hover {
+            background: rgb(31, 25, 38, 0.5);
+            color: var(--clr);
+            box-shadow: 0 0 5px var(--clr);
+        }
+
+        .sidenav a:before, .side-element button:before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            /*background: rgb(31, 25, 38, 0.5);*/
+        }
+
+        .sidenav a span, .side-element button span {
+            position: relative;
+            z-index: 1;
         }
 
 /* Main content */
 .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
+    margin-left: 210px; /* Same as the width of the sidenav */
     font-size: 20px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
     opacity: 1;
 }
 
@@ -55,6 +72,6 @@
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
     display: none;
-    background-color: #262626;
+    background-color: background: rgb(31, 25, 38, 0.5);
     padding-left: 8px;
 }
