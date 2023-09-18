@@ -15,7 +15,7 @@ public partial class MainLayout
     #region Methods
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(4000);
+        await Task.Delay(1000);
         isLoaded = true;
     }
     #endregion
