@@ -1,1 +1,51 @@
-﻿
+﻿<div class="sidenav">
+    <div class="side-element">
+        <a href="#">Home</a>
+    </div>
+    <div class="side-element">
+        <button class="dropdown-btn">
+            Projets
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Realisations</a>
+            <a href="#">Simulation</a>
+        </div>
+    </div>
+    <div class="side-element">
+        <button class="dropdown-btn">
+            A propos
+        </button>
+        <div class="dropdown-container">
+            <a href="#">JBT.DEV</a>
+            <a href="#">Collaborateurs</a>
+        </div>
+    </div>
+    <div class="side-element">
+        <a href="contactemails">Contact</a>
+
+    </div>
+    <div class="side-element">
+        <a href="test">Test</a>
+    </div>
+
+
+
+
+</div> 
+
+@* <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script> *@

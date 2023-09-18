@@ -1,1 +1,60 @@
 ﻿
+.sidenav {
+    height: fit-content;
+    width: 200px;
+    position: fixed;
+    top: 50%;
+    right: -7%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    background-color: rgb(31, 25, 38, 0.5);
+    overflow-x: hidden;
+    padding: 20px 0 20px 0;
+}
+    .sidenav .side-element {
+        width: fit-content;
+        height: fit-content;
+        /*background-color: pink;*/
+
+    }
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a, .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        font-family: 'Castoro Titling', sans-serif;
+        color: #B1A8B9;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+    }
+
+        /* On mouse-over */
+        .sidenav a:hover, .dropdown-btn:hover {
+            color: #009ef8;
+        }
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    opacity: 1;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: #4e0db3;
+    color: #FCF8FF;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
