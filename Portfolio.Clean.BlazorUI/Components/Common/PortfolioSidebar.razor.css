@@ -70,7 +70,6 @@
     color: #FCF8FF;
 }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
     background-color: background: rgb(31, 25, 38, 0.5);
     padding-left: 8px;
@@ -81,3 +80,27 @@
         width: 190px;
         letter-spacing: 4px;
     }
+
+
+/*------------------------------ Responsive ------------------------------*/
+
+/* Phones & small devices: */
+@media screen and (max-device-width : 600px) {
+    .sidenav {
+        display: none;
+    }
+}
+
+/* Ladscape tablets: */
+@media screen and (min-device-width: 600px ) and (max-device-width : 1024px) {
+    .sidenav {
+        display: none;
+    }
+}
+
+/* Desktops and laptops  */
+@media screen and (min-device-width: 1024px ) and (max-device-width : 1224px) {
+    .sidenav {
+        display: none;
+    }
+}
