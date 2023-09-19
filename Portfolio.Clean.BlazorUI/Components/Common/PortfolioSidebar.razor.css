@@ -85,6 +85,9 @@
 
 /*------------------------------ Responsive ------------------------------*/
 
+
+/**** Toggle ****/
+
 .sidenav-toogle {
     height: fit-content;
     width: fit-content;
@@ -163,28 +166,28 @@
 
 
 /* Phones & small devices: */
-@media screen and (max-device-width : 600px) {
+@media screen and (max-width : 600px) {
     .sidenav {
         display: none;
     }
 }
 
 /* Ladscape tablets: */
-@media screen and (min-device-width: 600px ) and (max-device-width : 1024px) {
+@media screen and (min-width: 600px ) and (max-width : 1024px) {
     .sidenav {
         display: none;
     }
 }
 
 /* Desktops and laptops  */
-@media screen and (min-device-width: 1024px ) and (max-device-width : 1224px) {
+@media screen and (min-width: 1024px ) and (max-width : 1224px) {
     .sidenav {
         display: none;
     }
 }
 
 /* Large desktops and laptops  */
-@media screen and (min-device-width : 1224px) {
+@media screen and (min-width : 1224px) {
     .sidenav-toogle {
         display: none;
     }
