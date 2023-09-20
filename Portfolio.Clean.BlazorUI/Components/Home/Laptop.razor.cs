@@ -1,4 +1,8 @@
-﻿namespace Portfolio.Clean.BlazorUI.Components.Home;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+using System.Reflection;
+
+namespace Portfolio.Clean.BlazorUI.Components.Home;
 
 public partial class Laptop
 {
@@ -6,6 +10,11 @@ public partial class Laptop
     #region Attributes & Accessors
     private List<string> LaptopText { get; set; } = new();
     private string TypingText { get; set; } = string.Empty;
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    private IJSObjectReference? module;
     #endregion
 
     #region Constructors
@@ -13,6 +22,18 @@ public partial class Laptop
     #endregion
 
     #region Methods
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        
+        if (firstRender)
+        {
+            module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./Components/Home/Laptop.razor.js");
+
+            await module.InvokeVoidAsync("exampleFunction1");
+        }
+
+    }
     //protected override async Task OnInitializedAsync()
     //{
     //    //await base.OnInitializedAsync().ConfigureAwait(false);

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Portfolio.Clean.Application.Contracts.Persistence;
 using Portfolio.Clean.Application.Contracts.Persistence.Common;
 using Portfolio.Clean.Persistence.DatabaseContext;
