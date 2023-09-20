@@ -13,6 +13,8 @@ public partial class Laptop
     public IJSRuntime? JSRuntime { get; set; }
 
     private IJSObjectReference? module { get; set; }
+
+    public string TypingWords { get; set; } = string.Empty;
     #endregion
 
     #region Constructors
@@ -20,6 +22,11 @@ public partial class Laptop
     #endregion
 
     #region Methods
+
+    protected override void OnInitialized()
+    {
+        TypingWords = "[\"Applications web\", \"Logiciels\", \"Sites vitrines\"]";
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
