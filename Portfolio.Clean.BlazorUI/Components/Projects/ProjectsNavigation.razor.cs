@@ -1,6 +1,6 @@
-﻿namespace Portfolio.Clean.BlazorUI.Components.Common;
+﻿namespace Portfolio.Clean.BlazorUI.Components.Projects;
 
-public partial class PortfolioNavbar
+public partial class ProjectsNavigation
 {
 
 	#region Attributes & Accessors
