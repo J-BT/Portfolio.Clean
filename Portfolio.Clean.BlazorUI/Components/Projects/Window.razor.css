@@ -2,8 +2,8 @@
 
 .window-container {
     /*----- variables -> var() -----*/
-    --monitor-width: 1200px;
-    --window-container-width: calc(var(--monitor-width) * 0.8 );
+    --monitor-width: 170vh;
+    --window-container-width: calc(var(--monitor-width) * 0.6 );
     /*------------------------------*/
     position: fixed;
     top: 50%;
@@ -23,7 +23,7 @@
     .window-container img {
         position: relative;
         top:20%;
-        left: 27%;
+        left: -1%;
         z-index: 7;
         /*margin-top: 250px;*/
         width: var(--monitor-width);
