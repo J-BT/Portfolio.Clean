@@ -2,15 +2,22 @@
 
 public partial class Project
 {
-	#region Attributes & Accessors
+    #region Attributes & Accessors
+    private string DescriptionTxt { get; set; } = string.Empty;
+    private string Technologies { get; set; } = string.Empty;
+    #endregion
 
-	#endregion
+    #region Constructors
 
-	#region Constructors
+    #endregion
 
-	#endregion
+    #region Methods
+    protected override async Task OnInitializedAsync()
+    {
+        DescriptionTxt = "Description du projet";
+        Technologies = "Liste des technologies (.NET, angular, etc)";
 
-	#region Methods
-
-	#endregion
+        await base.OnInitializedAsync();
+    }
+    #endregion
 }

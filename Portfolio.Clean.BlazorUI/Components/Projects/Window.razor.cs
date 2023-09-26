@@ -1,17 +1,22 @@
-﻿namespace Portfolio.Clean.BlazorUI.Components.Projects;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace Portfolio.Clean.BlazorUI.Components.Projects;
 
 public partial class Window
 {
 
-	#region Attributes & Accessors
+    #region Attributes & Accessors
+    [Parameter]
+    public string DescriptionTxt_ { get; set; } = string.Empty;
+    [Parameter]
+    public string Technologies_ { get; set; } = string.Empty;
+    #endregion
 
-	#endregion
+    #region Constructors
 
-	#region Constructors
+    #endregion
 
-	#endregion
+    #region Methods
 
-	#region Methods
-
-	#endregion	
+    #endregion
 }
