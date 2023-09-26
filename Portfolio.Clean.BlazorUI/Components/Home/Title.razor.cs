@@ -1,17 +1,20 @@
-﻿namespace Portfolio.Clean.BlazorUI.Components.Home;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace Portfolio.Clean.BlazorUI.Components.Home;
 
 public partial class Title
 {
 
-	#region Attributes & Accessors
+    #region Attributes & Accessors
+    [Parameter]
+    public string TitleJob { get; set; } = string.Empty;
+    #endregion
 
-	#endregion
+    #region Constructors
 
-	#region Constructors
+    #endregion
 
-	#endregion
+    #region Methods
 
-	#region Methods
-
-	#endregion
+    #endregion
 }

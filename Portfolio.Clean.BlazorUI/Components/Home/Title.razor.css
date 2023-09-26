@@ -21,6 +21,7 @@
 .titlejob {
     margin-top: -40px;
     margin-left: 50px;
+    width: 10vw;
     display: flex;
     flex-direction: column;
 }
@@ -28,15 +29,10 @@
     .titlejob span {
         font-family: 'Castoro Titling', sans-serif;
         font-size: 3.5vw;
-        letter-spacing: 0.75vw;
+        letter-spacing: 0.7vw;
         color: #FCF8FF; /*white*/
         font-weight: 700;
     }
-
-#titlejob-l {
-    margin-top: -20px;
-    margin-left: 100px;
-}
 
 
 @media (max-width: 480px) {
@@ -54,8 +50,4 @@
         margin-left: 30px;
     }
 
-    #titlejob-l {
-        margin-top: 0px;
-        margin-left: 30px;
-    }
 }

@@ -1,8 +1,4 @@
 ﻿
-export function exampleFunction1() {
-    alert("頑張りましょう！")
-}
-
 export function typeOnLaptop() {
     const txtElement = document.querySelector('.txt-type');
     const words = JSON.parse(txtElement.getAttribute('data-words'));

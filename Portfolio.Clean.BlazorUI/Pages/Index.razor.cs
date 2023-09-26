@@ -3,15 +3,24 @@
 public partial class Index
 {
 
-	#region Attributes & Accessors
+    #region Attributes & Accessors
+    private string TitleJob { get; set; } = string.Empty;
+    public string LaptopTypingWords { get; set; } = string.Empty;
+    #endregion
 
-	#endregion
+    #region Constructors
 
-	#region Constructors
+    #endregion
 
-	#endregion
+    #region Methods
 
-	#region Methods
+    protected override async Task OnInitializedAsync()
+    {
+        TitleJob = "Solutions Logicielles";
+        LaptopTypingWords = "[\"Applications web\", \"Logiciels\", \"Sites vitrines\"]";
 
-	#endregion
+        await base.OnInitializedAsync();
+    }
+
+    #endregion
 }
