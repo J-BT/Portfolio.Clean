@@ -9,27 +9,28 @@ public partial class Index
 {
 
     #region Attributes & Accessors
-    //private string TitleJob { get; set; } = string.Empty;
-    public string LaptopTypingWords { get; set; } = string.Empty;
 
-    [Inject]
+    public string LaptopTypingWords { get; set; } = string.Empty;
+	public string ActualLanguage { get; set; } = string.Empty;
+
+	[Inject]
     public IJSRuntime JS { get; set; }
 
     [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
+	[Inject]
+	private NavigationManager Navigationmanager { get; set; }
 
-    public string ActualLanguage { get; set; } = "NONE";
 
+	#endregion
 
-    #endregion
+	#region Constructors
 
-    #region Constructors
+	#endregion
 
-    #endregion
+	#region Methods
 
-    #region Methods
-
-    protected override async Task OnInitializedAsync()
+	protected override async Task OnInitializedAsync()
     {
 		ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
 
@@ -37,12 +38,6 @@ public partial class Index
         {
             LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(ActualLanguage));
         }
-
-
-
-        //TitleJob = "Solutions Logicielles";
-        //TitleJob = LanguageContainer.Keys["TitleJob"];
-        //LaptopTypingWords = "[\"Applications web\", \"Logiciels\", \"Sites vitrines\"]";
 
         await base.OnInitializedAsync();
     }
@@ -52,7 +47,8 @@ public partial class Index
         
         LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
         await JS.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
-    }
+        Navigationmanager.NavigateTo("/", true);
+	}
 
     #endregion
 }
