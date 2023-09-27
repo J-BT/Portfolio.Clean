@@ -12,8 +12,14 @@ public partial class Index
 
     public string LaptopTypingWords { get; set; } = string.Empty;
 	public string ActualLanguage { get; set; } = string.Empty;
+    private Dictionary<string, string> Languages { get; set; } = new()
+    {
+        { "fr-FR", "🇫🇷"},
+		{ "en-US", "🇬🇧"},
+		{ "ja-JP", "🇯🇵"}
+	};
 
-	[Inject]
+    [Inject]
     public IJSRuntime JS { get; set; }
 
     [Inject]
@@ -30,14 +36,35 @@ public partial class Index
 
 	#region Methods
 
+	private Dictionary<string, string> OrderByLocalStorage(Dictionary<string, string> languages)
+	{
+	
+		Dictionary<string, string> orderedLanguages = new();
+
+		orderedLanguages.Add(ActualLanguage, languages[ActualLanguage]);
+		foreach (var language in languages)
+		{
+			if (language.Key != ActualLanguage)
+			{
+				orderedLanguages.Add(language.Key, language.Value);
+			}
+		}
+
+		return orderedLanguages;
+
+	}
+
 	protected override async Task OnInitializedAsync()
     {
+
 		ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
 
         if (!String.IsNullOrEmpty(ActualLanguage))
         {
             LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(ActualLanguage));
-        }
+			Languages = OrderByLocalStorage(Languages);
+
+		}
 
         await base.OnInitializedAsync();
     }

@@ -5,18 +5,13 @@
 <PageTitle>Accueil</PageTitle>
 
 <div class="home-page">
-	@* <Laptop TypingWords="@LaptopTypingWords"></Laptop> *@
 	<Laptop TypingWords="@LanguageContainer.Keys["LaptopTypingWords"]"></Laptop>
 	<Title TitleJob="@LanguageContainer.Keys["TitleJob"]"></Title>
 	<City></City>
-@* 	<div class="row d-flex flex-row" style="position:fixed;top:20px;right:50px;">
-		<button @onclick='() => SetLanguage("fr-FR")'>Français</button>
-		<button @onclick='() => SetLanguage("en-US")'>English</button>
-		<button @onclick='() => SetLanguage("ja-JP")'>日本語</button>
-	</div> *@
 	<select class="language-selector">
-		<option class="fr" @onclick='() => SetLanguage("fr-FR")'>🇫🇷</option>
-		<option class="en" @onclick='() => SetLanguage("en-US")'>🇬🇧</option>
-		<option class="jp" @onclick='() => SetLanguage("ja-JP")'>🇯🇵</option>
+		@foreach(var language in Languages)
+		{
+			<option @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</option>
+		}
 	</select>
 </div>
