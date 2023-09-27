@@ -1,23 +1,44 @@
 ﻿@page "/test"
+@inject IJSRuntime JS
 @using Portfolio.Clean.BlazorUI.Components.Common
 
 <PageTitle>Test</PageTitle>
 
-@* <h1>Counter</h1>
+
+
+<h1>Counter</h1>
 
 <p role="status">Current count: @currentCount</p>
+<p role="status">localStorageCount: @localStorageCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="IncrementCount">IncrementCount</button>
+<button class="btn btn-primary" @onclick="GetCount">GetCount</button>
+<button class="btn btn-primary" @onclick="DeleteCount">DeleteCount</button>
 
 
 @code {
     private int currentCount = 0;
+    private string localStorageCount = string.Empty;
 
-    private void IncrementCount()
+    private async Task IncrementCount()
     {
         currentCount++;
+        await JS.InvokeVoidAsync("localStorage.setItem", "count", currentCount);
+    }
+
+    private async Task GetCount()
+    {
+        localStorageCount = await JS.InvokeAsync<string>("localStorage.getItem", "count");
+
+    }
+
+    private async Task DeleteCount()
+    {
+        localStorageCount = await JS.InvokeAsync<string>("localStorage.removeItem", "count");
+
     }
 }
- *@
+
 
  <CustomLoadingAnimation></CustomLoadingAnimation>
+
