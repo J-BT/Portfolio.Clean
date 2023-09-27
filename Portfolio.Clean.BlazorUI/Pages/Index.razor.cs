@@ -1,5 +1,6 @@
 ﻿using AKSoftware.Localization.MultiLanguages;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System.Globalization;
 
 namespace Portfolio.Clean.BlazorUI.Pages;
@@ -12,7 +13,13 @@ public partial class Index
     public string LaptopTypingWords { get; set; } = string.Empty;
 
     [Inject]
+    public IJSRuntime JS { get; set; }
+
+    [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
+
+    public string ActualLanguage { get; set; } = "NONE";
+
 
     #endregion
 
@@ -24,6 +31,15 @@ public partial class Index
 
     protected override async Task OnInitializedAsync()
     {
+		ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
+
+        if (!String.IsNullOrEmpty(ActualLanguage))
+        {
+            LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(ActualLanguage));
+        }
+
+
+
         //TitleJob = "Solutions Logicielles";
         //TitleJob = LanguageContainer.Keys["TitleJob"];
         //LaptopTypingWords = "[\"Applications web\", \"Logiciels\", \"Sites vitrines\"]";
@@ -31,9 +47,11 @@ public partial class Index
         await base.OnInitializedAsync();
     }
 
-    public void SetLanguage(string cultureCode)
+    public async Task SetLanguage(string cultureCode)
     {
+        
         LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
+        await JS.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
     }
 
     #endregion
