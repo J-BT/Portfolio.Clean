@@ -1,9 +1,11 @@
+using AKSoftware.Localization.MultiLanguages;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Portfolio.Clean.BlazorUI;
 using Portfolio.Clean.BlazorUI.Contracts;
 using Portfolio.Clean.BlazorUI.Services;
 using Portfolio.Clean.BlazorUI.Services.Base;
+using System.Globalization;
 using System.Reflection;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -21,5 +23,6 @@ builder.Services.AddScoped<IContactEmailService, ContactEmailService>();
 builder.Services.AddScoped<IPCLogService, PCLogService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddLanguageContainer(Assembly.GetExecutingAssembly(), CultureInfo.GetCultureInfo("fr-FR"));
 
 await builder.Build().RunAsync();
