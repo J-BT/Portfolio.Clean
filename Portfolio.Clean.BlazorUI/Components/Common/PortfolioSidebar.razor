@@ -1,31 +1,31 @@
 ﻿<div class="sidenav">
     <div class="side-element">
-        <a href="#"><span>Accueil</span><i></i></a>
+        <a href="#"><span>@LanguageContainer.Keys["Home"]</span><i></i></a>
     </div>
     <div class="side-element">
         <button class="dropdown-btn" @onclick="ProjectDropdown">
-            <span>Projets ▽</span><i></i>
+            <span>@LanguageContainer.Keys["Projects"] ▽</span><i></i>
         </button>
         <div class="dropdown-container" id="project-dropdown" style="display: @projectsList;">
-            <a href="projects">Realisations</a>
-            <a href="#">Simulation</a>
+            <a href="projects">@LanguageContainer.Keys["P_Portfolio"]</a>
+            <a href="#">@LanguageContainer.Keys["P_Simulation"]</a>
         </div>
     </div>
     <div class="side-element">
         <button class="dropdown-btn" @onclick="AboutDropdown">
-            <span>A propos ▽</span><i></i>
+            <span>@LanguageContainer.Keys["About"] ▽</span><i></i>
         </button>
         <div class="dropdown-container" id="about-dropdown" style="display: @aboutList;">
-            <a href="#">JBT.DEV</a>
-            <a href="#">l'équipe</a>
+            <a href="#">@LanguageContainer.Keys["A_Company"]</a>
+            <a href="#">@LanguageContainer.Keys["A_Team"]</a>
         </div>
     </div>
     <div class="side-element">
-        <a href="contactemails"><span>Contact</span><i></i></a>
+        <a href="contactemails"><span>@LanguageContainer.Keys["Contact"]</span><i></i></a>
 
     </div>
     <div class="side-element">
-        <a href="test"><span>Test</span><i></i></a>
+        <a href="test"><span>@LanguageContainer.Keys["Test"]</span><i></i></a>
     </div>
 </div> 
 

@@ -1,2 +1,14 @@
+# Sidebar
+Home : "ホーム"
+Projects : "プロジェクト"
+P_Portfolio : "ポートフォリオ"
+P_Simulation : "シミュレーション"
+About : "会社概要"
+A_Company : "当社について"
+A_Team : "チームについて"
+Contact : "連悪先"
+Test : "テスト"
+
+# Home
 TitleJob: ソフトウェア ソリューション
 LaptopTypingWords : "[\"ウェブアプリケーション\", \"ソフトウェア\", \"eコマース サイト\"]"

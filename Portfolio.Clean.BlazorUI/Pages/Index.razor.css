@@ -12,6 +12,8 @@
 }
 
 .language-selector {
+    appearance: none;
+    -webkit-appearance: none;
     width: fit-content;
     height: auto;
     position: fixed;
@@ -20,12 +22,23 @@
     overflow: hidden;
     font-size: var(--flag-width);
     color: white;
-    background: none;
+    background: rgb(31,25,38);
     border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
-option {
-    font-size: var(--flag-width);
-    color: white;
-    background: none;
-    border: none;
-}
+
+/*    .language-selector option::after {
+        border: none;
+        outline: none;
+    }*/
+/*    .language-selector::after, .language-selector::before {
+        position: absolute;
+        content: "";
+        pointer-events: none;
+        color: white;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+*/
