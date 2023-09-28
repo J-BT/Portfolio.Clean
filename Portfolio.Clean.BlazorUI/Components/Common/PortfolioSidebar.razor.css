@@ -12,23 +12,25 @@
     flex-direction: column;
     justify-content: center;
     background: rgb(31, 25, 38, 0.5);
+    --nav-font-size: 17px;
+    --nav-width: 225px;
 }
 
     .sidenav .side-element {
-        width: 225px;
+        width: var(--nav-width);
         height: fit-content;
         margin: 8px 8px 8px 8px;
         border: 1px solid rgb(252, 248, 255, 0.05);
     }
 
     .sidenav a, .side-element button {
-        width: 225px;
+        width: var(--nav-width);
         position: relative;
         background: none;
         color: #FCF8FF;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: var(--nav-font-size);
         letter-spacing: 5px;
         font-weight: 400;
         padding: 10px 30px;
@@ -61,7 +63,7 @@
 /* Main content */
 .main {
     margin-left: 210px; /* Same as the width of the sidenav */
-    font-size: 20px; /* Increased text to enable scrolling */
+    /*font-size: 20px;*/ /* Increased text to enable scrolling */
     opacity: 1;
 }
 
@@ -77,8 +79,8 @@
 }
 
     .dropdown-container a {
-        font-size: 13px;
-        width: 190px;
+        font-size: calc(var(--nav-font-size) - 5px);
+        width: calc(var(--nav-width) - 35px);
         letter-spacing: 4px;
     }
 
