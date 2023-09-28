@@ -1,14 +1,20 @@
 ﻿# Sidebar
-Home : "Home"
-Projects : "Projects"
-P_Portfolio : "Portfolio"
-P_Simulation : "Simulation"
-About : "About"
-A_Company : "Company"
-A_Team : "Team"
-Contact : "Contact"
-Test : "Test"
+Sidebar :
+  Home : "Home"
+  Projects : "Projects"
+  P_Portfolio : "Portfolio"
+  P_Simulation : "Simulation"
+  About : "About"
+  A_Company : "Company"
+  A_Team : "Team"
+  Contact : "Contact"
+  Test : "Test"
 
 # Home
-TitleJob : Software Solutions
-LaptopTypingWords : "[\"Web applications\", \"Softwares\", \"Showcase site\", \"E-commerce sites\"]"
+Home :
+  TitleJob : Software Solutions
+  LaptopTypingWords : "[\"Web applications\", \"Softwares\", \"Showcase site\", \"E-commerce sites\"]"
+
+# Project
+Portfolio :
+  PageTitle : "Portfolio"

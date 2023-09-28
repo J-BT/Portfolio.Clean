@@ -1,14 +1,20 @@
 ﻿# Sidebar
-Home : "Accueil"
-Projects : "Projets"
-P_Portfolio : "Portfolio"
-P_Simulation : "Simulation"
-About : "à Propos"
-A_Company : "L'entreprise"
-A_Team : "L'équipe"
-Contact : "Contact"
-Test : "Test"
+Sidebar :
+  Home : "Accueil"
+  Projects : "Projets"
+  P_Portfolio : "Portfolio"
+  P_Simulation : "Simulation"
+  About : "à Propos"
+  A_Company : "L'entreprise"
+  A_Team : "L'équipe"
+  Contact : "Contact"
+  Test : "Test"
 
 # Home
-TitleJob : "Solutions Logicielles"
-LaptopTypingWords : "[\"Applications web\", \"Logiciels\", \"Sites vitrines\", \"Sites e-commerce\"]"
+Home :
+  TitleJob : "Solutions Logicielles"
+  LaptopTypingWords : "[\"Applications web\", \"Logiciels\", \"Sites vitrines\", \"Sites e-commerce\"]"
+
+# Project
+Portfolio :
+  PageTitle : "Portfolio"
