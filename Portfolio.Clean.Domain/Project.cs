@@ -11,10 +11,13 @@ public class Project : BaseEntity
 {
     #region Attributes & Accessors
     public string ProjectName { get; set; } = string.Empty;
-    //public string ProjectTitle { get; set; } = string.Empty; //XML
-    //public string ProjectDescription { get; set; } = string.Empty; //XML
+    public string? ProjectTitleFr { get; set; } = string.Empty;
+    public string? ProjectTitleEn { get; set; } = string.Empty;
+    public string? ProjectTitleJp { get; set; } = string.Empty;
     public string ProjectTechnologies { get; set; } = string.Empty;
-    public byte[]? ProjectScreenshots { get; set; }
+    public string? ProjectDescriptionFr { get; set; } = string.Empty;
+    public string? ProjectDescriptionEn { get; set; } = string.Empty;
+    public string? ProjectDescriptionJp { get; set; } = string.Empty;
     public string? ProjectUrl { get; set; }
     public string? ProjectVideo { get; set; }
     public string? ProjectGithub { get; set; }
