@@ -23,8 +23,14 @@ public class ProjectConfiguration : IEntityTypeConfiguration<Project>
             {
                 Id = 1, 
                 ProjectName = "This first Project is a test for db initialization",
+				ProjectTitleFr = "Projet Test",
+				ProjectTitleEn = "Test Project",
+				ProjectTitleJp = "テストプロジェクト",
                 ProjectTechnologies = "C#,Blazor",
-                LastUpdate = DateTime.Now,
+				ProjectDescriptionFr = "La base de données fonctionne",
+				ProjectDescriptionEn = "The database is working",
+				ProjectDescriptionJp = "データベースが発動されました",
+				LastUpdate = DateTime.Now,
                 CreationDate = DateTime.Now
             }
         );

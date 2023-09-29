@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Portfolio.Clean.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class initialMigration230929_ProjectModification : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -50,8 +50,13 @@ namespace Portfolio.Clean.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProjectName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProjectTitleFr = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProjectTitleEn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProjectTitleJp = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProjectTechnologies = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ProjectScreenshots = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    ProjectDescriptionFr = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProjectDescriptionEn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProjectDescriptionJp = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProjectUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProjectVideo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ProjectGithub = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -66,17 +71,17 @@ namespace Portfolio.Clean.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "ContactEmails",
                 columns: new[] { "Id", "ContactEmailContent", "ContactEmailObject", "ContactEmailSender", "CreationDate", "LastUpdate" },
-                values: new object[] { 1, "This first ContactEmail is a test for db initialization", "Initialization test", "Configuration", new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(6446), new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(6390) });
+                values: new object[] { 1, "This first ContactEmail is a test for db initialization", "Initialization test", "Configuration", new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(4795), new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(4755) });
 
             migrationBuilder.InsertData(
                 table: "PCLogs",
                 columns: new[] { "Id", "CreationDate", "LastUpdate", "PCLogContent" },
-                values: new object[] { 1, new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(8672), new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(8651), "This first PCLog is a test for db initialization" });
+                values: new object[] { 1, new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(5532), new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(5528), "This first PCLog is a test for db initialization" });
 
             migrationBuilder.InsertData(
                 table: "Projects",
-                columns: new[] { "Id", "CreationDate", "LastUpdate", "ProjectGithub", "ProjectName", "ProjectScreenshots", "ProjectTechnologies", "ProjectUrl", "ProjectVideo" },
-                values: new object[] { 1, new DateTime(2023, 9, 4, 0, 35, 1, 308, DateTimeKind.Local).AddTicks(772), new DateTime(2023, 9, 4, 0, 35, 1, 308, DateTimeKind.Local).AddTicks(754), null, "This first Project is a test for db initialization", null, "C#,Blazor", null, null });
+                columns: new[] { "Id", "CreationDate", "LastUpdate", "ProjectDescriptionEn", "ProjectDescriptionFr", "ProjectDescriptionJp", "ProjectGithub", "ProjectName", "ProjectTechnologies", "ProjectTitleEn", "ProjectTitleFr", "ProjectTitleJp", "ProjectUrl", "ProjectVideo" },
+                values: new object[] { 1, new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(6075), new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(6071), "The database is working", "La base de données fonctionne", "データベースが発動されました", null, "This first Project is a test for db initialization", "C#,Blazor", "Test Project", "Projet Test", "テストプロジェクト", null, null });
         }
 
         /// <inheritdoc />

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Portfolio.Clean.Domain\Portfolio.Clean.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Project\Commands\UpdateProject\" />
+  </ItemGroup>
+
 </Project>

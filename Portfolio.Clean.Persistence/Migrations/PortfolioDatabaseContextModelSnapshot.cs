@@ -17,7 +17,7 @@ namespace Portfolio.Clean.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.10")
+                .HasAnnotation("ProductVersion", "7.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -59,8 +59,8 @@ namespace Portfolio.Clean.Persistence.Migrations
                             ContactEmailContent = "This first ContactEmail is a test for db initialization",
                             ContactEmailObject = "Initialization test",
                             ContactEmailSender = "Configuration",
-                            CreationDate = new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(6446),
-                            LastUpdate = new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(6390)
+                            CreationDate = new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(4795),
+                            LastUpdate = new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(4755)
                         });
                 });
 
@@ -90,8 +90,8 @@ namespace Portfolio.Clean.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(8672),
-                            LastUpdate = new DateTime(2023, 9, 4, 0, 35, 1, 307, DateTimeKind.Local).AddTicks(8651),
+                            CreationDate = new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(5532),
+                            LastUpdate = new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(5528),
                             PCLogContent = "This first PCLog is a test for db initialization"
                         });
                 });
@@ -110,6 +110,15 @@ namespace Portfolio.Clean.Persistence.Migrations
                     b.Property<DateTime?>("LastUpdate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ProjectDescriptionEn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectDescriptionFr")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectDescriptionJp")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProjectGithub")
                         .HasColumnType("nvarchar(max)");
 
@@ -117,11 +126,17 @@ namespace Portfolio.Clean.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("ProjectScreenshots")
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<string>("ProjectTechnologies")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectTitleEn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectTitleFr")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectTitleJp")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProjectUrl")
@@ -138,10 +153,16 @@ namespace Portfolio.Clean.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 9, 4, 0, 35, 1, 308, DateTimeKind.Local).AddTicks(772),
-                            LastUpdate = new DateTime(2023, 9, 4, 0, 35, 1, 308, DateTimeKind.Local).AddTicks(754),
+                            CreationDate = new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(6075),
+                            LastUpdate = new DateTime(2023, 9, 29, 12, 30, 15, 557, DateTimeKind.Local).AddTicks(6071),
+                            ProjectDescriptionEn = "The database is working",
+                            ProjectDescriptionFr = "La base de données fonctionne",
+                            ProjectDescriptionJp = "データベースが発動されました",
                             ProjectName = "This first Project is a test for db initialization",
-                            ProjectTechnologies = "C#,Blazor"
+                            ProjectTechnologies = "C#,Blazor",
+                            ProjectTitleEn = "Test Project",
+                            ProjectTitleFr = "Projet Test",
+                            ProjectTitleJp = "テストプロジェクト"
                         });
                 });
 #pragma warning restore 612, 618
