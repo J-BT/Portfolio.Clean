@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Portfolio.Clean.Application.Features.Project.Queries.GetAllProjects;
+using Portfolio.Clean.Application.Features.Project.Queries.GetProjectDetails;
 using Portfolio.Clean.Domain;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ public class ProjectProfile : Profile
     public ProjectProfile()
     {
         CreateMap<ProjectDto, Project>();    
+        CreateMap<Project, ProjectDetailsDto>();    
     }
     #endregion
 

@@ -33,7 +33,7 @@ public class ProjectRepository : GenericRepository<Project>, IProjectRepository
         return projects;
     }
 
-    public async Task<List<Project>> GetProjectsWithDetails(string technology)
+    public async Task<List<Project>> GetProjectsViaTechnology(string technology)
     {
         var projects = await _context.Projects
             .Where(q => q.ProjectTechnologies.Contains(technology))
