@@ -12,9 +12,11 @@ Sidebar :
 
 # Home
 Home :
+  PageTabTitle :  "ホーム"
   TitleJob: ソフトウェア ソリューション
   LaptopTypingWords : "[\"ウェブアプリケーション\", \"ソフトウェア\", \"eコマース サイト\"]"
 
 # Project
 Portfolio :
+  PageTabTitle :  "ポートフォリオ"
   PageTitle : "ポートフォリオ"

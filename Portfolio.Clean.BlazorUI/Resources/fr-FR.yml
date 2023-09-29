@@ -12,9 +12,11 @@ Sidebar :
 
 # Home
 Home :
+  PageTabTitle :  "Accueil"
   TitleJob : "Solutions Logicielles"
   LaptopTypingWords : "[\"Applications web\", \"Logiciels\", \"Sites vitrines\", \"Sites e-commerce\"]"
 
 # Project
 Portfolio :
+  PageTabTitle :  "Portfolio"
   PageTitle : "Portfolio"

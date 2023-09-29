@@ -2,7 +2,7 @@
 @using Portfolio.Clean.BlazorUI.Components.Home
 @inject ILanguageContainerService languageContainer
 
-<PageTitle>Accueil</PageTitle>
+<PageTitle>@LanguageContainer.Keys["Home:PageTabTitle"]</PageTitle>
 
 <div class="home-page">
 	<Laptop TypingWords="@LanguageContainer.Keys["Home:LaptopTypingWords"]"></Laptop>
