@@ -23,7 +23,7 @@ public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     #region Methods
     public async Task<bool> IsProjectUnique(string name)
     {
-        return await _context.Projects.AnyAsync(q => q.ProjectName == name);
+        return await _context.Projects.AnyAsync(q => q.ProjectName == name) == false;
     }
 
     public async Task<List<Project>> GetAllProjects()

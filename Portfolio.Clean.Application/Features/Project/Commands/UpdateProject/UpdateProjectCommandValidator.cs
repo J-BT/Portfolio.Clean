@@ -20,14 +20,13 @@ public class UpdateProjectCommandValidator : AbstractValidator<UpdateProjectComm
 	#region Constructors
 	public UpdateProjectCommandValidator(IProjectRepository projectRepository)
     {
-		RuleFor(p => p.ProjectName)
-			.NotNull()
-			.MustAsync(ProjectMustExists);
 
 		RuleFor(p => p.ProjectName)
 			.NotEmpty().WithMessage("{PropertyName} is required")
 			.NotNull()
-			.MaximumLength(255).WithMessage("{PropertyName} must be fewer than 255 characters");
+			.MaximumLength(255).WithMessage("{PropertyName} must be fewer than 255 characters")
+			.MustAsync(ProjectMustExists);
+			
 
 		RuleFor(p => p.ProjectTechnologies)
 			.NotEmpty().WithMessage("{PropertyName} is required")
