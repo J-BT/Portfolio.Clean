@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Portfolio.Clean.Application.Features.Project.Commands.CreateProject;
 using Portfolio.Clean.Application.Features.Project.Queries.GetAllProjects;
 using Portfolio.Clean.Application.Features.Project.Queries.GetProjectDetails;
 using Portfolio.Clean.Domain;
@@ -20,8 +21,9 @@ public class ProjectProfile : Profile
     #region Constructors
     public ProjectProfile()
     {
-        CreateMap<ProjectDto, Project>();    
-        CreateMap<Project, ProjectDetailsDto>();    
+        CreateMap<ProjectDto, Project>().ReverseMap();    
+        CreateMap<Project, ProjectDetailsDto>().ReverseMap();
+        CreateMap<CreateProjectCommand, Project>();
     }
     #endregion
 
