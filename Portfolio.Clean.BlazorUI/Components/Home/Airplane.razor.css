@@ -3,9 +3,9 @@
 .airplane-container {
     /***** Variables *****/
     --airplane-top: 30%;
-    --airplane-left: -20%;
+    --airplane-left: -15%;
     --airplane-scale: 1.25;
-    --airplane-coef: 1.2;
+    --airplane-coef: 1.1;
     /*********************/
     position: fixed;
     top: var(--airplane-top);
@@ -14,7 +14,7 @@
     height: fit-content;
     width: fit-content;
     opacity: 0.33;
-    animation: flight 10s ease-in;
+    animation: flight 12s ease-in;
     animation-delay: 4s
 }
 
@@ -38,9 +38,9 @@
     100% {
         top: calc(var(--airplane-top) + 11%);
         left: calc(var(--airplane-left) + 210%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 13)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 13)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 13));
+        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 15)); /* IE 9 */
+        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 15)); /* Safari 3-8 */
+        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 15));
     }
 
 }

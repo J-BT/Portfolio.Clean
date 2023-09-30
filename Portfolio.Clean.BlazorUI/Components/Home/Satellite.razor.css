@@ -1,0 +1,56 @@
+﻿
+
+.satellite-container {
+    /***** Variables *****/
+    --satellite-top: 10%;
+    --sateillite-right: -20%;
+    /*********************/
+    position: fixed;
+    top: var(--satellite-top);
+    right: var(--sateillite-right);
+    z-index: 5;
+    height: fit-content;
+    width: fit-content;
+    opacity: 0.23;
+    animation: flight 20s linear;
+    animation-delay: 15s
+}
+
+
+    .satellite-container img {
+        z-index: 7;
+        height: auto;
+        width: 2vw;
+        transform: rotate(0deg)
+    }
+
+/*Animation*/
+@keyframes flight {
+    0% {
+        right: calc(var(--sateillite-right) + 10%);
+        top: var(--satellite-top);
+        
+    }
+
+    25% {
+        top: calc(var(--satellite-top) - 2%);
+        transform: rotate(-20deg)
+    }
+
+    50% {
+        top: calc(var(--satellite-top) - 4%);
+        transform: rotate(-50deg)
+    }
+
+    75% {
+        top: calc(var(--satellite-top) - 2%);
+        transform: rotate(-80deg)
+    }
+
+    100% {
+        right: calc(var(--sateillite-right) + 120%);
+        top: calc(var(--satellite-top) - 0%);
+        transform: rotate(-100deg)
+    }
+
+}
