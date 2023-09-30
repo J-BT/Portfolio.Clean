@@ -38,9 +38,9 @@
     100% {
         top: calc(var(--airplane-top) + 11%);
         left: calc(var(--airplane-left) + 210%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 15)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 15)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 15));
+        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 20)); /* IE 9 */
+        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 20)); /* Safari 3-8 */
+        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 20));
     }
 
 }
