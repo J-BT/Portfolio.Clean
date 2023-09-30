@@ -4,7 +4,15 @@
 
 <PageTitle>@LanguageContainer.Keys["Portfolio:PageTabTitle"]</PageTitle>
 
-<div class="projects-page">
-    <SetPageTitle PageTitleName="@LanguageContainer.Keys["Portfolio:PageTitle"]"></SetPageTitle>
-    <Window DescriptionTxt_=@DescriptionTxt Technologies_=@Technologies></Window>
-</div>
+@if (isLoaded)
+{
+    <div class="projects-page">
+        <SetPageTitle PageTitleName="@LanguageContainer.Keys["Portfolio:PageTitle"]"></SetPageTitle>
+        <Window DescriptionTxt_=@DescriptionTxt Technologies_=@Technologies></Window>
+    </div>
+}
+else
+{
+    <CustomLoadingAnimation></CustomLoadingAnimation>
+}
+

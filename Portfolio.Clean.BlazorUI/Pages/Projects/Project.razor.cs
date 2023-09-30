@@ -10,6 +10,8 @@ namespace Portfolio.Clean.BlazorUI.Pages.Projects;
 public partial class Project
 {
     #region Attributes & Accessors
+
+    bool isLoaded;
     private string DescriptionTxt { get; set; } = string.Empty;
     private string Technologies { get; set; } = string.Empty;
 	public string ActualLanguage { get; set; } = string.Empty;
@@ -41,23 +43,24 @@ public partial class Project
 
         Projects = await ProjectService.GetProjects();
 
-        //DescriptionTxt = "Description du projet";
-        Technologies = "Liste des technologies (.NET, angular, etc)";
-
         try
         {
             DescriptionTxt = Projects!
                 .Where(p => p.Id == 2)!
                 .FirstOrDefault()!.ProjectDescriptionFr!;
+
+            Technologies = Projects!
+                .Where(p => p.Id == 2)!
+                .FirstOrDefault()!.ProjectTechnologies!;
         }
 
         catch
         {
             DescriptionTxt = "***Description du projet***";
+            Technologies = "***Liste des technologies (.NET, angular, etc)***";
         }
 
-        //Technologies = "Liste des technologies (.NET, angular, etc)";
-
+        isLoaded = true;
 
         await base.OnInitializedAsync();
     }
