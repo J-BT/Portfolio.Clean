@@ -5,7 +5,7 @@
     --airplane-top: 30%;
     --airplane-left: -15%;
     --airplane-scale: 1.25;
-    --airplane-coef: 1.1;
+    --airplane-coef: 1.4;
     /*********************/
     position: fixed;
     top: var(--airplane-top);
@@ -16,6 +16,7 @@
     opacity: 0.33;
     animation: flight 12s ease-in;
     animation-delay: 4s
+    
 }
 
 
@@ -23,6 +24,7 @@
         z-index: 7;
         height: auto;
         width: 2vw;
+        transform: rotate(10deg);
     }
 
 /*Animation*/
@@ -36,8 +38,8 @@
     }
 
     100% {
-        top: calc(var(--airplane-top) + 11%);
-        left: calc(var(--airplane-left) + 210%);
+        top: calc(var(--airplane-top) + 40%);
+        left: calc(var(--airplane-left) + 200%);
         -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 20)); /* IE 9 */
         -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 20)); /* Safari 3-8 */
         transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 20));
