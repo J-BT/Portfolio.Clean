@@ -21,6 +21,7 @@ builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = n
 
 builder.Services.AddScoped<IContactEmailService, ContactEmailService>();
 builder.Services.AddScoped<IPCLogService, PCLogService>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddLanguageContainer(Assembly.GetExecutingAssembly(), CultureInfo.GetCultureInfo("fr-FR"));

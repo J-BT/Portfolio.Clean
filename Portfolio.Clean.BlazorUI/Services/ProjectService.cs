@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Portfolio.Clean.BlazorUI.Contracts;
-using Portfolio.Clean.BlazorUI.Models.ContactEmails;
 using Portfolio.Clean.BlazorUI.Models.Projects;
 using Portfolio.Clean.BlazorUI.Services.Base;
 
