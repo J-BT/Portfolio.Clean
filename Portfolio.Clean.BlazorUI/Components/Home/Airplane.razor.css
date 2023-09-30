@@ -3,9 +3,9 @@
 .airplane-container {
     /***** Variables *****/
     --airplane-top: 30%;
-    --airplane-left: -10%;
+    --airplane-left: -20%;
     --airplane-scale: 1.25;
-    --airplane-coef: 1.05;
+    --airplane-coef: 1.2;
     /*********************/
     position: fixed;
     top: var(--airplane-top);
@@ -14,9 +14,8 @@
     height: fit-content;
     width: fit-content;
     opacity: 0.33;
-    animation: flight 10s linear;
-    animation-delay: 8s
-
+    animation: flight 10s ease-in;
+    animation-delay: 4s
 }
 
 
@@ -36,84 +35,12 @@
         transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 1));
     }
 
-    10% {
-        top: calc(var(--airplane-top) + 2%);
-        left: calc(var(--airplane-left) + 20%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 2)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 2)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 2));
-    }
-
-    20% {
-        top: calc(var(--airplane-top) + 3%);
-        left: calc(var(--airplane-left) + 30%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 3)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 3)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 3));
-    }
-
-    30% {
-        top: calc(var(--airplane-top) + 4%);
-        left: calc(var(--airplane-left) + 40%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 4)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 4)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 4));
-    }
-
-    40% {
-        top: calc(var(--airplane-top) + 5%);
-        left: calc(var(--airplane-left) + 50%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 5)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 5)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 5));
-    }
-
-    50% {
-        top: calc(var(--airplane-top) + 6%);
-        left: calc(var(--airplane-left) + 60%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 6)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 6)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 6));
-    }
-
-    60% {
-        top: calc(var(--airplane-top) + 7%);
-        left: calc(var(--airplane-left) + 75%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 7)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 7)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 7));
-    }
-
-    70% {
-        top: calc(var(--airplane-top) + 8%);
-        left: calc(var(--airplane-left) + 95%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 8)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 8)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 8));
-    }
-
-    80% {
-        top: calc(var(--airplane-top) + 9%);
-        left: calc(var(--airplane-left) + 120%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 9)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 9)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 9));
-    }
-
-    90% {
-        top: calc(var(--airplane-top) + 10%);
-        left: calc(var(--airplane-left) + 160%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 10)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 10)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 10));
-    }
-
     100% {
         top: calc(var(--airplane-top) + 11%);
         left: calc(var(--airplane-left) + 210%);
-        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 11)); /* IE 9 */
-        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 11)); /* Safari 3-8 */
-        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 11));
+        -ms-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 13)); /* IE 9 */
+        -webkit-transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 13)); /* Safari 3-8 */
+        transform: scale(calc(var(--airplane-scale) * var(--airplane-coef) * 13));
     }
 
 }
