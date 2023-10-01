@@ -20,8 +20,6 @@ public partial class Project
     public string ActualLanguage { get; set; } = string.Empty;
     private bool DisplayNextButton { get; set; } 
     private bool DisplayPreviousButton { get; set; } 
-
-
     [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
     [Inject]
@@ -30,7 +28,6 @@ public partial class Project
     public IProjectService ProjectService { get; set; }
     public List<ProjectVM> Projects { get; set; }
 
-    public int Test { get; set; } = 0;
 
     #endregion
 
@@ -86,7 +83,6 @@ public partial class Project
 
     private void ToPreviousProject()
     {
-        Test -= 1;
         NthProject -= 1;
         CheckDisplayableButtons();
         WriteProjectInfos();
@@ -94,7 +90,6 @@ public partial class Project
 
     private void ToNextProject()
     {
-        Test += 1;
         NthProject += 1;
         CheckDisplayableButtons();
         WriteProjectInfos();
