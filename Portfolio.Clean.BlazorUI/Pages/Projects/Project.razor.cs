@@ -13,11 +13,14 @@ public partial class Project
 
     bool isLoaded;
     public int NthProject { get; set; }
+    public int TotalProjects { get; set; }
     private string DescriptionTxt { get; set; } = string.Empty;
     private string Technologies { get; set; } = string.Empty;
     private string Title { get; set; } = string.Empty;
     public string ActualLanguage { get; set; } = string.Empty;
-	[Inject]
+
+
+    [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
     [Inject]
     public IJSRuntime JS { get; set; }
@@ -36,6 +39,7 @@ public partial class Project
     protected override async Task OnInitializedAsync()
     {
         NthProject = 3;
+
         ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
 
         if (!String.IsNullOrEmpty(ActualLanguage))
@@ -46,14 +50,29 @@ public partial class Project
 
         Projects = await ProjectService.GetProjects();
 
-        WriteProjectInfos(ActualLanguage);
+        SetNavigationElements();
+        WriteProjectInfos();
 
         isLoaded = true;
 
         await base.OnInitializedAsync();
     }
 
-    private void WriteProjectInfos(string language)
+    private void SetNavigationElements()
+    {
+        try
+        {
+            TotalProjects = Projects!.Count();
+
+        }
+
+        catch
+        {
+            TotalProjects = 0;
+        }
+    }
+
+    private void WriteProjectInfos()
     {
         try
         {
@@ -62,7 +81,7 @@ public partial class Project
                 .Skip(NthProject - 1)
                 .FirstOrDefault()!;
 
-            switch (language)
+            switch (ActualLanguage)
             {
                 case "fr-FR":
                     Title = projects!.ProjectTitleFr!;
@@ -76,7 +95,9 @@ public partial class Project
                     Title = projects!.ProjectTitleJp!;
                     DescriptionTxt = projects!.ProjectDescriptionJp!;
                     break;
-                default: 
+                default:
+                    Title = projects!.ProjectTitleFr!;
+                    DescriptionTxt = projects!.ProjectDescriptionFr!;
                     break;
 
             }
