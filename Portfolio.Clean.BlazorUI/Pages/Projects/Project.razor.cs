@@ -80,6 +80,9 @@ public partial class Project
                     break;
 
             }
+
+            Technologies = projects!.ProjectTechnologies!;
+
         }
 
         catch
