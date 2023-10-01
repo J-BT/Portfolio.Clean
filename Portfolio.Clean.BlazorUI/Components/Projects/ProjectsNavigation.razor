@@ -1,14 +1,21 @@
 <div class="projects-navigation-container">
     <div id="arrow_2" class="arrow-wrapper">
-        <div @onclick="@ToPreviousProject" class="arrow arrow--left">
-            <span>@Previous</span>
-        </div>
+        @if (DisplayPreviousButton)
+        {
+            <div @onclick="@ToPreviousProject" class="arrow arrow--left">
+                <span>@Previous</span>
+            </div>
+        }
 
         <div class="block"><h1>@ProjectWord @NthProject/@TotalProjects</h1></div>
 
-        <div @onclick="@ToNextProject" class="arrow arrow--right">
-            <span>@Next</span>
-        </div>
+        @if (DisplayNextButton)
+        {
+            <div @onclick="@ToNextProject" class="arrow arrow--right">
+                <span>@Next</span>
+            </div>
+        }
+
     </div>
 </div>
 

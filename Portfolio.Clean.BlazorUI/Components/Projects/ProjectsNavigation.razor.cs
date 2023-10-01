@@ -17,12 +17,15 @@ public partial class ProjectsNavigation
     public string Previous { get; set; } = string.Empty;
     [Parameter]
     public string Next { get; set; } = string.Empty;
-
     [Parameter]
     public Action ToNextProject { get; set; }
-
     [Parameter]
     public Action ToPreviousProject { get; set; }
+    [Parameter]
+    public bool DisplayNextButton { get; set; }
+    [Parameter]
+    public bool DisplayPreviousButton { get; set; }
+
 
     #endregion
 

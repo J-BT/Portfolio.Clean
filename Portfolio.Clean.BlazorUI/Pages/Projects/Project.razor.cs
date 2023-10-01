@@ -18,6 +18,8 @@ public partial class Project
     private string Technologies { get; set; } = string.Empty;
     private string Title { get; set; } = string.Empty;
     public string ActualLanguage { get; set; } = string.Empty;
+    private bool DisplayNextButton { get; set; } 
+    private bool DisplayPreviousButton { get; set; } 
 
 
     [Inject]
@@ -39,8 +41,7 @@ public partial class Project
     #region Methods
     protected override async Task OnInitializedAsync()
     {
-        NthProject = 3;
-
+        NthProject = 1;
         ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
 
         if (!String.IsNullOrEmpty(ActualLanguage))
@@ -53,20 +54,50 @@ public partial class Project
 
         SetNavigationElements();
         WriteProjectInfos();
+        CheckDisplayableButtons();
 
         isLoaded = true;
 
         await base.OnInitializedAsync();
     }
 
+    private void CheckDisplayableButtons()
+    {
+        if (NthProject > 1)
+        {
+            DisplayPreviousButton = true;
+        }
+        else
+        {
+            DisplayPreviousButton = false;
+
+        }
+
+        if (NthProject < TotalProjects)
+        {
+            DisplayNextButton = true;
+        }
+        else
+        {
+            DisplayNextButton = false;
+
+        }
+    }
+
     private void ToPreviousProject()
     {
         Test -= 1;
+        NthProject -= 1;
+        CheckDisplayableButtons();
+        WriteProjectInfos();
     }
 
     private void ToNextProject()
     {
         Test += 1;
+        NthProject += 1;
+        CheckDisplayableButtons();
+        WriteProjectInfos();
     }
 
 

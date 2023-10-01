@@ -12,7 +12,6 @@ public partial class Window
     public string Technologies_ { get; set; } = string.Empty;
     [Parameter]
     public string Title_ { get; set; } = string.Empty;
-
     [Parameter]
     public string ProjectWord_ { get; set; } = string.Empty;
     [Parameter]
@@ -23,12 +22,14 @@ public partial class Window
     public string Previous_ { get; set; } = string.Empty;
     [Parameter]
     public string Next_ { get; set; } = string.Empty;
-
     [Parameter]
     public Action ToNextProject_ { get; set; }
-
     [Parameter]
     public Action ToPreviousProject_ { get; set; }
+    [Parameter]
+    public bool DisplayNextButton_ { get; set; }
+    [Parameter]
+    public bool DisplayPreviousButton_ { get; set; }
     #endregion
 
     #region Constructors
