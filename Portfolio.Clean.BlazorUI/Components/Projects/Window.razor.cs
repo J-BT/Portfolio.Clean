@@ -23,6 +23,12 @@ public partial class Window
     public string Previous_ { get; set; } = string.Empty;
     [Parameter]
     public string Next_ { get; set; } = string.Empty;
+
+    [Parameter]
+    public Action ToNextProject_ { get; set; }
+
+    [Parameter]
+    public Action ToPreviousProject_ { get; set; }
     #endregion
 
     #region Constructors

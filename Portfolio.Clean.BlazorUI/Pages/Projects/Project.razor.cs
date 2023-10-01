@@ -28,6 +28,7 @@ public partial class Project
     public IProjectService ProjectService { get; set; }
     public List<ProjectVM> Projects { get; set; }
 
+    public int Test { get; set; } = 0;
 
     #endregion
 
@@ -57,6 +58,17 @@ public partial class Project
 
         await base.OnInitializedAsync();
     }
+
+    private void ToPreviousProject()
+    {
+        Test -= 1;
+    }
+
+    private void ToNextProject()
+    {
+        Test += 1;
+    }
+
 
     private void SetNavigationElements()
     {
