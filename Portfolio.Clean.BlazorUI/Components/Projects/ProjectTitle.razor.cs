@@ -2,16 +2,12 @@
 
 namespace Portfolio.Clean.BlazorUI.Components.Projects;
 
-public partial class Window
+public partial class ProjectTitle
 {
 
     #region Attributes & Accessors
     [Parameter]
-    public string DescriptionTxt_ { get; set; } = string.Empty;
-    [Parameter]
-    public string Technologies_ { get; set; } = string.Empty;
-    [Parameter]
-    public string Title_ { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
     #endregion
 
     #region Constructors

@@ -14,7 +14,8 @@ public partial class Project
     bool isLoaded;
     private string DescriptionTxt { get; set; } = string.Empty;
     private string Technologies { get; set; } = string.Empty;
-	public string ActualLanguage { get; set; } = string.Empty;
+    private string Title { get; set; } = string.Empty;
+    public string ActualLanguage { get; set; } = string.Empty;
 	[Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
     [Inject]
@@ -45,6 +46,10 @@ public partial class Project
 
         try
         {
+            Title = Projects!
+                .Where(p => p.Id == 2)!
+                .FirstOrDefault()!.ProjectTitleFr!;
+
             DescriptionTxt = Projects!
                 .Where(p => p.Id == 2)!
                 .FirstOrDefault()!.ProjectDescriptionFr!;

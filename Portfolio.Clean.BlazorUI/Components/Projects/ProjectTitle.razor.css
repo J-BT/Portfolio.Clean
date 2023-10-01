@@ -1,7 +1,7 @@
 ﻿
-.description-container {
+.title-container {
     position: fixed;
-    top: 60%;
+    top: 13%;
     left: 27%;
     transform: translate(-50%, -50%);
     z-index: 7;
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     width: calc(var(--window-container-width) * 0.5);
-    height: calc(var(--window-container-width) * 9/16 * 0.75);
+    height: calc(var(--window-container-width) * 9/16 * 0.15);
     border: 1px solid rgb(252, 248, 255, 0.05);
     border-radius: 10px;
     color: #FCF8FF;
