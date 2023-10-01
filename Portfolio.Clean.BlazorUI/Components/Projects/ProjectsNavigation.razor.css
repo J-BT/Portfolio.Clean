@@ -107,3 +107,14 @@ h1 {
     #arrow_2 .arrow:hover {
         transform: none;
     }
+
+
+    /**** no arrow***/
+
+    #arrow_2 .no-arrow span {
+        display: block;
+        width: 3em;
+        opacity: 0;
+        transition: opacity 0.3s 0s;
+        padding: 0 0.5em;
+    }

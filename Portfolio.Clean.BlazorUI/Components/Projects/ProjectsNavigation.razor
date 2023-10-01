@@ -6,6 +6,10 @@
                 <span>@Previous</span>
             </div>
         }
+        else
+        {
+            <div class="no-arrow"><span></span></div>
+        }
 
         <div class="block"><h1>@ProjectWord @NthProject/@TotalProjects</h1></div>
 
@@ -14,6 +18,10 @@
             <div @onclick="@ToNextProject" class="arrow arrow--right">
                 <span>@Next</span>
             </div>
+        }
+        else
+        {
+            <div class="no-arrow"><span></span></div>
         }
 
     </div>
