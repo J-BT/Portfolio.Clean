@@ -1,4 +1,17 @@
 ﻿
 <div class="technologies-container">
-    @Technologies
+    @* @Technologies *@
+    @foreach (string technologyIcon in TechnologiesIcons)
+    {
+        try
+        {
+            <img src="@technologyIcon" alt="@TechnologiesIconsAlt" />
+        }
+        catch
+        {
+            @TechnologiesIconsAlt
+        }
+
+    }
+
 </div>
