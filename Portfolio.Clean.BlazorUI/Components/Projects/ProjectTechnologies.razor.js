@@ -1,16 +1,11 @@
 ﻿
-export function test() {
-    alert("ça marche");
-}
 
 export function clearTechnologiesContainer() {
 
     let technologiesContainer = document.getElementById("tech");
-    let techImg = document.getElementById("tech-img");
+    let techImg = technologiesContainer.getElementsByTagName('img');
 
-    console.log(technologiesContainer.innerHTML)
-    //if (technologiesContainer.contains(techImg)) {
-    //    /*technologiesContainer.parentNode.removeChild(technologiesContainer);*/
-    //    console.log(techImg.getAttribute())
-    //}
+    while (techImg.length > 0) {
+        technologiesContainer.removeChild(techImg[0]);
+    }
 }
