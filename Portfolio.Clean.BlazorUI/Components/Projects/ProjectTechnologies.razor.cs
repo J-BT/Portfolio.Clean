@@ -24,6 +24,13 @@ public partial class ProjectTechnologies
 
         await base.OnInitializedAsync();
     }
+
+
+    /****************************************************************/
+    /************************** TO DO *******************************/
+    /************** Put all the logic in Project page****************/
+    /****************************************************************/
+
     private void SetTechnologiesImg()
     {
         if (Technologies.Contains(","))
@@ -45,8 +52,6 @@ public partial class ProjectTechnologies
 
     private bool ImageExists()
     {
-        /****************************************************************/
-        /************************** TO DO *******************************/
 
         /*check if image exist here*/
         return true;
