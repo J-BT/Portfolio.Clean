@@ -18,12 +18,16 @@ public partial class Project
     private string Technologies { get; set; } = string.Empty;
     private string Title { get; set; } = string.Empty;
     public string ActualLanguage { get; set; } = string.Empty;
-    private bool DisplayNextButton { get; set; } 
-    private bool DisplayPreviousButton { get; set; } 
+    private bool DisplayNextButton { get; set; }
+    private bool DisplayPreviousButton { get; set; }
+    public List<string> TechnologiesIcons { get; set; } = new();
+    public List<string> TechnologiesIconsAlt { get; set; } = new();
     [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
     [Inject]
     public IJSRuntime JS { get; set; }
+    private IJSObjectReference? module { get; set; }
+
     [Inject]
     public IProjectService ProjectService { get; set; }
     public List<ProjectVM> Projects { get; set; }
@@ -49,15 +53,49 @@ public partial class Project
 
         Projects = await ProjectService.GetProjects();
 
-        SetNavigationElements();
+        
         WriteProjectInfos();
+        SetNavigationElements();
         CheckDisplayableButtons();
-
         isLoaded = true;
 
-        await base.OnInitializedAsync();
+        //await base.OnInitializedAsync();
     }
 
+    private void SetTechnologiesImg()
+    {
+        string t = Technologies.Replace(" ", "");
+
+        if (Technologies.Contains(",")) //If several technologies
+        {
+
+            TechnologiesIconsAlt = t.Split(",").ToList();
+
+            foreach (var technology in TechnologiesIconsAlt)
+            {
+
+                if (ImageExists())
+                {
+                    TechnologiesIcons.Add(@$"/images/technologies/{technology}.svg");
+
+                }
+            }
+        }
+
+        else
+        {
+            TechnologiesIconsAlt.Add(t);
+            TechnologiesIcons.Add(@$"/images/technologies/{Technologies}.svg");
+        }
+
+    }
+
+    private bool ImageExists()
+    {
+
+        /*check if image exist here*/
+        return true;
+    }
     private void CheckDisplayableButtons()
     {
         if (NthProject > 1)
@@ -81,15 +119,23 @@ public partial class Project
         }
     }
 
-    private void ToPreviousProject()
+    private async Task DeleteProjectImages()
     {
+        module = await JS!.InvokeAsync<IJSObjectReference>("import", "./Components/Projects/ProjectTechnologies.razor.js");
+        await module.InvokeVoidAsync("clearTechnologiesContainer");
+    }
+
+    private async Task ToPreviousProject()
+    {
+        await DeleteProjectImages();
         NthProject -= 1;
         CheckDisplayableButtons();
         WriteProjectInfos();
     }
 
-    private void ToNextProject()
+    private async Task ToNextProject()
     {
+        await DeleteProjectImages();
         NthProject += 1;
         CheckDisplayableButtons();
         WriteProjectInfos();
@@ -115,7 +161,7 @@ public partial class Project
         try
         {
             var projects = Projects!
-                .OrderBy( p => p.Id)!
+                .OrderBy(p => p.Id)!
                 .Skip(NthProject - 1)
                 .FirstOrDefault()!;
 
@@ -140,7 +186,9 @@ public partial class Project
 
             }
 
+
             Technologies = projects!.ProjectTechnologies!;
+            SetTechnologiesImg();
 
         }
 

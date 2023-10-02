@@ -23,13 +23,17 @@ public partial class Window
     [Parameter]
     public string Next_ { get; set; } = string.Empty;
     [Parameter]
-    public Action ToNextProject_ { get; set; }
+    public Func<Task> ToNextProject_ { get; set; }
     [Parameter]
-    public Action ToPreviousProject_ { get; set; }
+    public Func<Task> ToPreviousProject_ { get; set; }
     [Parameter]
     public bool DisplayNextButton_ { get; set; }
     [Parameter]
     public bool DisplayPreviousButton_ { get; set; }
+    [Parameter]
+    public List<string> TechnologiesIcons_ { get; set; } = new();
+    [Parameter]
+    public List<string> TechnologiesIconsAlt_ { get; set; } = new();
     #endregion
 
     #region Constructors

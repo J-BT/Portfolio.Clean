@@ -1,11 +1,10 @@
 ﻿
-<div class="technologies-container">
-    @* @Technologies *@
+<div class="technologies-container" id="tech">
     @foreach (string technologyIcon in TechnologiesIcons)
     {
         try
         {
-            <img src="@technologyIcon" alt="@TechnologiesIconsAlt" />
+            <img src="@technologyIcon" alt="@TechnologiesIconsAlt" id="tech-img" />
         }
         catch
         {
@@ -13,5 +12,4 @@
         }
 
     }
-
 </div>

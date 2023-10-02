@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace Portfolio.Clean.BlazorUI.Components.Projects;
 
@@ -18,13 +19,14 @@ public partial class ProjectsNavigation
     [Parameter]
     public string Next { get; set; } = string.Empty;
     [Parameter]
-    public Action ToNextProject { get; set; }
+    public Func<Task> ToNextProject { get; set; }
     [Parameter]
-    public Action ToPreviousProject { get; set; }
+    public Func<Task> ToPreviousProject { get; set; }
     [Parameter]
     public bool DisplayNextButton { get; set; }
     [Parameter]
     public bool DisplayPreviousButton { get; set; }
+
 
 
     #endregion
