@@ -1,9 +1,8 @@
 ﻿# Sidebar
 Sidebar :
   Home : "Accueil"
-  Projects : "Projets"
-  P_Portfolio : "Portfolio"
-  P_Simulation : "Simulation"
+  Solutions : "Solutions"
+  Portfolio : "Portfolio"
   About : "à Propos"
   A_Company : "L'entreprise"
   A_Team : "L'équipe"
@@ -16,7 +15,7 @@ Home :
   TitleJob : "Solutions Logicielles"
   LaptopTypingWords : "[\"Applications web\", \"Logiciels\", \"Sites vitrines\", \"Sites e-commerce\"]"
 
-# Project
+# Portfolio
 Portfolio :
   PageTabTitle :  "Portfolio"
   PageTitle : "Portfolio"

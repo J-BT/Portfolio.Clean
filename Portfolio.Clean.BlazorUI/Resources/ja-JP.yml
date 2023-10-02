@@ -1,9 +1,8 @@
 # Sidebar
 Sidebar :
   Home : "ホーム"
-  Projects : "プロジェクト"
-  P_Portfolio : "ポートフォリオ"
-  P_Simulation : "シミュレーション"
+  Solutions : "ソリューションズ"
+  Portfolio : "ポートフォリオ"
   About : "会社概要"
   A_Company : "当社について"
   A_Team : "チームについて"
@@ -13,10 +12,10 @@ Sidebar :
 # Home
 Home :
   PageTabTitle :  "ホーム"
-  TitleJob: ソフトウェア ソリューション
+  TitleJob: "ソフトウェア ソリューションズ"
   LaptopTypingWords : "[\"ウェブアプリケーション\", \"ソフトウェア\", \"eコマース サイト\"]"
 
-# Project
+# Portfolio
 Portfolio :
   PageTabTitle :  "ポートフォリオ"
   PageTitle : "ポートフォリオ"
