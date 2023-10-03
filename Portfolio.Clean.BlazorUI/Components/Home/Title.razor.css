@@ -2,10 +2,10 @@
 
 #title-block {
     position: fixed;
-    top: 45vh;
+    top: 50vh;
     right: 0;
     bottom: 0;
-    left: 20vw;
+    left: 45vw;
     z-index: 8;
 }
 
@@ -19,14 +19,16 @@
 }
 
 .titlejob {
-    margin-top: -40px;
-    margin-left: 50px;
-    max-width: 30vw;
+    margin-top: -2.5vw;
+    margin-left: 6vw;
+    max-width: 33vw;
     display: flex;
     flex-direction: column;
 }
 
     .titlejob span {
+        white-space: break-spaces;
+        word-break: keep-all;
         font-family: 'Castoro Titling', sans-serif;
         font-size: 3.5vw;
         letter-spacing: 0.7vw;
@@ -37,7 +39,7 @@
 
 @media (max-width: 480px) {
     #title-block {
-        margin-top: 230px;
+        /*margin-top: 230px;*/
     }
 
     #titlename {
@@ -46,8 +48,8 @@
 
     .titlejob {
         font-size: 6vw;
-        margin-top: -20px;
-        margin-left: 30px;
+        margin-top: -2.5vw;
+        margin-left: 6vw;
     }
 
 }
