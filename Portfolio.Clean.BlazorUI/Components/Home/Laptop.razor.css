@@ -57,11 +57,12 @@
     text-align: start;
     color: #FCF8FF;
     font-size: 1.7vw;
-    position: fixed;
+    position: relative;
     /*    top: 42%;
     left: 65%;*/
-    top: 47%;
-    left: 61%;
+    top: -42.5vw;
+    left: 20vw;
+    
     transform: translate(-50%, -50%) rotateX(-13deg) rotateY(-28deg) rotateZ(0deg);
     z-index: 8;
 }
