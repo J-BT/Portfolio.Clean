@@ -1,40 +1,39 @@
 ﻿.laptop-container {
     /****** Variables ******/
     --laptop-container-opacity: 0.3;
+    --laptop-container-width: 40vw;
+    --laptop-container-height: 40vw;
+    --laptop-width: 50vw;
+    --laptop-height: 50vw;
     /***********************/
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 67%;
     transform: translate(-50%, -50%);
     z-index: 6;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content;
-    width: fit-content;
-/*    background: rgb(0,158,248, var(--laptop-container-opacity));
+    width: var(--laptop-container-width);
+    height: var(--laptop-container-height);
+    background: rgb(0,158,248, var(--laptop-container-opacity));
     background: linear-gradient(86deg, rgba(0,158,248,var(--laptop-container-opacity)) 0%,
         rgba(78,13,179,var(--laptop-container-opacity)) 44%, rgba(31,25,38,var(--laptop-container-opacity)) 95%);
     background: rgba(31,25,38,0.33);
     background: linear-gradient(86deg,rgba(31,25,38,var(--laptop-container-opacity)) 0%,
-        rgba(78,13,179,var(--laptop-container-opacity)) 44%, rgba(0,158,248,var(--laptop-container-opacity)) 95%);*/
-    /**** Hexagon****/
-    /*clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);*/
-    /**** Half Circle ****/
-   /* clip-path: circle(30%);*/
+        rgba(78,13,179,var(--laptop-container-opacity)) 44%, rgba(0,158,248,var(--laptop-container-opacity)) 95%);
+    border-radius: 50%;
     animation: up-down 1.5s infinite alternate;
+
 }
 
     .laptop-container img {
-        /****** Variables ******/
-        --laptop-width: 70vw;
-        --laptop-height: 70vw;
-        /***********************/
         z-index: 7;
-        margin-top: 20vh;
+        margin-top: 0vh;
         width: var(--laptop-width);
         height: var(--laptop-height);
+
     }
 
 /*Animation*/
@@ -51,18 +50,17 @@
 
 
 .laptop-text {
-    width: 25vw;
+    width: 20vw;
     /*width: calc(var(--laptop-width) / 2.8);*/
     font-family: 'Courier New';
     text-align: start;
     color: #FCF8FF;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     position: relative;
     /*    top: 42%;
     left: 65%;*/
-    top: -42.5vw;
-    left: 20vw;
-    
+    top: -30vw;
+    left: 16vw;
     transform: translate(-50%, -50%) rotateX(-13deg) rotateY(-28deg) rotateZ(0deg);
     z-index: 8;
 }
