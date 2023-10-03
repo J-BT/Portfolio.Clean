@@ -40,6 +40,8 @@
         border: none;
         --clr: #009ef8;
         text-align: start;
+        white-space: break-spaces;
+        word-break: keep-all;
     }
 
         .sidenav a:hover, .side-element button:hover {
