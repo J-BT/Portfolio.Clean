@@ -1,10 +1,10 @@
 ﻿
 .circle-container {
     /****** Variables ******/
-    /*--circle-container-opacity: 0.3;*/
-    --circle-container-opacity: 0.3;
-    /*    --circle-container-width: 40vw;
-    --circle-container-height: 40vw;*/
+    /*carousel*/
+    --slide-btn-autoplay: #4e0db3;
+    --slide-btn-clicked: #4e0db3;
+    --slide-btn-hover: #c50092;
     /***********************/
     position: fixed;
     /*    top: 50%;
@@ -107,19 +107,19 @@ input {
     }
 
     .slider > ul > li.slide-0 {
-        background-color: #00DBF9;
+        background-color: white;
     }
 
     .slider > ul > li.slide-1 {
-        background-color: #47D7ED;
+        background-color: white;
     }
 
     .slider > ul > li.slide-2 {
-        background-color: #0093E9;
+        background-color: white;
     }
 
     .slider > ul > li.slide-3 {
-        background-color: #0073B6;
+        background-color: white;
     }
     /* -------------------------------------------------------- arrow */
     .slider > .slider-arrow-prev,
@@ -195,11 +195,11 @@ input {
     .slider > #input-slide-1:checked ~ .slider-dot > label.slide-1,
     .slider > #input-slide-2:checked ~ .slider-dot > label.slide-2,
     .slider > #input-slide-3:checked ~ .slider-dot > label.slide-3 {
-        background-color: #FD7FE3;
+        background-color: var(--slide-btn-clicked);
     }
 
     .slider > .slider-dot > label:hover {
-        background-color: #7E6DE0 !important;
+        background-color: var(--slide-btn-hover) !important;
     }
     /* -------------------------------------------------------- description */
     .slider > .slide-description {
@@ -472,7 +472,7 @@ input {
 /* -------------------------------------------------------- autoplay dot */
 @-webkit-keyframes dot {
     0%, 24% {
-        background-color: #FD7FE3;
+        background-color: var(--slide-btn-autoplay);
     }
 
     25%, 100% {
@@ -482,7 +482,7 @@ input {
 
 @-moz-keyframes dot {
     0%, 24% {
-        background-color: #FD7FE3;
+        background-color: var(--slide-btn-autoplay);
     }
 
     25%, 100% {
@@ -492,7 +492,7 @@ input {
 
 @-ms-keyframes dot {
     0%, 24% {
-        background-color: #FD7FE3;
+        background-color: var(--slide-btn-autoplay);
     }
 
     25%, 100% {
@@ -502,7 +502,7 @@ input {
 
 @-o-keyframes dot {
     0%, 24% {
-        background-color: #FD7FE3;
+        background-color: var(--slide-btn-autoplay);
     }
 
     25%, 100% {
@@ -512,7 +512,7 @@ input {
 
 @keyframes dot {
     0%, 24% {
-        background-color: #FD7FE3;
+        background-color: var(--slide-btn-autoplay);
     }
 
     25%, 100% {
