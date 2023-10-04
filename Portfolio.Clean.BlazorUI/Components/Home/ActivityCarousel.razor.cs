@@ -2,7 +2,7 @@
 
 namespace Portfolio.Clean.BlazorUI.Components.Home;
 
-public partial class PurpleBlueCircle
+public partial class ActivityCarousel
 {
 
     #region Attributes & Accessors
