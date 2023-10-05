@@ -6,57 +6,30 @@
     --z-index : @ZIndex;
     --circle-container-opacity: @Opacity;">
 
-    <div class='slider'>
-        <input name="input-slider" id='input-slide-0' type="radio" class='input-slide input-slide-num'>
-        <input name="input-slider" id='input-slide-1' type="radio" class='input-slide input-slide-num'>
-        <input name="input-slider" id='input-slide-2' type="radio" class='input-slide input-slide-num'>
-        <input name="input-slider" id='input-slide-3' type="radio" class='input-slide input-slide-num'>
-        <input name="input-slider" id='input-slide-autoplay' type="radio" class='input-slide' checked>
-        <ul>
-            <li class='slide-0'></li>
-            <li class='slide-1'></li>
-            <li class='slide-2'></li>
-            <li class='slide-3'></li>
-        </ul>
-        <div class='slide-description'>
-            <label class='slide-3'>
-                <div class="text-slide" id="img1">
-                    <p> Texte</p>
-                </div>
-            </label>
-            <label class='slide-1'>
-                <div class="text-slide" id="img2">
-                    <p> Texte</p>
-                </div>
-            </label>
-            <label class='slide-2'>
-                <div class="text-slide" id="img3">
-                    <p> Texte</p>
-                </div>
-            </label>
-            <label class='slide-0'>
-                <div class="text-slide" id="img4">
-                    <p> Texte</p>
-                </div>
-            </label>
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div class='slider-arrow-prev'>
-            <label class='slide-0' for='input-slide-0'></label>
-            <label class='slide-1' for='input-slide-1'></label>
-            <label class='slide-2' for='input-slide-2'></label>
-            <label class='slide-3' for='input-slide-3'></label>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/work.jpg" class="d-block " alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/design.jpg" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/client-meeting.jpg" class="d-block" alt="...">
+            </div>
         </div>
-        <div class='slider-arrow-next'>
-            <label class='slide-0' for='input-slide-0'></label>
-            <label class='slide-1' for='input-slide-1'></label>
-            <label class='slide-2' for='input-slide-2'></label>
-            <label class='slide-3' for='input-slide-3'></label>
-        </div>
-        <div class='slider-dot'>
-            <label class='slide-0' for='input-slide-0'></label>
-            <label class='slide-1' for='input-slide-1'></label>
-            <label class='slide-2' for='input-slide-2'></label>
-            <label class='slide-3' for='input-slide-3'></label>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
