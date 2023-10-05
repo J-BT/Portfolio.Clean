@@ -19,10 +19,12 @@
     align-items: center;
     width: var(--circle-container-width);
     height: var(--circle-container-width);
-    background: rgb(0,158,248, var(--circle-container-opacity));
-    background: linear-gradient(86deg, rgba(0,158,248,var(--circle-container-opacity)) 0%, rgba(78,13,179,var(--circle-container-opacity)) 44%, rgba(31,25,38,var(--circle-container-opacity)) 95%);
+/*    background: rgb(0,158,248, var(--circle-container-opacity));
+    background: linear-gradient(86deg, rgba(0,158,248,var(--circle-container-opacity)) 0%, 
+        rgba(78,13,179,var(--circle-container-opacity)) 44%, rgba(31,25,38,var(--circle-container-opacity)) 95%);
     background: rgba(31,25,38,0.33);
-    background: linear-gradient(86deg,rgba(31,25,38,var(--circle-container-opacity)) 0%, rgba(78,13,179,var(--circle-container-opacity)) 44%, rgba(0,158,248,var(--circle-container-opacity)) 95%);
+    background: linear-gradient(86deg,rgba(31,25,38,var(--circle-container-opacity)) 0%, 
+        rgba(78,13,179,var(--circle-container-opacity)) 44%, rgba(0,158,248,var(--circle-container-opacity)) 95%);*/
     border-radius: 50%;
     overflow: hidden;
 }
@@ -46,11 +48,30 @@
 
 /***************** Carousel ********************/
 
-h1 {
+.text-slide {
+    position: fixed;
+    top: 51%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 6vw;
     text-transform: uppercase;
     font-weight: normal;
+    width: 43vw;
+    height: 100.5vh;
+    z-index: 10;
+    background: red;
+    text-align: center;
 }
+
+    .text-slide img {
+        margin-top: 0vh;
+        width: inherit;
+        height: inherit;
+    }
 
 a {
     color: inherit;
@@ -235,11 +256,11 @@ input {
         visibility: visible;
     }
 
-    .slider > .slide-description > label > .text-slide {
+  /*  .slider > .slide-description > label > .text-slide {
         margin: 0 auto;
         line-height: 6vw;
         text-align: center;
-    }
+    }*/
 
     .slider > .slide-description > .slide-0 {
         font-family: 'Raleway', sans-serif;
