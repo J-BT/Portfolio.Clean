@@ -15,15 +15,31 @@ public partial class Laptop
     private IJSObjectReference? module { get; set; }
     [Parameter]
     public string TypingWords { get; set; } = string.Empty;
-    #endregion
+	[Parameter]
+	public string PositionTop { get; set; } = string.Empty;
+	[Parameter]
+	public string PositionLeft { get; set; } = string.Empty;
+	[Parameter]
+	public string Opacity { get; set; } = string.Empty;
+	[Parameter]
+	public string ContainerWidth { get; set; } = string.Empty;
+	[Parameter]
+	public string ContainerHeight { get; set; } = string.Empty;
+	[Parameter]
+	public string LaptopWidth { get; set; } = string.Empty;
+	[Parameter]
+	public string LaptopHeight { get; set; } = string.Empty;
+	[Parameter]
+	public string ZIndex { get; set; } = string.Empty;
+	#endregion
 
-    #region Constructors
+	#region Constructors
 
-    #endregion
+	#endregion
 
-    #region Methods
+	#region Methods
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+	protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
@@ -31,5 +47,5 @@ public partial class Laptop
             await module.InvokeVoidAsync("typeOnLaptop");
         }
     }
-    #endregion
+	#endregion
 }

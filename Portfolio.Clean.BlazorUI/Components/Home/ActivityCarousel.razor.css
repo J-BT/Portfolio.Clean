@@ -6,6 +6,7 @@
     --slide-btn-clicked: #4e0db3;
     --slide-btn-hover: #c50092;
     --carousel-clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%); /*Trapezoid*/
+    /*--carousel-clip-path: circle(60.4% at 39% 38%);*/ /*half circle*/
     /***********************/
     position: fixed;
     top: var(--position-top);
@@ -18,8 +19,8 @@
     align-items: center;
     width: var(--carousel-container-width);
     height: var(--carousel-container-height);
-    /*border-radius: 65% 4% 18% 40% / 0% 26% 73% 0%;*/
-    clip-path: var(--carousel-clip-path);
+    /*clip-path: var(--carousel-clip-path);*/
+    border-radius: 0% 100% 24% 76% / 25% 25% 62% 41%;
     overflow: hidden;
 }
 
@@ -43,8 +44,8 @@
     z-index: 10;
     text-align: center;
     opacity: 0.8;
-    clip-path: var(--carousel-clip-path);
-    background-size: 100% 100%;
+    /*clip-path: var(--carousel-clip-path);*/
+    border-radius: 0% 100% 24% 76% / 25% 25% 62% 41%;
     box-shadow: 0 0 8px 8px rgba(78, 13, 179, 0.2) inset;
     filter: blur(0px) grayscale(0.8) hue-rotate(240deg);
 }

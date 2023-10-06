@@ -7,10 +7,14 @@
 <div class="home-page">
 @* 	<Airplane></Airplane>
 	<Satellite></Satellite> *@
-	<Laptop TypingWords="@LanguageContainer.Keys["Home:LaptopTypingWords"]"></Laptop>
+	<Laptop 
+		TypingWords="@LanguageContainer.Keys["Home:LaptopTypingWords"]" 
+		PositionTop="50%" PositionLeft="67%" Opacity="0.3" ContainerWidth="40vw" 
+		ContainerHeight="40vw" LaptopWidth="50vw" LaptopHeight="50vw" ZIndex="6"> 
+	</Laptop>
 	<Title TitleJob="@LanguageContainer.Keys["Home:TitleJob"]"></Title>
 	<City></City>
-	<ActivityCarousel PositionTop="50%" PositionLeft="22%" CarouselWidth="55vw" CarouselHeight="100.1vh" ZIndex="7" Opacity="1">
+	<ActivityCarousel PositionTop="30%" PositionLeft="22%" CarouselWidth="45vw" CarouselHeight="75vh" ZIndex="7" Opacity="1">
 	</ActivityCarousel>
 
 	<select class="language-selector">

@@ -1,23 +1,19 @@
 ﻿.laptop-container {
     /****** Variables ******/
-    --laptop-container-opacity: 0.3;
-    --laptop-container-width: 40vw;
-    --laptop-container-height: 40vw;
-    --laptop-width: 50vw;
-    --laptop-height: 50vw;
+
     /***********************/
     position: fixed;
-    top: 50%;
-    left: 67%;
+    top: var(--laptop-position-top);
+    left: var(--laptop-position-left);
     transform: translate(-50%, -50%);
-    z-index: 6;
+    z-index: var(--laptop-z-index);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: var(--laptop-container-width);
     height: var(--laptop-container-height);
-/*    background: rgb(0,158,248, var(--laptop-container-opacity));
+    /*    background: rgb(0,158,248, var(--laptop-container-opacity));
     background: linear-gradient(86deg, rgba(0,158,248,var(--laptop-container-opacity)) 0%,
         rgba(78,13,179,var(--laptop-container-opacity)) 44%, rgba(31,25,38,var(--laptop-container-opacity)) 95%);
     background: rgba(31,25,38,0.33);
@@ -25,7 +21,6 @@
         rgba(78,13,179,var(--laptop-container-opacity)) 44%, rgba(0,158,248,var(--laptop-container-opacity)) 95%);
     border-radius: 50%;*/
     animation: up-down 1.5s infinite alternate;
-
 }
 
     .laptop-container img {
