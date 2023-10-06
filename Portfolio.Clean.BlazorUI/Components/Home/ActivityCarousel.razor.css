@@ -8,7 +8,6 @@
     --carousel-clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%); /*Trapezoid*/
     /***********************/
     position: fixed;
-
     top: var(--position-top);
     left: var(--position-left);
     transform: translate(-50%, -50%);
@@ -17,8 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: var(--circle-container-width);
-    height: 100.1vh;
+    width: var(--carousel-container-width);
+    height: var(--carousel-container-height);
     /*border-radius: 65% 4% 18% 40% / 0% 26% 73% 0%;*/
     clip-path: var(--carousel-clip-path);
     overflow: hidden;
@@ -39,8 +38,8 @@
     font-size: 6vw;
     text-transform: uppercase;
     font-weight: normal;
-    width: inherit;
-    height: 100vh;
+    width: var(--carousel-container-width);
+    height: var(--carousel-container-height);
     z-index: 10;
     text-align: center;
     opacity: 0.8;

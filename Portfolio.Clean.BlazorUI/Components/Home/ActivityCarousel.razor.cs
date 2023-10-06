@@ -11,7 +11,9 @@ public partial class ActivityCarousel
     [Parameter]
     public string PositionLeft { get; set; } = string.Empty;
 	[Parameter]
-	public string CircleWidth { get; set; } = string.Empty;
+	public string CarouselWidth { get; set; } = string.Empty;
+	[Parameter]
+	public string CarouselHeight { get; set; } = string.Empty;
 	[Parameter]
 	public string ZIndex { get; set; } = string.Empty;
 	[Parameter]
