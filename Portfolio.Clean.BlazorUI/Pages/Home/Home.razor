@@ -1,20 +1,30 @@
 ﻿@page "/"
+@using Portfolio.Clean.BlazorUI.Components.Common
 @using Portfolio.Clean.BlazorUI.Components.Home
 @inject ILanguageContainerService languageContainer
 
 <PageTitle>@LanguageContainer.Keys["Home:PageTabTitle"]</PageTitle>
 
 <div class="home-page">
-	<Laptop PositionTop="30%" PositionLeft="25%" Opacity="0.3"
-		ContainerWidth="50vw" ContainerHeight="50vw" ZIndex="6">
-	</Laptop>
-	<City></City>
-	<HomeMainText></HomeMainText>
+	 @if (isLoaded)
+    {
+		<Laptop PositionTop="30%" PositionLeft="30%" Opacity="0.3"
+				ContainerWidth="50vw" ContainerHeight="50vw" ZIndex="6">
+		</Laptop>
+		<City></City>
+		<HomeMainText></HomeMainText>
 
-	<select class="language-selector">
-		@foreach (var language in Languages)
-		{
-			<option @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</option>
-		}
-	</select>
+		<select class="language-selector">
+			@foreach (var language in Languages)
+			{
+				<option @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</option>
+			}
+		</select>
+		<PortfolioFooter></PortfolioFooter>
+    }
+    else
+    {
+        <CustomLoadingAnimation></CustomLoadingAnimation>
+    }
+
 </div>

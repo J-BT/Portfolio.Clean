@@ -9,6 +9,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/Home/jbtdev-home-new-background-image-color.png");
+    background-size: 100% 100%;
 }
 
     .language-selector {
