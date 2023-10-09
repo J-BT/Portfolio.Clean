@@ -10,7 +10,6 @@ public partial class Home
 
 	#region Attributes & Accessors
 
-	public string LaptopTypingWords { get; set; } = string.Empty;
 	public string ActualLanguage { get; set; } = string.Empty;
 	private Dictionary<string, string> Languages { get; set; } = new()
 	{

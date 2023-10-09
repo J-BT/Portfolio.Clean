@@ -8,15 +8,8 @@ public partial class Laptop
 {
 
     #region Attributes & Accessors
-
-    [Inject]
-    public IJSRuntime? JSRuntime { get; set; }
-
-    private IJSObjectReference? module { get; set; }
     [Parameter]
-    public string TypingWords { get; set; } = string.Empty;
-	[Parameter]
-	public string PositionTop { get; set; } = string.Empty;
+    public string PositionTop { get; set; } = string.Empty;
 	[Parameter]
 	public string PositionLeft { get; set; } = string.Empty;
 	[Parameter]
@@ -25,10 +18,6 @@ public partial class Laptop
 	public string ContainerWidth { get; set; } = string.Empty;
 	[Parameter]
 	public string ContainerHeight { get; set; } = string.Empty;
-	[Parameter]
-	public string LaptopWidth { get; set; } = string.Empty;
-	[Parameter]
-	public string LaptopHeight { get; set; } = string.Empty;
 	[Parameter]
 	public string ZIndex { get; set; } = string.Empty;
 	#endregion
@@ -39,13 +28,5 @@ public partial class Laptop
 
 	#region Methods
 
-	protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            module = await JSRuntime!.InvokeAsync<IJSObjectReference>("import", "./Components/Home/Laptop.razor.js");
-            await module.InvokeVoidAsync("typeOnLaptop");
-        }
-    }
 	#endregion
 }

@@ -27,13 +27,14 @@
     text-align: center;
 }
 
-    .home-img-top img {
+/*    .home-img-top img {
         width: inherit;
         height: inherit;
         background-size: 100% 100%;
         opacity: 0.8;
         z-index: 2;
-    }
+        filter: brightness(2);
+    }*/
     /*.home-img-bottom {
     position: fixed;
     bottom: 0%;

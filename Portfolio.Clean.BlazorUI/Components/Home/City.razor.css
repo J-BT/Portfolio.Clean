@@ -7,7 +7,7 @@
     left: 0;
     height: fit-content;
     width: fit-content;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
     .left-city-container img {
@@ -23,7 +23,7 @@
     right: 0;
     height: fit-content;
     width: fit-content;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
     .right-city-container img {
