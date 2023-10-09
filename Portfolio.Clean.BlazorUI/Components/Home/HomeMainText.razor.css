@@ -1,7 +1,7 @@
 ﻿
 .home-main-text {
     position: fixed;
-    top: 30%;
+    top: 50%;
     left: 61%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -46,7 +46,7 @@
         top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: start;
+        text-align: end;
         width: 35vw;
         height: 12vh;
         font-size: 0.90vw;
