@@ -11,5 +11,54 @@
     width: 40vw;
     height: 45vh;
     z-index: 10;
-    background: green;
+    color: #FCF8FF;
+    /*background: purple;*/
 }
+
+    .home-main-text .title {
+        position: fixed;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: end;
+        width: 35vw;
+        height: 6vh;
+        font-weight: 900;
+        font-size: 1.8vw;
+        /*background: green;*/
+    }
+
+    .home-main-text .sub-title {
+        position: fixed;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: end;
+        width: 35vw;
+        height: 12vh;
+        font-weight: 900;
+        font-size: 2vw;
+        /*background: blue;*/
+    }
+
+    .home-main-text .description {
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: start;
+        width: 35vw;
+        height: 12vh;
+        font-size: 0.90vw;
+        /*background: grey;*/
+    }
+    .home-main-text button {
+        position: fixed;
+        top: 85%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        font-weight: 400;
+        font-size: 0.9vw;
+        width: 7vw;
+        height: 4vh;
+    }
