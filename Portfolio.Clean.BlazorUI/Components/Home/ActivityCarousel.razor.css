@@ -5,8 +5,8 @@
     --slide-btn-autoplay: #4e0db3;
     --slide-btn-clicked: #4e0db3;
     --slide-btn-hover: #c50092;
-    --carousel-clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%); /*Trapezoid*/
-    /*--carousel-clip-path: circle(60.4% at 39% 38%);*/ /*half circle*/
+    /*--carousel-clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%);*/ /*Trapezoid*/
+    /*--carousel-clip-path: circle(49.6% at 50% 0);*/ /*half circle*/
     /***********************/
     position: fixed;
     top: var(--position-top);
@@ -20,7 +20,7 @@
     width: var(--carousel-container-width);
     height: var(--carousel-container-height);
     /*clip-path: var(--carousel-clip-path);*/
-    border-radius: 0% 100% 24% 76% / 25% 25% 62% 41%;
+    border-radius: 17% 83% 67% 4% / 42% 46% 52% 44%;
     overflow: hidden;
 }
 
@@ -45,7 +45,7 @@
     text-align: center;
     opacity: 0.8;
     /*clip-path: var(--carousel-clip-path);*/
-    border-radius: 0% 100% 24% 76% / 25% 25% 62% 41%;
+    border-radius: 17% 83% 67% 4% / 42% 46% 52% 44%;
     box-shadow: 0 0 8px 8px rgba(78, 13, 179, 0.2) inset;
     filter: blur(0px) grayscale(0.8) hue-rotate(240deg);
 }

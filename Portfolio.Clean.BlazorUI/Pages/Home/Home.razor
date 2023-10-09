@@ -1,0 +1,25 @@
+﻿@page "/"
+@using Portfolio.Clean.BlazorUI.Components.Home
+@inject ILanguageContainerService languageContainer
+
+<PageTitle>@LanguageContainer.Keys["Home:PageTabTitle"]</PageTitle>
+
+<div class="home-page">
+	<LaptopWhite TypingWords="@LanguageContainer.Keys["Home:LaptopTypingWords"]"
+				 PositionBottom="19%" PositionLeft="51%" Opacity="0.3" ContainerWidth="40vw"
+				 ContainerHeight="40vw" LaptopWidth="40vw" LaptopHeight="40vw" ZIndex="6">
+	</LaptopWhite>
+	<City></City>
+
+	<div class="home-img-top">
+		<img src="/images/Home/jbtdev-home-new-background-image-color.png">
+	</div>
+	<div class="home-img-bottom"></div>
+
+	<select class="language-selector">
+		@foreach (var language in Languages)
+		{
+			<option @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</option>
+		}
+	</select>
+</div>

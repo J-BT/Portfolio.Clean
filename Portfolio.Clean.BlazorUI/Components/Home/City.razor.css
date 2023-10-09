@@ -1,13 +1,13 @@
 ﻿
 
 .left-city-container {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     bottom: 0;
     left: 0;
     height: fit-content;
     width: fit-content;
-    opacity: 0.33;
+    opacity: 0.8;
 }
 
     .left-city-container img {
@@ -17,17 +17,17 @@
     }
 
 .right-city-container {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     bottom: -0.9%;
     right: 0;
     height: fit-content;
     width: fit-content;
-    opacity: 0.33;
+    opacity: 0.8;
 }
 
     .right-city-container img {
-        z-index: 1;
+        z-index: 3;
         object-fit: inherit;
         height: auto;
         width: 50.01vw;
