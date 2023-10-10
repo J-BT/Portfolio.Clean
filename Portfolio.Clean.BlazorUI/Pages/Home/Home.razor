@@ -14,12 +14,20 @@
 		<City></City>
 		<HomeMainText></HomeMainText>
 
-		<select class="language-selector">
-			@foreach (var language in Languages)
-			{
-				<option @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</option>
-			}
-		</select>
+		<div class="language-selector">
+
+            <div class="side-element">
+                <button class="dropdown-btn" @onclick="ShowLanguages">
+                    <img src="/images/Home/icons8-language-50.png">
+                </button>
+                <div class="dropdown-container" id="about-dropdown" style="display: @displayLanguages;">
+                    @foreach (var language in Languages)
+                    {
+                        <a @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</a>
+                    }
+                </div>
+            </div>
+		</div>
     }
     else
     {

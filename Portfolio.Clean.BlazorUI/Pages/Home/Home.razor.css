@@ -13,20 +13,124 @@
     background-size: 100% 100%;
 }
 
-    .language-selector {
-        appearance: none;
-        -webkit-appearance: none;
-        width: fit-content;
-        height: auto;
-        position: fixed;
-        bottom: 0%;
-        right: 50px;
-        overflow: hidden;
-        font-size: var(--flag-width);
-        color: white;
-        background: none;
-        border: none;
-        outline: none;
-        scroll-behavior: smooth;
-        z-index: 3;
+.language-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 45px;
+    height: fit-content;
+    position: fixed;
+    bottom: 2%;
+    right: 112px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    font-size: var(--flag-width);
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    z-index: 3;
+}
+
+    .language-selector .side-element {
+        /********Variables*******/
+        --nav-font-size: 14px;
+        --nav-width: 170px;
+        /************************/
+        width: var(--nav-width);
+        height: fit-content;
+        /*margin: 8px 8px 8px 8px;*/
+        border: 1px solid rgb(252, 248, 255, 0.05);
+        overflow-y: visible;
+        background: rgb(31, 25, 38, 0.5);
     }
+
+
+    .language-selector a, .side-element button {
+        width: var(--nav-width);
+        position: relative;
+        background: none;
+        color: #FCF8FF;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: var(--nav-font-size);
+        letter-spacing: 2px;
+        font-weight: 400;
+        padding: 10px 10px;
+        font-family: 'Castoro Titling', sans-serif;
+        display: block;
+        transition: 0.5s;
+        border: none;
+        --clr: #009ef8;
+        text-align: center;
+        white-space: break-spaces;
+        word-break: keep-all;
+    }
+
+        .language-selector a:hover, .side-element button:hover {
+            background: rgb(31, 25, 38, 0.5);
+            color: var(--clr);
+            box-shadow: 0 0 5px var(--clr);
+        }
+
+        .language-selector a:before, .side-element button:before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            /*background: rgb(31, 25, 38, 0.5);*/
+        }
+
+        .language-selector a span, .side-element button span {
+            position: relative;
+            z-index: 1;
+        }
+
+/* Main content */
+.main {
+    margin-left: 210px; /* Same as the width of the sidenav */
+    /*font-size: 20px;*/ /* Increased text to enable scrolling */
+    opacity: 1;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: #4e0db3;
+    color: #FCF8FF;
+}
+
+.dropdown-container {
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    position: fixed;
+    bottom: 60px;
+    right: 68px;
+}
+
+    .dropdown-container a:not(button) {
+        font-size: calc(var(--nav-font-size) - 5px);
+        width: calc(var(--nav-width) - 35px);
+        letter-spacing: 4px;
+    }
+
+.dropdown-btn {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40px !important;
+    height: 40px !important;
+}
+button {
+
+
+}
+
+.language-selector .side-element .dropdown-btn img {
+    width: 25px;
+    height: 25px;
+}

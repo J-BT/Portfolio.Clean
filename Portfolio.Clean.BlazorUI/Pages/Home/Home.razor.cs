@@ -14,9 +14,9 @@ public partial class Home
 	public string ActualLanguage { get; set; } = string.Empty;
 	private Dictionary<string, string> Languages { get; set; } = new()
 	{
-		{ "fr-FR", "🇫🇷"},
-		{ "en-US", "🇬🇧"},
-		{ "ja-JP", "🇯🇵"}
+		{ "fr-FR", "Français"},
+		{ "en-US", "English"},
+		{ "ja-JP", "日本語"}
 	};
 
 	[Inject]
@@ -27,16 +27,18 @@ public partial class Home
 	[Inject]
 	private NavigationManager Navigationmanager { get; set; }
 
+    private string displayLanguages = string.Empty;
 
-	#endregion
 
-	#region Constructors
+    #endregion
 
-	#endregion
+    #region Constructors
 
-	#region Methods
+    #endregion
 
-	private Dictionary<string, string> OrderByLocalStorage(Dictionary<string, string> languages)
+    #region Methods
+
+    private Dictionary<string, string> OrderByLocalStorage(Dictionary<string, string> languages)
 	{
 
 		Dictionary<string, string> orderedLanguages = new();
@@ -56,8 +58,9 @@ public partial class Home
 
 	protected override async Task OnInitializedAsync()
 	{
+		displayLanguages = "none";
 
-		ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
+        ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
 
 		if (!String.IsNullOrEmpty(ActualLanguage))
 		{
@@ -78,5 +81,17 @@ public partial class Home
 		Navigationmanager.NavigateTo("/", true);
 	}
 
-	#endregion
+    private void ShowLanguages()
+    {
+        if (displayLanguages == "none")
+        {
+            displayLanguages = "flex";
+        }
+        else
+        {
+            displayLanguages = "none";
+        }
+    }
+
+    #endregion
 }
