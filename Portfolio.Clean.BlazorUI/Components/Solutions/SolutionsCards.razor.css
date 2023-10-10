@@ -9,9 +9,10 @@
     align-items: center;
     width: var(--solution-container-width);
     height: var(--solution-container-height);
-    z-index: 10;
+    z-index: 4;
     color: #FCF8FF;
     background: purple;
+    opacity: 0.9;
 }
     .solution-container .title {
         width: calc(var(--solutions-container-width) / 5);
