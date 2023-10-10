@@ -19,7 +19,7 @@
         width: fit-content;
         height: auto;
         position: fixed;
-        top: 20px;
+        bottom: 0%;
         right: 50px;
         overflow: hidden;
         font-size: var(--flag-width);
