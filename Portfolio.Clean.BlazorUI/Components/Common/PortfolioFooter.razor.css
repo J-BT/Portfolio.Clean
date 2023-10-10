@@ -3,7 +3,7 @@
     bottom: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: var(--laptop-z-index);
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

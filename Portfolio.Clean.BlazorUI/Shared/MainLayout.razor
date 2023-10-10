@@ -6,13 +6,14 @@
 <div class="page">
     @if (isLoaded)
     {
+        <PortfolioNavbar></PortfolioNavbar>
         <Logo></Logo>
-        @* <PortfolioSidebar></PortfolioSidebar> *@
         <main>
             <article class="content">
                 @Body
             </article>
         </main>
+        <PortfolioFooter></PortfolioFooter>
     }
     else
     {
