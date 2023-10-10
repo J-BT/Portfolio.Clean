@@ -1,0 +1,20 @@
+﻿
+.solutions-container {
+    /********Variables*******/
+    /************************/
+
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.solutions-container img{
+    width: inherit;
+    height: inherit;
+    opacity: 0.3;
+}

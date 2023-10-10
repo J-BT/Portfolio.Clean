@@ -68,7 +68,7 @@ public partial class Home
 			Languages = OrderByLocalStorage(Languages);
 
 		}
-		await Task.Delay(500);
+		await Task.Delay(800);
 		isLoaded = true;
 		await base.OnInitializedAsync();
 	}

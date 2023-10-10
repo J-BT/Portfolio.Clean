@@ -12,9 +12,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/Home/jbtdev-home-new-background-image-color.png");
-    background-size: 100% 100%;
+    /*    background-image: url("../images/Home/jbtdev-home-new-background-image-color.png");
+    background-size: 100% 100%;*/
 }
+
+    .home-page img {
+        width: inherit;
+        height: inherit;
+        opacity: 0.8;
+    }
 
 .language-selector {
     appearance: none;
@@ -129,9 +135,8 @@ a:active {
     width: 56px !important;
     height: 56px !important;
 }
+
 button {
-
-
 }
 
 .language-selector .side-element .dropdown-btn img {
