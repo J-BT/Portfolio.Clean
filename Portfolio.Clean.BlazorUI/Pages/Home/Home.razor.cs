@@ -11,6 +11,7 @@ public partial class Home
 	#region Attributes & Accessors
 
 	bool isLoaded = false;
+
 	public string ActualLanguage { get; set; } = string.Empty;
 	private Dictionary<string, string> Languages { get; set; } = new()
 	{

@@ -23,7 +23,7 @@
                 <div class="dropdown-container" id="about-dropdown" style="display: @displayLanguages;">
                     @foreach (var language in Languages)
                     {
-                        <a @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</a>
+                        <a class="" @onclick='() => SetLanguage($"{language.Key}")'>@language.Value</a>
                     }
                 </div>
             </div>

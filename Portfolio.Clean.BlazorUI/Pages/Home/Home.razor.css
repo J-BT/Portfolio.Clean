@@ -96,9 +96,10 @@
 }
 
 /* Add an active class to the active dropdown button */
-.active {
-    background-color: #4e0db3;
-    color: #FCF8FF;
+a:active {
+    /*    background-color: #4e0db3;
+    color: #FCF8FF;*/
+    color: var(--clr);
 }
 
 .dropdown-container {
@@ -109,7 +110,7 @@
     align-items: center;
     height: fit-content;
     position: fixed;
-    bottom: 75px;
+    bottom: 83px;
     right: 20px;
 }
 
