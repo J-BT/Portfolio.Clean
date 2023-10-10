@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Resources  -> Create your own .yml (ex : en-US.yml)
+Resources/
+
 # User-specific files
 *.rsuser
 *.suo

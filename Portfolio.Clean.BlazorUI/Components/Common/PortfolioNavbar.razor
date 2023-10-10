@@ -2,15 +2,6 @@
     <div class="side-element">
         <a href="#"><span>@LanguageContainer.Keys["Sidebar:Home"]</span><i></i></a>
     </div>
-    @*     <div class="side-element">
-    <button class="dropdown-btn" @onclick="ProjectDropdown">
-    <span>@LanguageContainer.Keys["Sidebar:Projects"] ▽</span><i></i>
-    </button>
-    <div class="dropdown-container" id="project-dropdown" style="display: @projectsList;">
-    <a href="projects">@LanguageContainer.Keys["Sidebar:P_Portfolio"]</a>
-    <a href="#">@LanguageContainer.Keys["Sidebar:P_Simulation"]</a>
-    </div>
-    </div> *@
     <div class="side-element">
         <a href="#"><span>@LanguageContainer.Keys["Sidebar:Solutions"]</span><i></i></a>
     </div>
@@ -37,7 +28,7 @@
 
 <div class="sidenav-toogle">
     <div class="side-element">
-        <button class="dropdown-btn" @onclick="ProjectDropdown"><span>≡</span></button>
+        <button class="dropdown-btn" @onclick="DisplaySideBar"><span>≡</span></button>
     </div>
 </div>
-
+<PortfolioSidebar Sidebar="@displaySidebar"></PortfolioSidebar>

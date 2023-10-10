@@ -4,7 +4,7 @@
     width: fit-content;
     position: fixed;
     top: 50%;
-    left: 92%;
+    left: 88%;
     transform: translate(-50%, -50%);
     z-index: 6;
     overflow-x: hidden;
@@ -170,23 +170,122 @@
 
 
 /* Phones & small devices: */
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 460px) {
     .sidenav {
-        display: none;
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        top: 50%;
+        left: 73.5%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(31, 25, 38, 0.5);
+        --nav-font-size: 17px;
+        --nav-width: 225px;
+    }
+}
+
+/* Phones & small devices: */
+@media screen and (min-width: 460px ) and (max-width : 600px) {
+    .sidenav {
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(31, 25, 38, 0.5);
+        --nav-font-size: 17px;
+        --nav-width: 225px;
     }
 }
 
 /* Ladscape tablets: */
-@media screen and (min-width: 600px ) and (max-width : 1024px) {
+@media screen and (min-width: 600px ) and (max-width : 900px) {
     .sidenav {
-        display: none;
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        top: 50%;
+        left: 87%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(31, 25, 38, 0.5);
+        --nav-font-size: 17px;
+        --nav-width: 225px;
+    }
+}
+
+/* Ladscape tablets: */
+@media screen and (min-width: 900px ) and (max-width : 1024px) {
+    .sidenav {
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        top: 50%;
+        left: 88%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(31, 25, 38, 0.5);
+        --nav-font-size: 17px;
+        --nav-width: 225px;
     }
 }
 
 /* Desktops and laptops  */
-@media screen and (min-width: 1024px ) and (max-width : 1224px) {
+@media screen and (min-width: 1024px ) and (max-width : 1100px) {
     .sidenav {
-        display: none;
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        top: 50%;
+        left: 89%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(31, 25, 38, 0.5);
+        --nav-font-size: 17px;
+        --nav-width: 225px;
+    }
+}
+
+/* Desktops and laptops  */
+@media screen and (min-width: 1100px ) and (max-width : 1224px) {
+    .sidenav {
+        height: fit-content;
+        width: fit-content;
+        position: fixed;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(31, 25, 38, 0.5);
+        --nav-font-size: 17px;
+        --nav-width: 225px;
     }
 }
 
@@ -194,5 +293,8 @@
 @media screen and (min-width : 1224px) {
     .sidenav-toogle {
         display: none;
+    }
+    .sidenav {
+        display: none !important;
     }
 }

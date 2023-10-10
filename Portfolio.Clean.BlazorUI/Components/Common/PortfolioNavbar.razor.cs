@@ -10,7 +10,7 @@ public partial class PortfolioNavbar
 
     #region Attributes & Accessors
 
-    private string projectsList = string.Empty;
+    private string displaySidebar = string.Empty;
     private string aboutList = string.Empty;
     [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
@@ -28,7 +28,7 @@ public partial class PortfolioNavbar
 
     protected override async Task OnInitializedAsync()
     {
-        projectsList = "none";
+        displaySidebar = "none";
         aboutList = "none";
 
         ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
@@ -40,15 +40,15 @@ public partial class PortfolioNavbar
         }
     }
 
-    private void ProjectDropdown()
+    private void DisplaySideBar()
 	{
-        if(projectsList == "none")
+        if(displaySidebar == "none")
         {
-            projectsList = "block";
+            displaySidebar = "flex";
         }
         else
         {
-            projectsList = "none";
+            displaySidebar = "none";
         }
     }
 
@@ -56,7 +56,7 @@ public partial class PortfolioNavbar
     {
         if (aboutList == "none")
         {
-            aboutList = "block";
+            aboutList = "flex";
         }
         else
         {

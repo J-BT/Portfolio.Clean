@@ -10,7 +10,8 @@ public partial class PortfolioSidebar
 
     #region Attributes & Accessors
 
-    private string projectsList = string.Empty;
+    [Parameter]
+    public string Sidebar { get; set; }
     private string aboutList = string.Empty;
     [Inject]
     private ILanguageContainerService LanguageContainer { get; set; }
@@ -28,7 +29,7 @@ public partial class PortfolioSidebar
 
     protected override async Task OnInitializedAsync()
     {
-        projectsList = "none";
+        Sidebar = "none";
         aboutList = "none";
 
         ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
@@ -40,17 +41,6 @@ public partial class PortfolioSidebar
         }
     }
 
-    private void ProjectDropdown()
-	{
-        if(projectsList == "none")
-        {
-            projectsList = "block";
-        }
-        else
-        {
-            projectsList = "none";
-        }
-    }
 
     private void AboutDropdown()
     {
