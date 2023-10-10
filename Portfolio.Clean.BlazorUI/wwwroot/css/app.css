@@ -34,7 +34,7 @@ body, .index-loading {
             width: 200px;
             height: 200px;
             background: #1f1926; /*black*/
-            opacity: 0.75;
+            opacity: 0.5;
             border-radius: 20px;
             display: flex;
             justify-content: center;
