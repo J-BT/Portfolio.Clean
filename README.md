@@ -65,3 +65,22 @@
 > NOTE
 > In visual studio, the secrets.json file must be retrieved from the API project.
 >
+
+## __Resources__
+> NOTE
+> You must create your own .yml files to enable multi-language texts. Check the following en-US.yml template below.
+> Once your .yml files are created you can retrieve informations as follows : @LanguageContainer.Keys["Sidebar:Portfolio"] 
+>
+
+```
+# Sidebar
+Sidebar :
+  Home : "Home"
+  Solutions : "Solutions"
+  Portfolio : "Portfolio"
+  About : "About"
+  A_Company : "Company"
+  A_Team : "Team"
+  Contact : "Contact"
+  Test : "Test"
+```
