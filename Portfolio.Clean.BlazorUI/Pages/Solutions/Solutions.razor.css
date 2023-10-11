@@ -63,7 +63,7 @@ body {
 }
 
     .container > div {
-        flex: 0 0 calc(var(--solutions-container-width) / 12);
+        flex: 0 0 calc(var(--solutions-container-width) / 8);
         border-radius: 15px;
         transition: 0.5s ease-in-out;
         cursor: pointer;
@@ -73,35 +73,46 @@ body {
     }
 
         .container > div:nth-of-type(1) {
-            background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+            background: url("../../images/Solutions/1-showcase-site.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
         }
 
         .container > div:nth-of-type(2) {
-            background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+            background: url("../../images/Solutions/2-web-application.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
         }
 
         .container > div:nth-of-type(3) {
-            background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+            background: url("../../images/Solutions/3-api.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
         }
 
         .container > div:nth-of-type(4) {
-            background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+           /* background: url("../../images/Solutions/4-back-office.jpg");*/
+            /*background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 30% 50%;*/
         }
         .container > div:nth-of-type(5) {
-            background: url("https://images.pexels.com/photos/1845208/pexels-photo-1845208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+            background: url("../../images/Solutions/5-site-redesign.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 30% 50%;
         }
 
         .container > div:nth-of-type(6) {
-            background: url("https://images.pexels.com/photos/36469/woman-person-flowers-wreaths.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
+           /* background: url("../../images/Solutions/6-consulting.jpg");*/
+            /*background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0% 50%;*/
         }
 
-        .container > div:nth-of-type(7) {
-            background: url("https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
-        }
-
-        .container > div:nth-of-type(8) {
-            background: url("https://images.pexels.com/photos/247322/pexels-photo-247322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 50%/cover;
-        }
 
         .container > div .content {
             font-size: 1.5rem;
