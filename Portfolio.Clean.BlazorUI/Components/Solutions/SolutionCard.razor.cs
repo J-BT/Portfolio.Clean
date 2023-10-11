@@ -1,6 +1,6 @@
 ﻿namespace Portfolio.Clean.BlazorUI.Components.Solutions;
 
-public partial class SolutionsCards
+public partial class SolutionCard
 {
 
 	#region Attributes & Accessors
