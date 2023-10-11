@@ -94,10 +94,10 @@ body {
         }
 
         .container > div:nth-of-type(4) {
-           /* background: url("../../images/Solutions/4-back-office.jpg");*/
-            /*background-size: cover;
+            background: url("../../images/Solutions/4-back-office.jpg");
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: 30% 50%;*/
+            background-position: 10% 50%;
         }
         .container > div:nth-of-type(5) {
             background: url("../../images/Solutions/5-site-redesign.jpg");
@@ -107,10 +107,10 @@ body {
         }
 
         .container > div:nth-of-type(6) {
-           /* background: url("../../images/Solutions/6-consulting.jpg");*/
-            /*background-size: cover;
+            background: url("../../images/Solutions/6-consulting.jpg");
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: 0% 50%;*/
+            background-position: 70% 50%;
         }
 
 
