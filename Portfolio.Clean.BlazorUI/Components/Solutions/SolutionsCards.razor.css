@@ -12,8 +12,7 @@
     height: var(--solution-container-height);
     z-index: 4;
     color: #FCF8FF;
-    background: rgb(36,41,73);
-    background: linear-gradient(90deg, rgba(36,41,73,1) 0%, rgba(29,34,61,1) 100%);
+    background: linear-gradient(180deg, rgba(28, 36, 76, 1) 0%, rgba(27, 28, 68, 1) 50%, rgba(28, 36, 76, 1) 100%, rgba(37, 150, 190, 1) 100%);
     border-radius: 15px;
     opacity: 1;
 }
@@ -39,8 +38,7 @@
             align-items: center;
             font-weight: 900;
             font-size: calc(var(--solution-container-width) / 15);
-            background: rgb(36,41,73);
-            background: linear-gradient(90deg, rgba(36,41,73,1) 0%, rgba(29,34,61,1) 100%);
+            background: linear-gradient(180deg, rgba(28, 36, 76, 1) 0%, rgba(27, 28, 68, 1) 50%, rgba(28, 36, 76, 1) 100%, rgba(37, 150, 190, 1) 100%);
             position: relative;
             border-radius: var(--borderWidth);
         }
@@ -78,8 +76,7 @@
         align-items: end;
         border-radius: var(--borderWidth);
         font-size: calc(var(--solution-container-width) / 15);
-        /*background-image: linear-gradient(to left bottom, #4e0db3, #490db3, #430db3, #3e0db3, #370db3);*/
-        background-image: linear-gradient(to top, #4e0db3, #581abb, #6225c3, #6c2fcc, #7538d4);
+        background: linear-gradient(174deg, rgba(112, 63, 188, 1) 0%, rgba(108, 41, 245, 1) 10%, rgba(78, 13, 179, 1) 100%, rgba(112, 63, 188, 1) 100%);
     }
 
         .solution-container .sub-title-container .sub-title {
@@ -102,7 +99,7 @@
         align-items: end;
         border-radius: var(--borderWidth);
         font-size: calc(var(--solution-container-width) / 15);
-        background-image: linear-gradient(to left bottom, #4e0db3, #490db3, #430db3, #3e0db3, #370db3);
+        background: linear-gradient(90deg, rgba(78, 13, 179, 1) 0%, rgba(75, 0, 212, 1) 50%, rgba(78, 13, 179, 1) 100%);
     }
 
         .solution-container .sub-title-container2 .sub-title2 {
@@ -124,7 +121,7 @@
         align-items: end;
         border-radius: var(--borderWidth);
         font-size: calc(var(--solution-container-width) / 15);
-        background-image: linear-gradient(to top, #4e0db3, #581abb, #6225c3, #6c2fcc, #7538d4);
+        background: linear-gradient(174deg, rgba(112, 63, 188, 1) 0%, rgba(108, 41, 245, 1) 10%, rgba(78, 13, 179, 1) 100%, rgba(112, 63, 188, 1) 100%);
     }
 
         .solution-container .sub-title-container3 .sub-title3 {
