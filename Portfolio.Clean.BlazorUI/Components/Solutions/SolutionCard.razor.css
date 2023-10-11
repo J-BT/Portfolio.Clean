@@ -19,9 +19,10 @@
 
 /***************************************** title **********************************************/
 /**********************************************************************************************/
-    .solution-container .title-container .solution-index-container {
+    .solution-container .solution-index-container {
         position: fixed;
-        top: 2.5%;
+        top: 1%;
+        left: -7%;
         width: calc(var(--solutions-container-width) / 8);
         height: calc(var(--solutions-container-height) / 14);
         font-weight: 900;
@@ -33,7 +34,7 @@
         z-index: 5;
     }
 
-        .solution-container .title-container .solution-index-container .solution-index {
+        .solution-container .solution-index-container .solution-index {
             width: calc(var(--solutions-container-width) / 12);
             height: calc(var(--solutions-container-height) / 18);
             font-weight: 700;
@@ -46,21 +47,8 @@
             z-index: 5;
         }
 
-    .solution-container .title-container .arrow-container {
-        position: fixed;
-        top: 21%;
-        width: calc(var(--solutions-container-width) / 14);
-        height: calc(var(--solutions-container-height) / 16);
-        font-weight: 900;
-        font-size: calc(var(--solution-container-width) / 15);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: end;
-        z-index: 5;
-    }
 
-        .solution-container .title-container .arrow-container .arrow {
+        .solution-container .title-container .arrow {
             width: calc(var(--solutions-container-width) / 20);
             height: calc(var(--solutions-container-height) / 33);
             font-weight: 900;
@@ -87,7 +75,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-/*        background: rgba(255,255,255,0.2);*/
+        /*background: rgba(255,255,255,0.2);*/
     }
 
         .solution-container .title-container .title {

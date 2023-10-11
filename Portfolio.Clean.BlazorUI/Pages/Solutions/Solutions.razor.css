@@ -64,7 +64,7 @@ body {
 
     .container > div {
         flex: 0 0 calc(var(--solutions-container-width) / 12);
-        border-radius: 0.5rem;
+        border-radius: 15px;
         transition: 0.5s ease-in-out;
         cursor: pointer;
         box-shadow: 1px 5px 15px #1e0e3e;
@@ -135,6 +135,6 @@ body {
 
             .container > div:hover .content {
                 opacity: 1;
-                transform: translateY(0%);
+                transform: translateY(1.5%) scaleY(101%);
                 visibility: visible;
             }
