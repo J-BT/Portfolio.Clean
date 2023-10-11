@@ -21,7 +21,7 @@
 
 }
     .solutions-container:not(img) {
-        background: #0094ff;
+        /*background: #0094ff;*/
         opacity: 1;
     }
 
