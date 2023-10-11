@@ -1,40 +1,46 @@
 ﻿@page "/solutions"
+@using Portfolio.Clean.BlazorUI.Components.Common
 @using Portfolio.Clean.BlazorUI.Components.Solutions
 
+@if (isLoaded)
+{
+    <div class="solutions-container">
+        <div class="container">
+            <div>
+                <div class="content">
+                    <SolutionCard></SolutionCard>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <SolutionCard></SolutionCard>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <SolutionCard></SolutionCard>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <SolutionCard></SolutionCard>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <SolutionCard></SolutionCard>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <SolutionCard></SolutionCard>
+                </div>
+            </div>
+        </div>
 
-<div class="solutions-container">
-    @* <SolutionCard></SolutionCard> *@
-    <div class="container">
-        <div>
-            <div class="content">
-                <SolutionCard></SolutionCard>
-            </div>
-        </div>
-        <div>
-            <div class="content">
-                <SolutionCard></SolutionCard>
-            </div>
-        </div>
-        <div>
-            <div class="content">
-                <SolutionCard></SolutionCard>
-            </div>
-        </div>
-        <div>
-            <div class="content">
-                <SolutionCard></SolutionCard>
-            </div>
-        </div>
-        <div>
-            <div class="content">
-                <SolutionCard></SolutionCard>
-            </div>
-        </div>
-        <div>
-            <div class="content">
-                <SolutionCard></SolutionCard>
-            </div>
-        </div>
     </div>
-
-</div>
+}
+else
+{
+    <CustomLoadingAnimation></CustomLoadingAnimation>
+}
