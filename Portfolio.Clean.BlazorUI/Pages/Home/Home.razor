@@ -1,7 +1,6 @@
 ﻿@page "/"
 @using Portfolio.Clean.BlazorUI.Components.Common
 @using Portfolio.Clean.BlazorUI.Components.Home
-@inject ILanguageContainerService languageContainer
 
 <PageTitle>@LanguageContainer.Keys["Home:PageTabTitle"]</PageTitle>
 
@@ -15,7 +14,6 @@
 		<City></City>
 		<HomeMainText></HomeMainText>
 
-        <LanguageSelector></LanguageSelector>
     }
     else
     {

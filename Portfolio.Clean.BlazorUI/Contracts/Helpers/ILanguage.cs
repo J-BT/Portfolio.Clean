@@ -6,7 +6,7 @@ public interface ILanguage
 {
     ILanguageContainerService GetResourceFile();
     Task<string> GetLanguageFromBrowserAsync();
-    Task SetLanguageToBrowserAsync(string cultureCode, string thenToUrl = "/");
+    Task SetLanguageToBrowserAsync(string cultureCode);
     Dictionary<string, string> GetCultureCodes();
 
 }

@@ -61,11 +61,12 @@ public class Language : ILanguage
     /// </summary>
     /// <param name="cultureCode"></param>
     /// <returns></returns>
-    public async Task SetLanguageToBrowserAsync(string cultureCode, string thenToUrl = "/")
+    public async Task SetLanguageToBrowserAsync(string cultureCode)
     {
         _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
         await _js.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
-        _navigationmanager.NavigateTo(thenToUrl, true);
+        string currentUri = _navigationmanager.Uri;
+        _navigationmanager.NavigateTo(currentUri, true);
     }
 
     /// <summary>

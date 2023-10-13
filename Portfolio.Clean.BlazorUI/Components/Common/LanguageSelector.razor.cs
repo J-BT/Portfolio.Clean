@@ -42,7 +42,7 @@ public partial class LanguageSelector
         }
     }
 
-    public async Task SetLanguage(string cultureCode)
+    private async Task SetLanguage(string cultureCode)
     {
         await Language.SetLanguageToBrowserAsync(cultureCode);
     }
