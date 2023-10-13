@@ -12,8 +12,6 @@ public partial class Home
 	#region Attributes & Accessors
 
 	private bool isLoaded = false;
-    private string displayLanguages = string.Empty;
-    private Dictionary<string, string> Languages { get; set; } = new();
     [Inject]
     public ILanguage Language { get; set; }
 
@@ -30,34 +28,15 @@ public partial class Home
 
 	protected override async Task OnInitializedAsync()
 	{
-		displayLanguages = "none";
-
-        //Language setting
+        //Language settings
         LanguageContainer = Language.GetResourceFile();
         await Language.GetLanguageFromBrowserAsync();
-        Languages = Language.GetCultureCodes();
 
         await Task.Delay(800);
 		isLoaded = true;
 		await base.OnInitializedAsync();
 	}
 
-	public async Task SetLanguage(string cultureCode)
-	{
-        await Language.SetLanguageToBrowserAsync(cultureCode);
-    }
-
-    private void ShowLanguages()
-    {
-        if (displayLanguages == "none")
-        {
-            displayLanguages = "flex";
-        }
-        else
-        {
-            displayLanguages = "none";
-        }
-    }
 
     #endregion
 }
