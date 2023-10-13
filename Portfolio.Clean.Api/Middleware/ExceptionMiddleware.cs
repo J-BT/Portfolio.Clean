@@ -3,7 +3,11 @@ using Portfolio.Clean.Application.Exceptions;
 using System.Net;
 
 namespace Portfolio.Clean.Api.Middleware;
-
+/// <summary>
+/// Middleware enabling to use all the customed Exceptions defined in the 'Application' layer.
+/// Then the following command 'app.UseMiddleware<ExceptionMiddleware>();' must be added in Program.cs 
+/// to implement this class into the 'Api' layer. 
+/// </summary>
 public class ExceptionMiddleware
 {
 

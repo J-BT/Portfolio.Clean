@@ -13,6 +13,10 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 
 builder.Services.AddControllers();
 
+// Avoids CORS error
+// Nb : Replace options.AddPolicy("all", builder => builder.AllowAnyOrigin() by
+// options.AddPolicy(name: MyAllowSpecificOrigins, policy  => { policy.WithOrigins("http://example.com",...); });
+// to restrict Api access to a limited client numbers
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("all", builder => builder.AllowAnyOrigin()
@@ -37,6 +41,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+//Calls the CORS policy defined above
 app.UseCors("all");
 
 app.UseAuthorization();
