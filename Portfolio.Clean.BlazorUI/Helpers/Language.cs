@@ -65,7 +65,7 @@ public class Language : ILanguage
     {
         _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
         await _js.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
-        string currentUri = _navigationmanager.Uri;
+        string currentUri = _navigationmanager.BaseUri;
         _navigationmanager.NavigateTo(currentUri, true);
     }
 
