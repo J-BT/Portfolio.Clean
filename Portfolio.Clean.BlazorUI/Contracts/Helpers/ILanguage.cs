@@ -4,7 +4,9 @@ namespace Portfolio.Clean.BlazorUI.Contracts.Helpers;
 
 public interface ILanguage
 {
-    Task<string> GetLanguageSavedInBrowserAsync();
     ILanguageContainerService GetResourceFile();
-    Task SetLanguageSavedInBrowser();
+    Task<string> GetLanguageFromBrowserAsync();
+    Task SetLanguageToBrowserAsync(string cultureCode);
+    Dictionary<string, string> GetCultureCodes();
+
 }

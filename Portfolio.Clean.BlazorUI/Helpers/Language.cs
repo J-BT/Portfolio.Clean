@@ -13,47 +13,21 @@ public class Language : ILanguage
 
     private readonly ILanguageContainerService _languageContainer;
     private readonly IJSRuntime _js;
-    private readonly NavigationManager _navigationmanager;
-    private string _actualLanguage;
+    private string _actualLanguage = string.Empty;
 
     #endregion
 
     #region Constructors
-    public Language(ILanguageContainerService languageContainer, IJSRuntime js, NavigationManager navigationmanager)
+    public Language(ILanguageContainerService languageContainer, IJSRuntime js)
     {
         _languageContainer = languageContainer;
         _js = js;
-        _navigationmanager = navigationmanager;
     }
     #endregion
 
     #region Methods
-    /// <summary>
-    /// Get the language stored in browser's local storage. ex : fr-Fr
-    /// </summary>
-    /// <returns>A string relating to the language (en-Us, fr-Fr, etc).
-    /// Returns an empty string if the browser local storage variable (language) is empty  </returns>
-    public async Task<string> GetLanguageSavedInBrowserAsync()
-    {
-        string actualLanguage = string.Empty;
-        actualLanguage = await _js.InvokeAsync<string>("localStorage.getItem", "language");
 
-        return actualLanguage;
-    }
-    /// <summary>
-    /// Set the language saved in the browser's local storage if not empty. Default == 'fr-Fr'.
-    /// </summary>
-    /// <param name="actualLanguage"></param>
-    public async Task SetLanguageSavedInBrowser()
-    {
-        _actualLanguage = await GetLanguageSavedInBrowserAsync();
 
-        if (!String.IsNullOrEmpty(_actualLanguage))
-        {
-            _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(_actualLanguage));
-
-        }
-    }
     /// <summary>
     /// Retrieved all the resources saved in the .yml files located in Resources folder
     /// </summary>
@@ -62,6 +36,68 @@ public class Language : ILanguage
     {
         return _languageContainer;
     }
+
+
+    /// <summary>
+    /// Get the language stored in browser's local storage (ex : fr-Fr) and set the application Culture from it.
+    /// </summary>
+    public async Task<string> GetLanguageFromBrowserAsync()
+    {
+        _actualLanguage = await _js.InvokeAsync<string>("localStorage.getItem", "language");
+
+        if (!String.IsNullOrEmpty(_actualLanguage))
+        {
+            _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(_actualLanguage));
+
+        }
+
+        return _actualLanguage;
+    }
+
+    /// <summary>
+    /// Change the language stored in browser's local storage
+    /// </summary>
+    /// <param name="cultureCode"></param>
+    /// <returns></returns>
+    public async Task SetLanguageToBrowserAsync(string cultureCode)
+    {
+        _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
+        await _js.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
+    }
+
+    /// <summary>
+    /// Returns cultures codes according to languages which are stored into the browser
+    /// </summary>
+    /// <returns>A dictionary of string. The key is the culture code (ex : fr-Fr), the value is the language</returns>
+    public Dictionary<string, string> GetCultureCodes()
+    {
+
+        Dictionary<string, string> languages = new Dictionary<string, string>
+        {
+            { "fr-FR", "Français"},
+            { "en-US", "English"},
+            { "ja-JP", "日本語"}
+        };
+
+        if (!String.IsNullOrEmpty(_actualLanguage))
+        {
+            Dictionary<string, string> orderedLanguages = new();
+
+            orderedLanguages.Add(_actualLanguage, languages[_actualLanguage]);
+            foreach (var language in languages)
+            {
+                if (language.Key != _actualLanguage)
+                {
+                    orderedLanguages.Add(language.Key, language.Value);
+                }
+            }
+
+            languages = orderedLanguages;
+        }
+        
+        return languages;
+    }
+
 
     #endregion
 

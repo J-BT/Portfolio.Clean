@@ -1,6 +1,7 @@
 ﻿using AKSoftware.Localization.MultiLanguages;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using Portfolio.Clean.BlazorUI.Contracts.Helpers;
 using System.Globalization;
 
 namespace Portfolio.Clean.BlazorUI.Pages.Home;
@@ -12,14 +13,11 @@ public partial class Home
 
 	bool isLoaded = false;
 	public string ActualLanguage { get; set; } = string.Empty;
-	private Dictionary<string, string> Languages { get; set; } = new()
-	{
-		{ "fr-FR", "Français"},
-		{ "en-US", "English"},
-		{ "ja-JP", "日本語"}
-	};
 
-	[Inject]
+	private Dictionary<string, string> Languages { get; set; } = new();
+    [Inject]
+    public ILanguage Language { get; set; }
+    [Inject]
 	public IJSRuntime JS { get; set; }
 
 	[Inject]
@@ -38,36 +36,17 @@ public partial class Home
 
     #region Methods
 
-    private Dictionary<string, string> OrderByLocalStorage(Dictionary<string, string> languages)
-	{
-
-		Dictionary<string, string> orderedLanguages = new();
-
-		orderedLanguages.Add(ActualLanguage, languages[ActualLanguage]);
-		foreach (var language in languages)
-		{
-			if (language.Key != ActualLanguage)
-			{
-				orderedLanguages.Add(language.Key, language.Value);
-			}
-		}
-
-		return orderedLanguages;
-
-	}
-
 	protected override async Task OnInitializedAsync()
 	{
 		displayLanguages = "none";
 
         ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
-
-		if (!String.IsNullOrEmpty(ActualLanguage))
+        Languages = Language.GetCultureCodes();
+        if (!String.IsNullOrEmpty(ActualLanguage))
 		{
 			LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(ActualLanguage));
-			Languages = OrderByLocalStorage(Languages);
 
-		}
+        }
 		await Task.Delay(800);
 		isLoaded = true;
 		await base.OnInitializedAsync();
@@ -95,3 +74,5 @@ public partial class Home
 
     #endregion
 }
+
+
