@@ -1,6 +1,7 @@
 ﻿using AKSoftware.Localization.MultiLanguages;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using Portfolio.Clean.BlazorUI.Contracts.Helpers;
 using System.Globalization;
 
 namespace Portfolio.Clean.BlazorUI.Components.Common;
@@ -13,9 +14,9 @@ public partial class PortfolioNavbar
     private string displaySidebar = string.Empty;
     private string aboutList = string.Empty;
     [Inject]
+    public ILanguage _language { get; set; }
     private ILanguageContainerService LanguageContainer { get; set; }
-    [Inject]
-    public IJSRuntime JS { get; set; }
+
     public string ActualLanguage { get; set; } = string.Empty;
 
     #endregion
@@ -31,13 +32,10 @@ public partial class PortfolioNavbar
         displaySidebar = "none";
         aboutList = "none";
 
-        ActualLanguage = await JS.InvokeAsync<string>("localStorage.getItem", "language");
+        LanguageContainer = _language.GetLanguageContainer();
+        ActualLanguage = await _language.GetLanguageAsync();
+        _language.SetLanguage(ActualLanguage);
 
-        if (!String.IsNullOrEmpty(ActualLanguage))
-        {
-            LanguageContainer.SetLanguage(CultureInfo.GetCultureInfo(ActualLanguage));
-
-        }
     }
 
     private void DisplaySideBar()

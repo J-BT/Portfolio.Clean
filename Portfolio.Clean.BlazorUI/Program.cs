@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Portfolio.Clean.BlazorUI;
 using Portfolio.Clean.BlazorUI.Contracts;
+using Portfolio.Clean.BlazorUI.Contracts.Helpers;
+using Portfolio.Clean.BlazorUI.Helpers;
 using Portfolio.Clean.BlazorUI.Services;
 using Portfolio.Clean.BlazorUI.Services.Base;
 using System.Globalization;
@@ -24,6 +26,7 @@ builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = n
 builder.Services.AddScoped<IContactEmailService, ContactEmailService>();
 builder.Services.AddScoped<IPCLogService, PCLogService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<ILanguage, Language>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddLanguageContainer(Assembly.GetExecutingAssembly(), CultureInfo.GetCultureInfo("fr-FR"));
