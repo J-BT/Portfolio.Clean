@@ -19,6 +19,8 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddHttpClient<IClient, Client>(client => client.BaseAddress = new Uri
     ("https://localhost:7073"));
 
+// Nb : 'AddScoped()' enables IoC (Inversion of Control) according to the Depedency injection design pattern.
+// It implies that Interfaces can be used instead of their classes  when injecting a dependency in an another class.
 builder.Services.AddScoped<IContactEmailService, ContactEmailService>();
 builder.Services.AddScoped<IPCLogService, PCLogService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
