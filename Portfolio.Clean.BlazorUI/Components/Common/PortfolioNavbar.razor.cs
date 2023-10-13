@@ -14,10 +14,8 @@ public partial class PortfolioNavbar
     private string displaySidebar = string.Empty;
     private string aboutList = string.Empty;
     [Inject]
-    public ILanguage _language { get; set; }
+    public ILanguage Language { get; set; }
     private ILanguageContainerService LanguageContainer { get; set; }
-
-    public string ActualLanguage { get; set; } = string.Empty;
 
     #endregion
 
@@ -32,9 +30,8 @@ public partial class PortfolioNavbar
         displaySidebar = "none";
         aboutList = "none";
 
-        LanguageContainer = _language.GetLanguageContainer();
-        ActualLanguage = await _language.GetLanguageAsync();
-        _language.SetLanguage(ActualLanguage);
+        LanguageContainer = Language.GetResourceFile();
+        await Language.SetLanguageSavedInBrowser();
 
     }
 

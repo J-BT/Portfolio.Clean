@@ -4,7 +4,7 @@ namespace Portfolio.Clean.BlazorUI.Contracts.Helpers;
 
 public interface ILanguage
 {
-    Task<string> GetLanguageAsync();
-    ILanguageContainerService GetLanguageContainer();
-    void SetLanguage(string actualLanguage);
+    Task<string> GetLanguageSavedInBrowserAsync();
+    ILanguageContainerService GetResourceFile();
+    Task SetLanguageSavedInBrowser();
 }

@@ -1,4 +1,5 @@
 ﻿using AKSoftware.Localization.MultiLanguages;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using Portfolio.Clean.BlazorUI.Contracts.Helpers;
 using System.Globalization;
@@ -12,14 +13,17 @@ public class Language : ILanguage
 
     private readonly ILanguageContainerService _languageContainer;
     private readonly IJSRuntime _js;
+    private readonly NavigationManager _navigationmanager;
+    private string _actualLanguage;
 
     #endregion
 
     #region Constructors
-    public Language(ILanguageContainerService languageContainer, IJSRuntime js)
+    public Language(ILanguageContainerService languageContainer, IJSRuntime js, NavigationManager navigationmanager)
     {
         _languageContainer = languageContainer;
         _js = js;
+        _navigationmanager = navigationmanager;
     }
     #endregion
 
@@ -29,7 +33,7 @@ public class Language : ILanguage
     /// </summary>
     /// <returns>A string relating to the language (en-Us, fr-Fr, etc).
     /// Returns an empty string if the browser local storage variable (language) is empty  </returns>
-    public async Task<string> GetLanguageAsync()
+    public async Task<string> GetLanguageSavedInBrowserAsync()
     {
         string actualLanguage = string.Empty;
         actualLanguage = await _js.InvokeAsync<string>("localStorage.getItem", "language");
@@ -37,26 +41,27 @@ public class Language : ILanguage
         return actualLanguage;
     }
     /// <summary>
-    /// Set the language saved in the browser's local storage if not empty. Default set to 'fr-Fr'
+    /// Set the language saved in the browser's local storage if not empty. Default == 'fr-Fr'.
     /// </summary>
     /// <param name="actualLanguage"></param>
-    public void SetLanguage(string actualLanguage)
+    public async Task SetLanguageSavedInBrowser()
     {
-        if (!String.IsNullOrEmpty(actualLanguage))
+        _actualLanguage = await GetLanguageSavedInBrowserAsync();
+
+        if (!String.IsNullOrEmpty(_actualLanguage))
         {
-            _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(actualLanguage));
+            _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(_actualLanguage));
 
         }
     }
     /// <summary>
-    /// Retrieved all the values (text) saved in the .yml files located in Resources/
+    /// Retrieved all the resources saved in the .yml files located in Resources folder
     /// </summary>
     /// <returns></returns>
-    public ILanguageContainerService GetLanguageContainer()
+    public ILanguageContainerService GetResourceFile()
     {
         return _languageContainer;
     }
-
 
     #endregion
 
