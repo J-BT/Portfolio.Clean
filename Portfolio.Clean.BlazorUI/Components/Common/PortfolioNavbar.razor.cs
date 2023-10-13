@@ -30,6 +30,7 @@ public partial class PortfolioNavbar
         displaySidebar = "none";
         aboutList = "none";
 
+        //Language setting
         LanguageContainer = Language.GetResourceFile();
         await Language.GetLanguageFromBrowserAsync();
 

@@ -13,15 +13,17 @@ public class Language : ILanguage
 
     private readonly ILanguageContainerService _languageContainer;
     private readonly IJSRuntime _js;
+    private readonly NavigationManager _navigationmanager;
     private string _actualLanguage = string.Empty;
 
     #endregion
 
     #region Constructors
-    public Language(ILanguageContainerService languageContainer, IJSRuntime js)
+    public Language(ILanguageContainerService languageContainer, IJSRuntime js, NavigationManager navigationmanager)
     {
         _languageContainer = languageContainer;
         _js = js;
+        _navigationmanager = navigationmanager;
     }
     #endregion
 
@@ -59,10 +61,11 @@ public class Language : ILanguage
     /// </summary>
     /// <param name="cultureCode"></param>
     /// <returns></returns>
-    public async Task SetLanguageToBrowserAsync(string cultureCode)
+    public async Task SetLanguageToBrowserAsync(string cultureCode, string thenToUrl = "/")
     {
         _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
         await _js.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
+        _navigationmanager.NavigateTo(thenToUrl, true);
     }
 
     /// <summary>
