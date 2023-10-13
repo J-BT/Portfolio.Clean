@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Domain.Common;
-
+/// <summary>
+/// Composed of entities' common properties
+/// </summary>
 public abstract class BaseEntity
 {
     #region Attributes & Accessors
-    //[Key]
-    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     public DateTime? CreationDate { get; set; }
     public DateTime? LastUpdate { get; set; }

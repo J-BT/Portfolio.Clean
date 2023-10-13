@@ -1,5 +1,8 @@
 ﻿namespace Portfolio.Clean.Application.Models.Email;
 
+/// <summary>
+/// Gathers the elements required to send an email
+/// </summary>
 public class EmailSettings
 {
 

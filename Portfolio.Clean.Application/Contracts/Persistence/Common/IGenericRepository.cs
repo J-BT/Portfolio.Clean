@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Application.Contracts.Persistence.Common;
 
+/// <summary>
+/// Gathers domain entities commons methods 
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public interface IGenericRepository<T>
     where T : BaseEntity
 {

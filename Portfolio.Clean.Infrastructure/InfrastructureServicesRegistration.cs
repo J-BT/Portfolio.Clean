@@ -10,13 +10,14 @@ namespace Portfolio.Clean.Infrastructure;
 
 public static class InfrastructureServicesRegistration
 {
-
-	#region Attributes & Accessors
-
-	#endregion
-
-	#region Methods
-	public static IServiceCollection AddInfrastuctureServices(this IServiceCollection services,
+    #region Methods
+    /// <summary>
+    /// Called in the API's Program.cs, this class links the 'Infrastructure' layer to the 'Api' layer 
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="configuration"></param>
+    /// <returns></returns>
+    public static IServiceCollection AddInfrastuctureServices(this IServiceCollection services,
 		IConfiguration configuration)
 	{
         //Email config here

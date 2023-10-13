@@ -11,15 +11,13 @@ namespace Portfolio.Clean.Application;
 
 public static class ApplicationServiceRegistration
 {
-	#region Attributes & Accessors
-
-	#endregion
-
-	#region Constructors
-
-	#endregion
 
 	#region Methods
+	/// <summary>
+	/// Called in the API's Program.cs, this class links the 'Application' layer to the 'Api' layer 
+	/// </summary>
+	/// <param name="services"></param>
+	/// <returns></returns>
 	public static IServiceCollection AddApplicationServices(this IServiceCollection services)
 	{
 		services.AddAutoMapper(Assembly.GetExecutingAssembly());

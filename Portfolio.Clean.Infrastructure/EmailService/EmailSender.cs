@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Portfolio.Clean.Infrastructure.EmailService;
-
+/// <summary>
+/// Implementing the IEmailSender interface, EmailSender's instance method 'SendEmail()' enable sending emails
+/// </summary>
 public class EmailSender : IEmailSender
 {
 
@@ -28,7 +30,6 @@ public class EmailSender : IEmailSender
     #region Methods
     public async Task<bool> SendEmail(EmailMessage email)
     {
-        //OK
         var client = new SendGridClient(_emailSettings.ApiKey);
         var to = new EmailAddress(_emailSettings.To);
         var from = new EmailAddress

@@ -16,15 +16,13 @@ namespace Portfolio.Clean.Persistence;
 public static class PersistenceServiceRegistration
 {
 
-    #region Attributes & Accessors
-
-    #endregion
-
-    #region Constructors
-
-    #endregion
-
     #region Methods
+    /// <summary>
+    /// Called in the API's Program.cs, this class links the 'Persistence' layer to the 'Api' layer 
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="configuration"></param>
+    /// <returns></returns>
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services,
         IConfiguration configuration)
     {
