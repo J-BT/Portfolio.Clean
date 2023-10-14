@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using AKSoftware.Localization.MultiLanguages;
+using Microsoft.AspNetCore.Components;
+using Portfolio.Clean.BlazorUI.Helpers;
 
 namespace Portfolio.Clean.BlazorUI.Components.Solutions;
 
@@ -6,6 +8,7 @@ public partial class SolutionCard
 {
 
     #region Attributes & Accessors
+    private bool isLoaded = false;
     [Parameter]
     public string Rank { get; set; } = string.Empty;
     [Parameter]
@@ -27,6 +30,11 @@ public partial class SolutionCard
     #endregion
 
     #region Methods
+    protected override async Task OnInitializedAsync()
+    {
+        isLoaded = true;
+        await base.OnInitializedAsync();
+    }
 
     #endregion
 }

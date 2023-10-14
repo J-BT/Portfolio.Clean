@@ -1,37 +1,46 @@
+@using Portfolio.Clean.BlazorUI.Components.Common
 
-<div class="solution-container">
-    <div class="solution-index-container">
-        <div class="solution-index">
-            @Rank/5
-        </div>
-    </div>
-    <div class="title-container">
-        <div class="title">
-            @Title
-        </div>
-            <div class="arrow">
+	 @if (isLoaded)
+    {
+        <div class="solution-container">
+            <div class="solution-index-container">
+                <div class="solution-index">
+                    @Rank/5
+                </div>
             </div>
-    
-    </div>
-    <div class="sub-title-container">
-        <div class="sub-title0">
-            @SubTitle0
+            <div class="title-container">
+                <div class="title">
+                    @Title
+                </div>
+                <div class="arrow">
+                </div>
+
+            </div>
+            <div class="sub-title-container">
+                <div class="sub-title0">
+                    @SubTitle0
+                </div>
+                <div class="sub-title">
+                    @SubTitle1
+                </div>
+            </div>
+            <div class="sub-title-container2">
+                <div class="sub-title2">
+                    @SubTitle2
+                </div>
+            </div>
+            <div class="sub-title-container3">
+                <div class="sub-title3">
+                    @SubTitle3
+                </div>
+            </div>
+            <div class="sub-title4">
+                <span>@SubTitle4</span>
+            </div>
         </div>
-        <div class="sub-title">
-            @SubTitle1
-        </div>
-    </div>
-    <div class="sub-title-container2">
-        <div class="sub-title2">
-            @SubTitle2
-        </div>
-    </div>
-    <div class="sub-title-container3">
-        <div class="sub-title3">
-            @SubTitle3
-        </div>
-    </div>
-    <div class="sub-title4">
-        <span>@SubTitle4</span>
-    </div>
-</div>
+
+    }
+    else
+    {
+        <CustomLoadingAnimation></CustomLoadingAnimation>
+    }
