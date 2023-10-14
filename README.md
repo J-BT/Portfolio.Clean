@@ -68,10 +68,11 @@
 
 ## __Resources__
 > NOTE
-> You must create your own .yml files to enable multi-language texts. Check the following en-US.yml template below.
+> You must create your own .yml files to enable multi-language texts. Check the following en-US.yml & fr-FR.yml templates below.
 > Once your .yml files are created you can retrieve informations as follows : @LanguageContainer.Keys["Sidebar:Portfolio"] 
 >
-
+> NOTE
+> en-US.yml
 ```
 # Sidebar
 Sidebar :
@@ -81,6 +82,20 @@ Sidebar :
   About : "About"
   A_Company : "Company"
   A_Team : "Team"
+  Contact : "Contact"
+  Test : "Test"
+```
+> NOTE
+> fr-FR.yml
+```
+# Sidebar
+Sidebar :
+  Home : "Accueil"
+  Solutions : "Solutions"
+  Portfolio : "Portfolio"
+  About : "À propos"
+  A_Company : "L'entreprise"
+  A_Team : "L'Équipe"
   Contact : "Contact"
   Test : "Test"
 ```

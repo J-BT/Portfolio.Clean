@@ -31,7 +31,7 @@ public class Language : ILanguage
 
 
     /// <summary>
-    /// Retrieved all the resources saved in the .yml files located in Resources folder
+    /// Retrieves all the resources saved in the .yml files located in Resources folder
     /// </summary>
     /// <returns></returns>
     public ILanguageContainerService GetResourceFile()
@@ -41,7 +41,7 @@ public class Language : ILanguage
 
 
     /// <summary>
-    /// Get the language stored in browser's local storage (ex : fr-Fr) and set the application Culture from it.
+    /// Gets the language stored in browser's local storage if exists (ex : fr-FR) and set the application Culture from it.
     /// </summary>
     public async Task<string> GetLanguageFromBrowserAsync()
     {
@@ -57,7 +57,7 @@ public class Language : ILanguage
     }
 
     /// <summary>
-    /// Change the language stored in browser's local storage
+    /// Changes the language stored in browser's local storage
     /// </summary>
     /// <param name="cultureCode"></param>
     /// <returns></returns>
@@ -65,6 +65,8 @@ public class Language : ILanguage
     {
         _languageContainer.SetLanguage(CultureInfo.GetCultureInfo(cultureCode));
         await _js.InvokeVoidAsync("localStorage.setItem", "language", cultureCode);
+
+        // Page reloading to apply modifications
         string currentUri = _navigationmanager.Uri.Contains("#") ? _navigationmanager.BaseUri : _navigationmanager.Uri;
         _navigationmanager.NavigateTo(currentUri, true);
     }
