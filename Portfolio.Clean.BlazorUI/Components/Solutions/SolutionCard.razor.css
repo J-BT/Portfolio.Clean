@@ -80,7 +80,7 @@
 
         .solution-container .title-container .title {
             width: calc(var(--solutions-container-width) / 7);
-            height: calc(var(--solutions-container-height) / 7.5);
+            height: calc(var(--solutions-container-height) / 9.5);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -152,7 +152,7 @@
             width: calc(var(--solutions-container-width) / 4);
             height: calc(var(--solutions-container-height) / 7.5);
             font-weight: 400;
-            font-size: calc(var(--solution-container-width) / 27);
+            font-size: calc(var(--solution-container-width) / 30);
             text-align: center;
             display: flex;
             flex-direction: row;
