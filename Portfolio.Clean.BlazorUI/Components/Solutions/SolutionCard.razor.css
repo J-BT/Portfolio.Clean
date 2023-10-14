@@ -37,7 +37,7 @@
         .solution-container .solution-index-container .solution-index {
             width: calc(var(--solutions-container-width) / 12);
             height: calc(var(--solutions-container-height) / 18);
-            font-weight: 700;
+            font-weight: 200;
             font-size: calc(var(--solution-container-width) / 17);
             display: flex;
             flex-direction: column;
@@ -69,8 +69,8 @@
     .solution-container .title-container {
         width: calc(var(--solutions-container-width) / 5);
         height: calc(var(--solutions-container-height) / 4.5);
-        font-weight: 900;
-        font-size: calc(var(--solution-container-width) / 15);
+     /*   font-weight: 900;*/
+/*        font-size: calc(var(--solution-container-width) / 15);*/
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -85,12 +85,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-weight: 900;
-            font-size: calc(var(--solution-container-width) / 15);
+            font-weight: 700;
+            font-size: calc(var(--solution-container-width) / 19);
             background: linear-gradient(180deg, rgba(28, 36, 76, 1) 0%, rgba(27, 28, 68, 1) 50%, rgba(28, 36, 76, 1) 100%);
             position: relative;
             border-radius: var(--borderWidth);
-
+            white-space: break-spaces;
+            word-break: keep-all;
+            text-align: center;
         }
 
             .solution-container .title-container .title:after {
@@ -119,37 +121,54 @@
 
     .solution-container .sub-title-container {
         width: calc(var(--solutions-container-width) / 3.75);
-        height: calc(var(--solutions-container-height) / 5);
-        font-weight: 900;
+        height: calc(var(--solutions-container-height) / 4.5);
         font-size: calc(var(--solution-container-width) / 16);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        align-items: end;
+        align-items: center;
         border-radius: var(--borderWidth);
         font-size: calc(var(--solution-container-width) / 15);
         background: linear-gradient(174deg, rgba(112, 63, 188, 1) 0%, rgba(108, 41, 245, 1) 10%, rgba(78, 13, 179, 1) 100%, rgba(112, 63, 188, 1) 100%);
         margin-bottom: 2px;
     }
+        .solution-container .sub-title-container .sub-title0 {
+            width: calc(var(--solutions-container-width) / 4);
+            height: calc(var(--solutions-container-height) / 7.5);
+            font-weight: 500;
+            font-size: calc(var(--solution-container-width) / 30);
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            margin-top: 1vh;
+            padding: 1vh;
+            background: linear-gradient(180deg, rgba(28, 36, 76, 1) 0%, rgba(27, 28, 68, 1) 50%, rgba(28, 36, 76, 1) 100%);
+        }
 
         .solution-container .sub-title-container .sub-title {
-            width: calc(var(--solutions-container-width) / 5.5);
+            width: calc(var(--solutions-container-width) / 4);
             height: calc(var(--solutions-container-height) / 7.5);
-            font-weight: 900;
-            font-size: calc(var(--solution-container-width) / 16);
+            font-weight: 400;
+            font-size: calc(var(--solution-container-width) / 27);
             text-align: center;
-            /*background: #07b39b;*/
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          /*  background: #808080;*/
         }
 
     .solution-container .sub-title-container2 {
         width: calc(var(--solutions-container-width) / 3.75);
         height: calc(var(--solutions-container-height) / 6);
-        font-weight: 900;
         font-size: calc(var(--solution-container-width) / 16);
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: end;
+        align-items: center;
         border-radius: var(--borderWidth);
         font-size: calc(var(--solution-container-width) / 15);
         background: linear-gradient(90deg, rgba(78, 13, 179, 1) 0%, rgba(75, 0, 212, 1) 50%, rgba(78, 13, 179, 1) 100%);
@@ -157,40 +176,47 @@
     }
 
         .solution-container .sub-title-container2 .sub-title2 {
-            width: calc(var(--solutions-container-width) / 3.75);
+            width: calc(var(--solutions-container-width) / 4);
             height: calc(var(--solutions-container-height) / 6);
-            font-weight: 900;
-            font-size: calc(var(--solution-container-width) / 16);
+            font-weight: 400;
+            font-size: calc(var(--solution-container-width) / 25);
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
     .solution-container .sub-title-container3 {
         width: calc(var(--solutions-container-width) / 3.75);
         height: calc(var(--solutions-container-height) / 6);
-        font-weight: 900;
         font-size: calc(var(--solution-container-width) / 16);
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: end;
+        align-items: center;
         border-radius: var(--borderWidth);
         font-size: calc(var(--solution-container-width) / 15);
         background: linear-gradient(174deg, rgba(112, 63, 188, 1) 0%, rgba(108, 41, 245, 1) 10%, rgba(78, 13, 179, 1) 100%, rgba(112, 63, 188, 1) 100%);
     }
 
         .solution-container .sub-title-container3 .sub-title3 {
-            width: calc(var(--solutions-container-width) / 3.75);
+            width: calc(var(--solutions-container-width) / 4);
             height: calc(var(--solutions-container-height) / 6);
-            font-weight: 900;
-            font-size: calc(var(--solution-container-width) / 16);
+            font-weight: 400;
+            font-size: calc(var(--solution-container-width) / 25);
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
     .solution-container .sub-title4 {
         width: calc(var(--solutions-container-width) / 3.75);
         height: calc(var(--solutions-container-height) / 9);
-        font-weight: 900;
-        font-size: calc(var(--solution-container-width) / 19);
+        font-weight: 100;
+        font-size: calc(var(--solution-container-width) / 30);
         display: flex;
         flex-direction: row;
         justify-content: end;

@@ -42,11 +42,12 @@ public partial class Solutions
     /// <returns></returns>
     private void GetSolutions()
     {
-        foreach (int index in Enumerable.Range(1, 6))
+        foreach (int index in Enumerable.Range(1, 5))
         {
             Solution solution = new();
             solution.Title = LanguageContainer.Keys[$"Solutions:Cards:{index}:Title"];
             solution.Rank = LanguageContainer.Keys[$"Solutions:Cards:{index}:Rank"];
+            solution.SubTitle0 = LanguageContainer.Keys[$"Solutions:Cards:{index}:SubTitle0"];
             solution.SubTitle1 = LanguageContainer.Keys[$"Solutions:Cards:{index}:SubTitle1"];
             solution.SubTitle2 = LanguageContainer.Keys[$"Solutions:Cards:{index}:SubTitle2"];
             solution.SubTitle3 = LanguageContainer.Keys[$"Solutions:Cards:{index}:SubTitle3"];

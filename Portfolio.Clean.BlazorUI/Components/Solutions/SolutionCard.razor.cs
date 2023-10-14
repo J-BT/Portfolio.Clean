@@ -11,6 +11,8 @@ public partial class SolutionCard
     [Parameter]
     public string Title { get; set; } = string.Empty;
     [Parameter]
+    public string SubTitle0 { get; set; } = string.Empty;
+    [Parameter]
     public string SubTitle1 { get; set; } = string.Empty;
     [Parameter]
     public string SubTitle2 { get; set; } = string.Empty;

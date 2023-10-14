@@ -89,12 +89,6 @@
             background-position: 30% 50%;
         }
 
-        .container > div:nth-of-type(6) {
-            background: url("../../images/Solutions/6-consulting.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 70% 50%;
-        }
 
 
         .container > div .content {
