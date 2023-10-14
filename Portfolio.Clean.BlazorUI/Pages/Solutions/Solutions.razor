@@ -2,8 +2,12 @@
 @using Portfolio.Clean.BlazorUI.Components.Common
 @using Portfolio.Clean.BlazorUI.Components.Solutions
 
+<PageTitle> @LanguageContainer.Keys["Solutions:PageTabTitle"] </PageTitle>
+
 @if (isLoaded)
 {
+    <SetPageTitle PageTitleName="@LanguageContainer.Keys["Solutions:PageTitle"]"></SetPageTitle>
+
     <div class="solutions-container">
         <div class="container">
             <div>

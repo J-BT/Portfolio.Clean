@@ -13,8 +13,7 @@ public partial class Home
 
 	private bool isLoaded = false;
     [Inject]
-    public ILanguage Language { get; set; }
-
+    private ILanguage Language { get; set; }
     private ILanguageContainerService LanguageContainer { get; set; }
 
 
