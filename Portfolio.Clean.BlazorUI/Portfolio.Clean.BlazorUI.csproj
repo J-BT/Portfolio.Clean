@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\js\**" />
+    <Content Remove="wwwroot\js\**" />
+    <EmbeddedResource Remove="wwwroot\js\**" />
+    <None Remove="wwwroot\js\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\en-US.yml" />
     <None Remove="Resources\fr-FR.yml" />
     <None Remove="Resources\ja-JP.yml" />
@@ -33,7 +40,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\fonts\common\" />
-    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
   <ItemGroup>
