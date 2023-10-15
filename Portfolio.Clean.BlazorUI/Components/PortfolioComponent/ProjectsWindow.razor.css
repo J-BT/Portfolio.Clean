@@ -1,0 +1,78 @@
+﻿
+.projects-window-container {
+    /***** Variables ******/
+    --window-container-width: 47vw;
+    --window-container-height: 70vh;
+    /**********************/
+    position: fixed;
+    top: 55%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--window-container-width);
+    height: var(--window-container-height);
+    border: 1px solid rgb(252, 248, 255, 0.05);
+    border-radius: 10px;
+    color: #FCF8FF;
+    background: pink;
+}
+
+
+.technologies-container {
+    /***** Variables ******/
+    --technologies-container-width: 37vw;
+    --technologies-container-height: 15vh;
+    /**********************/
+    position: fixed;
+    top: 82.5%;
+    left: 27.5%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--technologies-container-width);
+    height: var(--technologies-container-height);
+    border: 1px solid rgb(252, 248, 255, 0.05);
+    border-radius: 10px;
+    color: #FCF8FF;
+    background: blue;
+}
+
+.screen-container {
+    /***** Variables ******/
+    --screen-container-width: 44vw;
+    --screen-container-height: 42vh;
+    /**********************/
+    position: fixed;
+    top: 25.8%;
+    left: 6.7%;
+    width: var(--screen-container-width);
+    height: var(--screen-container-height);
+    perspective: 3000px;
+    transform-style: preserve-3d;
+}
+
+    .screen-container .screen {
+        z-index: 7;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+        border: 1px solid rgb(252, 248, 255, 0.05);
+        color: #FCF8FF;
+        background: red;
+        text-align: center;
+        font-size: 5vw;
+        /*transform: rotateX(5deg) rotateY(29deg) rotateZ(-0.4deg);*/
+        transform: rotateX(5deg) rotateY(29deg) rotateZ(-0.4deg);
+        transform-style: preserve-3d;
+        background: #00ffff;
+    }

@@ -1,5 +1,6 @@
 ﻿@page "/portfolio"
 @using Portfolio.Clean.BlazorUI.Components.Common
+@using Portfolio.Clean.BlazorUI.Components.PortfolioComponent
 
 <PageTitle>@LanguageContainer.Keys["Portfolio:PageTabTitle"]</PageTitle>
 
@@ -8,8 +9,8 @@
     {
         <SetPageTitle PageTitleName="@LanguageContainer.Keys["Portfolio:PageTitle"]"></SetPageTitle>
         <img src="/images/Portfolio/jbtdev-new-meeting-room.png" />
-
-
+        
+        <ProjectsWindow></ProjectsWindow>
     }
     else
     {
