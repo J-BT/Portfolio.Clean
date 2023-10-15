@@ -15,7 +15,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    z-index: 3;
+    z-index: 15;
 }
 
     .language-selector .side-element {
