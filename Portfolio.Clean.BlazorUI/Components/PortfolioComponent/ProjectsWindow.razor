@@ -3,6 +3,44 @@
     <div class="title-container">
         Nom Project
     </div>
+    <div class="description-container">
+        Description
+    </div>
+    <div class="projects-navigation-container">
+        <div id="arrow_2" class="arrow-wrapper">
+            <div class="arrow arrow--left">
+                <span>Prev</span>
+            </div>
+            <div class="block"><h1>Project 1/n</h1></div>
+            <div class="arrow arrow--right">
+                <span>Next</span>
+            </div>
+@*             @if (DisplayPreviousButton)
+            {
+                <div @onclick="@ToPreviousProject" class="arrow arrow--left">
+                    <span>@Previous</span>
+                </div>
+            }
+            else
+            {
+                <div class="no-arrow"><span></span></div>
+            }
+
+            <div class="block"><h1>@ProjectWord @NthProject/@TotalProjects</h1></div>
+
+            @if (DisplayNextButton)
+            {
+                <div @onclick="@ToNextProject" class="arrow arrow--right">
+                    <span>@Next</span>
+                </div>
+            }
+            else
+            {
+                <div class="no-arrow"><span></span></div>
+            } *@
+
+        </div>
+    </div>
 </div>
 
 <div class="screen-container">
@@ -12,5 +50,16 @@
 </div>
 
 <div class="technologies-container">
+@*     @foreach (string technologyIcon in TechnologiesIcons)
+    {
+        try
+        {
+            <img src="@technologyIcon" alt="@TechnologiesIconsAlt" />
+        }
+        catch
+        {
+            @TechnologiesIconsAlt
+        }
 
+    } *@
 </div>
