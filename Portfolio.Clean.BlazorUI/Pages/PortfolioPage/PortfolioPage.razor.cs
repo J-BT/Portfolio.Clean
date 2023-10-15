@@ -51,7 +51,7 @@ public partial class PortfolioPage
         //Projects Window
         NthProject = 1;
         Projects = await ProjectService.GetProjects();
-        await WriteProjectInfos();
+        await GetProjectInfos();
         SetNavigationElements();
         CheckDisplayableButtons();
 
@@ -60,11 +60,38 @@ public partial class PortfolioPage
         await base.OnInitializedAsync();
     }
 
+
+    /// <summary>
+    /// Navigates to the previous project requesting the database
+    /// </summary>
+    /// <returns></returns>
+    private async Task ToPreviousProject()
+    {
+        await DeleteProjectImages();
+        NthProject -= 1;
+        CheckDisplayableButtons();
+        await GetProjectInfos();
+    }
+
+    /// <summary>
+    /// Navigates to the next project requesting the database
+    /// </summary>
+    /// <returns></returns>
+    private async Task ToNextProject()
+    {
+        await DeleteProjectImages();
+        NthProject += 1;
+        CheckDisplayableButtons();
+        await GetProjectInfos();
+    }
+
+
+
     /// <summary>
     /// Call the database in order to retrieve the selected project informations.
     /// </summary>
     /// <returns></returns>
-    private async Task WriteProjectInfos()
+    private async Task GetProjectInfos()
     {
         try
         {
@@ -187,30 +214,6 @@ public partial class PortfolioPage
         }
     }
 
-
-    /// <summary>
-    /// Navigates to the previous project requesting the database
-    /// </summary>
-    /// <returns></returns>
-    private async Task ToPreviousProject()
-    {
-        await DeleteProjectImages();
-        NthProject -= 1;
-        CheckDisplayableButtons();
-        await WriteProjectInfos();
-    }
-
-    /// <summary>
-    /// Navigates to the next project requesting the database
-    /// </summary>
-    /// <returns></returns>
-    private async Task ToNextProject()
-    {
-        await DeleteProjectImages();
-        NthProject += 1;
-        CheckDisplayableButtons();
-        await WriteProjectInfos();
-    }
 
     /// <summary>
     /// Retrieves the number of projects stored into the database
