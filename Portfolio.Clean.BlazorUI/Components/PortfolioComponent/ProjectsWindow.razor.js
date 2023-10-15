@@ -1,5 +1,4 @@
 ﻿
-
 export function clearTechnologiesContainer() {
 
     let technologiesContainer = document.getElementById("tech");

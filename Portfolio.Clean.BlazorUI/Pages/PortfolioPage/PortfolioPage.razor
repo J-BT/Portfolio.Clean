@@ -9,8 +9,15 @@
     {
         <SetPageTitle PageTitleName="@LanguageContainer.Keys["Portfolio:PageTitle"]"></SetPageTitle>
         <img src="/images/Portfolio/jbtdev-new-meeting-room.png" />
-        
-        <ProjectsWindow></ProjectsWindow>
+
+        <ProjectsWindow DescriptionTxt=@DescriptionTxt Title="@Title" TechnologiesIcons="@TechnologiesIcons"
+                        TechnologiesIconsAlt="@TechnologiesIconsAlt"
+                        ProjectWord="@LanguageContainer.Keys["Portfolio:ProjectWord"]" NthProject="@NthProject"
+                        TotalProjects="@TotalProjects" Previous="@LanguageContainer.Keys["Portfolio:Previous"]"
+                        Next="@LanguageContainer.Keys["Portfolio:Next"]" ToPreviousProject="@ToPreviousProject"
+                        ToNextProject="@ToNextProject" DisplayNextButton="@DisplayNextButton"
+                        DisplayPreviousButton="DisplayPreviousButton">
+        </ProjectsWindow>
     }
     else
     {

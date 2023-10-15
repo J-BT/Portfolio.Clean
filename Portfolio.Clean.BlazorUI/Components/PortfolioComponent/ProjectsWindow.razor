@@ -1,21 +1,14 @@
 ﻿
 <div class="projects-window-container">
     <div class="title-container">
-        Nom Project
+        @Title
     </div>
     <div class="description-container">
-        Description
+        @DescriptionTxt
     </div>
     <div class="projects-navigation-container">
         <div id="arrow_2" class="arrow-wrapper">
-            <div class="arrow arrow--left">
-                <span>Prev</span>
-            </div>
-            <div class="block"><h1>Project 1/n</h1></div>
-            <div class="arrow arrow--right">
-                <span>Next</span>
-            </div>
-@*             @if (DisplayPreviousButton)
+            @if (DisplayPreviousButton)
             {
                 <div @onclick="@ToPreviousProject" class="arrow arrow--left">
                     <span>@Previous</span>
@@ -37,7 +30,7 @@
             else
             {
                 <div class="no-arrow"><span></span></div>
-            } *@
+            }
 
         </div>
     </div>
@@ -49,8 +42,8 @@
     </div>
 </div>
 
-<div class="technologies-container">
-@*     @foreach (string technologyIcon in TechnologiesIcons)
+<div class="technologies-container" id="tech">
+    @foreach (string technologyIcon in TechnologiesIcons)
     {
         try
         {
@@ -61,5 +54,5 @@
             @TechnologiesIconsAlt
         }
 
-    } *@
+    }
 </div>
