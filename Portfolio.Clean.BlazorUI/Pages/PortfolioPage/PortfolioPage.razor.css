@@ -1,0 +1,27 @@
+﻿
+.portfolio-container {
+    /********Variables*******/
+    --solutions-container-width: 100vw;
+    --solutions-container-height: 100vh;
+    /************************/
+    z-index: 2;
+    width: var(--solutions-container-width);
+    height: var(--solutions-container-height);
+    overflow: hidden;
+}
+
+    .portfolio-container:not(img) {
+        /*background: #0094ff;*/
+        opacity: 1;
+    }
+
+    .portfolio-container img {
+        position: fixed;
+        top: -100%;
+        left: -10%;
+        width: 200%;
+        height: 350%;
+        opacity: 0.4;
+        /*filter: blur(0.1rem);*/
+        z-index: 1;
+    }

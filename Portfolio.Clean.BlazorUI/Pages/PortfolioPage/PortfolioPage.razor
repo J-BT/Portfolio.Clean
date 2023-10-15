@@ -1,0 +1,19 @@
+﻿@page "/portfolio"
+@using Portfolio.Clean.BlazorUI.Components.Common
+
+<PageTitle>@LanguageContainer.Keys["Portfolio:PageTabTitle"]</PageTitle>
+
+<div class="portfolio-container">
+	 @if (isLoaded)
+    {
+        <SetPageTitle PageTitleName="@LanguageContainer.Keys["Portfolio:PageTitle"]"></SetPageTitle>
+        <img src="/images/Portfolio/jbtdev-new-meeting-room.png" />
+
+
+    }
+    else
+    {
+        <CustomLoadingAnimation></CustomLoadingAnimation>
+    }
+
+</div>
