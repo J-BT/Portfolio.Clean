@@ -1,6 +1,7 @@
 ﻿@page "/test"
 @inject IJSRuntime JS
 @using Portfolio.Clean.BlazorUI.Components.Common
+@using Portfolio.Clean.BlazorUI.Components.PortfolioComponent
 @using Portfolio.Clean.BlazorUI.Components.Solutions
 
 <PageTitle>Test</PageTitle>
@@ -16,6 +17,8 @@
 <button class="btn btn-primary" @onclick="GetCount">GetCount</button>
 <button class="btn btn-primary" @onclick="DeleteCount">DeleteCount</button>
 
+
+<ProjectsWindow></ProjectsWindow>
 
 @code {
     private int currentCount = 0;

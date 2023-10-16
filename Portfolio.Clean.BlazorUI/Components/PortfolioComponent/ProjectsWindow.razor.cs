@@ -13,9 +13,9 @@ public partial class ProjectsWindow
     [Parameter]
     public string ProjectWord { get; set; } = string.Empty;
     [Parameter]
-    public int NthProject { get; set; }
+    public int NthProject { get; set; } = 1;
     [Parameter]
-    public int TotalProjects { get; set; }
+    public int TotalProjects { get; set; } = 1;
     [Parameter]
     public string Previous { get; set; } = string.Empty;
     [Parameter]
@@ -25,9 +25,9 @@ public partial class ProjectsWindow
     [Parameter]
     public Func<Task> ToPreviousProject { get; set; }
     [Parameter]
-    public bool DisplayNextButton { get; set; }
+    public bool DisplayNextButton { get; set; } = true;
     [Parameter]
-    public bool DisplayPreviousButton { get; set; }
+    public bool DisplayPreviousButton { get; set; } = true;
     [Parameter]
     public List<string> TechnologiesIcons { get; set; } = new();
     [Parameter]
