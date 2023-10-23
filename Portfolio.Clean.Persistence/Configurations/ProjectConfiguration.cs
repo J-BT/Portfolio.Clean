@@ -21,16 +21,30 @@ public class ProjectConfiguration : IEntityTypeConfiguration<Project>
         builder.HasData(
             new Project
             {
-                Id = 1, 
-                ProjectName = "This first Project is a test for db initialization",
-				ProjectTitleFr = "Projet Test",
-				ProjectTitleEn = "Test Project",
-				ProjectTitleJp = "テストプロジェクト",
-                ProjectTechnologies = "C#,Blazor",
-				ProjectDescriptionFr = "La base de données fonctionne",
-				ProjectDescriptionEn = "The database is working",
-				ProjectDescriptionJp = "データベースが発動されました",
-				LastUpdate = DateTime.Now,
+                Id = 1,
+                ProjectName = "test1",
+                ProjectTitleFr = "Projet Test",
+                ProjectTitleEn = "Test Project",
+                ProjectTitleJp = "テストプロジェクト",
+                ProjectTechnologies = "csharp,blazor, webassembly, html, css, iis",
+                ProjectDescriptionFr = "La base de données fonctionne",
+                ProjectDescriptionEn = "The database is working",
+                ProjectDescriptionJp = "データベースが発動されました",
+                LastUpdate = DateTime.Now,
+                CreationDate = DateTime.Now
+            },
+            new Project
+            {
+                Id = 2,
+                ProjectName = "test2",
+                ProjectTitleFr = "Projet Test 2",
+                ProjectTitleEn = "Test Project 2",
+                ProjectTitleJp = "テストプロジェクト 2",
+                ProjectTechnologies = "Csharp, Typescript, Angular, HTML, CSS, IIS",
+                ProjectDescriptionFr = "La base de données fonctionne",
+                ProjectDescriptionEn = "The database is working",
+                ProjectDescriptionJp = "データベースが発動されました",
+                LastUpdate = DateTime.Now,
                 CreationDate = DateTime.Now
             }
         );

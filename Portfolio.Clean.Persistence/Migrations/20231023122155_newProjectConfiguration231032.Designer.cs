@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Portfolio.Clean.Persistence.DatabaseContext;
 
@@ -11,9 +12,11 @@ using Portfolio.Clean.Persistence.DatabaseContext;
 namespace Portfolio.Clean.Persistence.Migrations
 {
     [DbContext(typeof(PortfolioDatabaseContext))]
-    partial class PortfolioDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20231023122155_newProjectConfiguration231032")]
+    partial class newProjectConfiguration231032
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

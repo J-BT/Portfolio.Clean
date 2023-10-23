@@ -143,7 +143,7 @@ public partial class PortfolioPage
     /// </summary>
     private void SetTechnologiesImg()
     {
-        string t = Technologies.Replace(" ", "");
+        string t = Technologies.Replace(" ", "").ToLower();
 
         if (Technologies.Contains(",")) //If several technologies
         {
